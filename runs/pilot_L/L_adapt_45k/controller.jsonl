@@ -1,0 +1,43 @@
+{"ts": 1793714678.728, "event": "start", "mode": "full", "high": 100000, "low": 10000, "k": 2, "m": 3, "dwell": 15.0}
+{"ts": 1793714707.742, "batch": 2, "backlog": 22673, "rows": 74998, "dur_ms": 2694, "mode": "full"}
+{"ts": 1793714709.745, "batch": 3, "backlog": 68833, "rows": 74998, "dur_ms": 2364, "mode": "full"}
+{"ts": 1793714711.747, "batch": 4, "backlog": 100163, "rows": 74999, "dur_ms": 1950, "mode": "full"}
+{"ts": 1793714713.75, "batch": 5, "backlog": 112997, "rows": 74999, "dur_ms": 1741, "mode": "full", "switch_to": "light"}
+{"ts": 1793714715.754, "batch": 6, "backlog": 116399, "rows": 74997, "dur_ms": 1707, "mode": "light"}
+{"ts": 1793714716.755, "batch": 7, "backlog": 118171, "rows": 74998, "dur_ms": 1131, "mode": "light"}
+{"ts": 1793714717.755, "batch": 8, "backlog": 94056, "rows": 74998, "dur_ms": 1025, "mode": "light"}
+{"ts": 1793714718.757, "batch": 9, "backlog": 65248, "rows": 74997, "dur_ms": 1005, "mode": "light"}
+{"ts": 1793714719.758, "batch": 10, "backlog": 35472, "rows": 74998, "dur_ms": 943, "mode": "light"}
+{"ts": 1793714720.763, "batch": 12, "backlog": 0, "rows": 45319, "dur_ms": 694, "mode": "light"}
+{"ts": 1793714721.764, "batch": 13, "backlog": 0, "rows": 31198, "dur_ms": 652, "mode": "light"}
+{"ts": 1793714722.765, "batch": 15, "backlog": 0, "rows": 24364, "dur_ms": 543, "mode": "light"}
+{"ts": 1793714723.765, "batch": 17, "backlog": 0, "rows": 24982, "dur_ms": 532, "mode": "light"}
+{"ts": 1793714724.766, "batch": 19, "backlog": 0, "rows": 23531, "dur_ms": 510, "mode": "light"}
+{"ts": 1793714725.766, "batch": 21, "backlog": 0, "rows": 24275, "dur_ms": 507, "mode": "light"}
+{"ts": 1793714726.767, "batch": 23, "backlog": 0, "rows": 23390, "dur_ms": 473, "mode": "light"}
+{"ts": 1793714727.768, "batch": 25, "backlog": 0, "rows": 21879, "dur_ms": 481, "mode": "light"}
+{"ts": 1793714728.768, "batch": 27, "backlog": 0, "rows": 21753, "dur_ms": 515, "mode": "light", "switch_to": "full"}
+{"ts": 1793714729.769, "batch": 29, "backlog": 0, "rows": 24009, "dur_ms": 540, "mode": "full"}
+{"ts": 1793714731.77, "batch": 30, "backlog": 0, "rows": 24219, "dur_ms": 1305, "mode": "full"}
+{"ts": 1793714732.773, "batch": 31, "backlog": 0, "rows": 58951, "dur_ms": 1614, "mode": "full"}
+{"ts": 1793714734.773, "batch": 32, "backlog": 0, "rows": 72354, "dur_ms": 1673, "mode": "full"}
+{"ts": 1793714735.774, "batch": 33, "backlog": 320, "rows": 74997, "dur_ms": 1645, "mode": "full"}
+{"ts": 1793714737.776, "batch": 34, "backlog": 0, "rows": 74365, "dur_ms": 1993, "mode": "full"}
+{"ts": 1793714739.777, "batch": 35, "backlog": 14706, "rows": 74998, "dur_ms": 1642, "mode": "full"}
+{"ts": 1793714741.779, "batch": 36, "backlog": 13644, "rows": 74998, "dur_ms": 1474, "mode": "full"}
+{"ts": 1793714742.781, "batch": 37, "backlog": 4912, "rows": 74997, "dur_ms": 1639, "mode": "full"}
+{"ts": 1793714744.784, "batch": 38, "backlog": 3700, "rows": 74999, "dur_ms": 1610, "mode": "full"}
+{"ts": 1793714745.787, "batch": 39, "backlog": 1148, "rows": 74999, "dur_ms": 1697, "mode": "full"}
+{"ts": 1793714747.787, "batch": 40, "backlog": 1852, "rows": 74998, "dur_ms": 1617, "mode": "full"}
+{"ts": 1793714749.788, "batch": 41, "backlog": 348, "rows": 74998, "dur_ms": 1535, "mode": "full"}
+{"ts": 1793714750.79, "batch": 42, "backlog": 0, "rows": 69393, "dur_ms": 1499, "mode": "full"}
+{"ts": 1793714752.79, "batch": 43, "backlog": 0, "rows": 67452, "dur_ms": 1471, "mode": "full"}
+{"ts": 1793714753.793, "batch": 44, "backlog": 0, "rows": 66210, "dur_ms": 1515, "mode": "full"}
+{"ts": 1793714755.797, "batch": 45, "backlog": 0, "rows": 68150, "dur_ms": 1456, "mode": "full"}
+{"ts": 1793714756.798, "batch": 46, "backlog": 0, "rows": 65475, "dur_ms": 1539, "mode": "full"}
+{"ts": 1793714758.799, "batch": 47, "backlog": 0, "rows": 69110, "dur_ms": 1568, "mode": "full"}
+{"ts": 1793714759.802, "batch": 48, "backlog": 0, "rows": 70802, "dur_ms": 1585, "mode": "full"}
+{"ts": 1793714761.803, "batch": 49, "backlog": 0, "rows": 71299, "dur_ms": 1468, "mode": "full"}
+{"ts": 1793714762.807, "batch": 50, "backlog": 0, "rows": 65992, "dur_ms": 1494, "mode": "full"}
+{"ts": 1793714764.807, "batch": 51, "backlog": 0, "rows": 51835, "dur_ms": 1642, "mode": "full"}
+{"ts": 1793714823.83, "event": "stop", "mode": "full"}

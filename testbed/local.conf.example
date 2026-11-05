@@ -1,0 +1,30 @@
+[[local|localrc]]
+# ------------------------------------------------------------------
+# DevStack all-in-one for the MSc testbed (HP Omen 16, Ubuntu 24.04)
+# OpenStack release: 2026.1 Gazpacho (set by cloning stable/2026.1)
+# ------------------------------------------------------------------
+
+# Passwords: letters and numbers only (special characters break some services)
+ADMIN_PASSWORD=CHANGE_ME
+DATABASE_PASSWORD=$ADMIN_PASSWORD
+RABBIT_PASSWORD=$ADMIN_PASSWORD
+SERVICE_PASSWORD=$ADMIN_PASSWORD
+
+# Fixed address on the dummy0 interface (NOT the Wi-Fi address).
+# Wi-Fi DHCP can change its IP freely; OpenStack never sees the change.
+HOST_IP=10.250.250.10
+
+# Keep only what the paper uses: Keystone, Glance, Nova, Placement, Neutron.
+# Removing these saves several GB of RAM for the experiment VM.
+disable_service horizon
+disable_service c-api c-sch c-vol c-bak
+disable_service tempest
+disable_service dstat
+
+# Use hardware virtualization (KVM), not software emulation
+LIBVIRT_TYPE=kvm
+
+# Logging, so failures can be diagnosed
+LOGFILE=$DEST/logs/stack.sh.log
+VERBOSE=True
+LOG_COLOR=False

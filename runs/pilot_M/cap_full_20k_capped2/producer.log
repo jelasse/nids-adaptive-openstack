@@ -1,0 +1,7 @@
+Replay file rows: 9,421,260; sending 1,200,000 from row 0 at 20,000/s to topic 'cap_full_20k_capped2'
+  sent 199,986  achieved 19,995/s
+  sent 400,001  achieved 19,969/s
+  sent 600,001  achieved 19,979/s
+  sent 800,247  achieved 19,990/s
+  sent 1,000,259  achieved 19,993/s
+SENT 1,200,000 records in 60.0 s, achieved 19,995/s (event_id 0..1,199,999)

@@ -1,0 +1,8 @@
+Replay file rows: 9,421,260; sending 1,800,000 from row 0 at 30,000/s to topic 'cap_light_30k'
+  sent 297,751  achieved 29,770/s
+  sent 597,337  achieved 29,864/s
+  sent 899,951  achieved 29,997/s
+  sent 1,199,978  achieved 29,998/s
+  sent 1,499,989  achieved 29,999/s
+  sent 1,798,073  achieved 29,967/s
+SENT 1,800,000 records in 60.1 s, achieved 29,962/s (event_id 0..1,799,999)

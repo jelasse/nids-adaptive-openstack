@@ -1,0 +1,8 @@
+Replay file rows: 9,421,260; sending 1,800,000 from row 0 at 30,000/s to topic 't0_full_30k'
+  sent 284,040  achieved 28,404/s
+  sent 599,269  achieved 29,960/s
+  sent 880,001  achieved 28,600/s
+  sent 960,001  achieved 16,691/s
+  sent 1,590,479  achieved 23,557/s
+SENT 1,800,000 records in 70.9 s, achieved 25,383/s (event_id 0..1,799,999)
+WARNING: producer could not keep the offered rate (25,383 < 30,000/s)

@@ -1,0 +1,7 @@
+Replay file rows: 9,421,260; sending 1,350,000 from row 1,350,000 at 22,500/s to topic 'L_full_45k'
+  sent 225,001  achieved 22,500/s
+  sent 450,001  achieved 22,461/s
+  sent 675,801  achieved 22,500/s
+  sent 900,802  achieved 22,500/s
+  sent 1,125,805  achieved 22,500/s
+SENT 1,350,000 records in 60.0 s, achieved 22,498/s (event_id 1,350,000..2,699,999)

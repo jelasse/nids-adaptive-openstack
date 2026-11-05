@@ -1,0 +1,68 @@
+{
+  "rows": 60000,
+  "unique": 60000,
+  "duplicates": 0,
+  "missing": 0,
+  "span_s": 32.1,
+  "throughput_rps": 1870,
+  "latency_ms": {
+    "p50": 3484,
+    "p95": 5758,
+    "p99": 6283,
+    "max": 6584,
+    "mean": 3474
+  },
+  "detection": {
+    "tp": 0,
+    "fp": 1,
+    "fn": 0,
+    "tn": 59999,
+    "recall": 0.0,
+    "precision": 0.0,
+    "fpr": 1.7e-05,
+    "macro_f1": 0.5
+  },
+  "by_mode": {
+    "full": {
+      "rows": 60000,
+      "latency_ms": {
+        "p50": 3484,
+        "p95": 5758,
+        "p99": 6283,
+        "max": 6584,
+        "mean": 3474
+      },
+      "detection": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "tn": 59999,
+        "recall": 0.0,
+        "precision": 0.0,
+        "fpr": 1.7e-05,
+        "macro_f1": 0.5
+      }
+    }
+  },
+  "family_recall": {},
+  "batches": {
+    "count": 7,
+    "mean_total_s": 1.73,
+    "max_total_s": 2.241,
+    "mean_rows": 8571,
+    "modes": {
+      "full": 7
+    }
+  },
+  "backlog_max_offsets_behind": 0,
+  "telemetry": {
+    "samples": 32,
+    "cpu_mean": 38.4,
+    "cpu_p95": 96.0,
+    "cpu_max": 97.5,
+    "mem_used_max_mb": 3421.0,
+    "mem_avail_min_mb": 494.0,
+    "swap_used_max_mb": 0.0,
+    "steal_max": 0.5
+  }
+}

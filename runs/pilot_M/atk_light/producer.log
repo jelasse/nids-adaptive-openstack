@@ -1,0 +1,4 @@
+Replay file rows: 9,421,260; sending 60,000 from row 250,000 at 2,000/s to topic 'atk_light'
+  sent 20,001  achieved 2,000/s
+  sent 40,051  achieved 2,000/s
+SENT 60,000 records in 30.0 s, achieved 2,001/s (event_id 0..59,999)

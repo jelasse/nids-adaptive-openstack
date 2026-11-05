@@ -1,0 +1,251 @@
+:: loading settings :: url = jar:file:/home/ubuntu/nids-venv/lib/python3.12/site-packages/pyspark/jars/ivy-2.5.3.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /home/ubuntu/.ivy2/cache
+The jars for the packages stored in: /home/ubuntu/.ivy2/jars
+org.apache.spark#spark-sql-kafka-0-10_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-14697397-3556-48d0-80bb-0f84da27dab7;1.0
+	confs: [default]
+	found org.apache.spark#spark-sql-kafka-0-10_2.12;3.5.9 in central
+	found org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.5.9 in central
+	found org.apache.kafka#kafka-clients;3.4.1 in central
+	found org.lz4#lz4-java;1.8.0 in central
+	found org.xerial.snappy#snappy-java;1.1.10.5 in central
+	found org.slf4j#slf4j-api;2.0.7 in central
+	found org.apache.hadoop#hadoop-client-runtime;3.3.4 in central
+	found org.apache.hadoop#hadoop-client-api;3.3.4 in central
+	found commons-logging#commons-logging;1.1.3 in central
+	found com.google.code.findbugs#jsr305;3.0.0 in central
+	found org.apache.commons#commons-pool2;2.11.1 in central
+:: resolution report :: resolve 292ms :: artifacts dl 22ms
+	:: modules in use:
+	com.google.code.findbugs#jsr305;3.0.0 from central in [default]
+	commons-logging#commons-logging;1.1.3 from central in [default]
+	org.apache.commons#commons-pool2;2.11.1 from central in [default]
+	org.apache.hadoop#hadoop-client-api;3.3.4 from central in [default]
+	org.apache.hadoop#hadoop-client-runtime;3.3.4 from central in [default]
+	org.apache.kafka#kafka-clients;3.4.1 from central in [default]
+	org.apache.spark#spark-sql-kafka-0-10_2.12;3.5.9 from central in [default]
+	org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.5.9 from central in [default]
+	org.lz4#lz4-java;1.8.0 from central in [default]
+	org.slf4j#slf4j-api;2.0.7 from central in [default]
+	org.xerial.snappy#snappy-java;1.1.10.5 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   11  |   0   |   0   |   0   ||   11  |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-14697397-3556-48d0-80bb-0f84da27dab7
+	confs: [default]
+	0 artifacts copied, 11 already retrieved (0kB/5ms)
+26/11/03 00:17:35 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/11/03 00:17:36 INFO SparkContext: Running Spark version 3.5.9
+26/11/03 00:17:36 INFO SparkContext: OS info Linux, 6.8.0-147-generic, amd64
+26/11/03 00:17:36 INFO SparkContext: Java version 17.0.20.1
+26/11/03 00:17:36 INFO ResourceUtils: ==============================================================
+26/11/03 00:17:36 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/11/03 00:17:36 INFO ResourceUtils: ==============================================================
+26/11/03 00:17:36 INFO SparkContext: Submitted application: stream-detect
+26/11/03 00:17:36 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/11/03 00:17:36 INFO ResourceProfile: Limiting resource is cpu
+26/11/03 00:17:36 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/11/03 00:17:36 INFO SecurityManager: Changing view acls to: ubuntu
+26/11/03 00:17:36 INFO SecurityManager: Changing modify acls to: ubuntu
+26/11/03 00:17:36 INFO SecurityManager: Changing view acls groups to: 
+26/11/03 00:17:36 INFO SecurityManager: Changing modify acls groups to: 
+26/11/03 00:17:36 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: ubuntu; groups with view permissions: EMPTY; users with modify permissions: ubuntu; groups with modify permissions: EMPTY
+26/11/03 00:17:36 INFO Utils: Successfully started service 'sparkDriver' on port 37831.
+26/11/03 00:17:36 INFO SparkEnv: Registering MapOutputTracker
+26/11/03 00:17:36 INFO SparkEnv: Registering BlockManagerMaster
+26/11/03 00:17:36 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/11/03 00:17:36 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/11/03 00:17:36 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/11/03 00:17:36 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-e13acfa1-d252-4fb6-8f4b-023f024e790c
+26/11/03 00:17:36 INFO MemoryStore: MemoryStore started with capacity 1048.8 MiB
+26/11/03 00:17:36 INFO SparkEnv: Registering OutputCommitCoordinator
+26/11/03 00:17:36 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/11/03 00:17:36 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/11/03 00:17:36 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.9.jar at spark://nids-exp:37831/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.9.jar with timestamp 1793639856682
+26/11/03 00:17:36 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.9.jar at spark://nids-exp:37831/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.9.jar with timestamp 1793639856682
+26/11/03 00:17:36 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.apache.kafka_kafka-clients-3.4.1.jar at spark://nids-exp:37831/jars/org.apache.kafka_kafka-clients-3.4.1.jar with timestamp 1793639856682
+26/11/03 00:17:36 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar at spark://nids-exp:37831/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1793639856682
+26/11/03 00:17:36 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar at spark://nids-exp:37831/jars/org.apache.commons_commons-pool2-2.11.1.jar with timestamp 1793639856682
+26/11/03 00:17:36 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar at spark://nids-exp:37831/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar with timestamp 1793639856682
+26/11/03 00:17:36 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar at spark://nids-exp:37831/jars/org.lz4_lz4-java-1.8.0.jar with timestamp 1793639856682
+26/11/03 00:17:36 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.10.5.jar at spark://nids-exp:37831/jars/org.xerial.snappy_snappy-java-1.1.10.5.jar with timestamp 1793639856682
+26/11/03 00:17:36 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.slf4j_slf4j-api-2.0.7.jar at spark://nids-exp:37831/jars/org.slf4j_slf4j-api-2.0.7.jar with timestamp 1793639856682
+26/11/03 00:17:36 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar at spark://nids-exp:37831/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar with timestamp 1793639856682
+26/11/03 00:17:36 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar at spark://nids-exp:37831/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1793639856682
+26/11/03 00:17:36 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.9.jar at file:///home/ubuntu/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.9.jar with timestamp 1793639856682
+26/11/03 00:17:36 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.9.jar to /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.9.jar
+26/11/03 00:17:36 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.9.jar at file:///home/ubuntu/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.9.jar with timestamp 1793639856682
+26/11/03 00:17:36 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.9.jar to /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.9.jar
+26/11/03 00:17:36 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.apache.kafka_kafka-clients-3.4.1.jar at file:///home/ubuntu/.ivy2/jars/org.apache.kafka_kafka-clients-3.4.1.jar with timestamp 1793639856682
+26/11/03 00:17:36 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.apache.kafka_kafka-clients-3.4.1.jar to /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/org.apache.kafka_kafka-clients-3.4.1.jar
+26/11/03 00:17:36 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar at file:///home/ubuntu/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1793639856682
+26/11/03 00:17:36 INFO Utils: Copying /home/ubuntu/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar to /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/com.google.code.findbugs_jsr305-3.0.0.jar
+26/11/03 00:17:36 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar at file:///home/ubuntu/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar with timestamp 1793639856682
+26/11/03 00:17:36 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar to /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/org.apache.commons_commons-pool2-2.11.1.jar
+26/11/03 00:17:36 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar at file:///home/ubuntu/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar with timestamp 1793639856682
+26/11/03 00:17:36 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar to /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar
+26/11/03 00:17:37 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar at file:///home/ubuntu/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar with timestamp 1793639856682
+26/11/03 00:17:37 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar to /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/org.lz4_lz4-java-1.8.0.jar
+26/11/03 00:17:37 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.10.5.jar at file:///home/ubuntu/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.10.5.jar with timestamp 1793639856682
+26/11/03 00:17:37 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.10.5.jar to /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/org.xerial.snappy_snappy-java-1.1.10.5.jar
+26/11/03 00:17:37 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.slf4j_slf4j-api-2.0.7.jar at file:///home/ubuntu/.ivy2/jars/org.slf4j_slf4j-api-2.0.7.jar with timestamp 1793639856682
+26/11/03 00:17:37 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.slf4j_slf4j-api-2.0.7.jar to /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/org.slf4j_slf4j-api-2.0.7.jar
+26/11/03 00:17:37 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar at file:///home/ubuntu/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar with timestamp 1793639856682
+26/11/03 00:17:37 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar to /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/org.apache.hadoop_hadoop-client-api-3.3.4.jar
+26/11/03 00:17:37 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar at file:///home/ubuntu/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1793639856682
+26/11/03 00:17:37 INFO Utils: Copying /home/ubuntu/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar to /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/commons-logging_commons-logging-1.1.3.jar
+26/11/03 00:17:37 INFO Executor: Starting executor ID driver on host nids-exp
+26/11/03 00:17:37 INFO Executor: OS info Linux, 6.8.0-147-generic, amd64
+26/11/03 00:17:37 INFO Executor: Java version 17.0.20.1
+26/11/03 00:17:37 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/11/03 00:17:37 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@6e0a86bb for default.
+26/11/03 00:17:37 INFO Executor: Fetching file:///home/ubuntu/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.10.5.jar with timestamp 1793639856682
+26/11/03 00:17:37 INFO Utils: /home/ubuntu/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.10.5.jar has been previously copied to /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/org.xerial.snappy_snappy-java-1.1.10.5.jar
+26/11/03 00:17:37 INFO Executor: Fetching file:///home/ubuntu/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar with timestamp 1793639856682
+26/11/03 00:17:37 INFO Utils: /home/ubuntu/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar has been previously copied to /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/org.lz4_lz4-java-1.8.0.jar
+26/11/03 00:17:37 INFO Executor: Fetching file:///home/ubuntu/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.9.jar with timestamp 1793639856682
+26/11/03 00:17:37 INFO Utils: /home/ubuntu/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.9.jar has been previously copied to /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.9.jar
+26/11/03 00:17:37 INFO Executor: Fetching file:///home/ubuntu/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar with timestamp 1793639856682
+26/11/03 00:17:37 INFO Utils: /home/ubuntu/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar has been previously copied to /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/org.apache.commons_commons-pool2-2.11.1.jar
+26/11/03 00:17:37 INFO Executor: Fetching file:///home/ubuntu/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar with timestamp 1793639856682
+26/11/03 00:17:37 INFO Utils: /home/ubuntu/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar has been previously copied to /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/org.apache.hadoop_hadoop-client-api-3.3.4.jar
+26/11/03 00:17:37 INFO Executor: Fetching file:///home/ubuntu/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1793639856682
+26/11/03 00:17:37 INFO Utils: /home/ubuntu/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar has been previously copied to /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/com.google.code.findbugs_jsr305-3.0.0.jar
+26/11/03 00:17:37 INFO Executor: Fetching file:///home/ubuntu/.ivy2/jars/org.slf4j_slf4j-api-2.0.7.jar with timestamp 1793639856682
+26/11/03 00:17:37 INFO Utils: /home/ubuntu/.ivy2/jars/org.slf4j_slf4j-api-2.0.7.jar has been previously copied to /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/org.slf4j_slf4j-api-2.0.7.jar
+26/11/03 00:17:37 INFO Executor: Fetching file:///home/ubuntu/.ivy2/jars/org.apache.kafka_kafka-clients-3.4.1.jar with timestamp 1793639856682
+26/11/03 00:17:37 INFO Utils: /home/ubuntu/.ivy2/jars/org.apache.kafka_kafka-clients-3.4.1.jar has been previously copied to /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/org.apache.kafka_kafka-clients-3.4.1.jar
+26/11/03 00:17:37 INFO Executor: Fetching file:///home/ubuntu/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.9.jar with timestamp 1793639856682
+26/11/03 00:17:37 INFO Utils: /home/ubuntu/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.9.jar has been previously copied to /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.9.jar
+26/11/03 00:17:37 INFO Executor: Fetching file:///home/ubuntu/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar with timestamp 1793639856682
+26/11/03 00:17:37 INFO Utils: /home/ubuntu/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar has been previously copied to /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar
+26/11/03 00:17:37 INFO Executor: Fetching file:///home/ubuntu/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1793639856682
+26/11/03 00:17:37 INFO Utils: /home/ubuntu/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar has been previously copied to /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/commons-logging_commons-logging-1.1.3.jar
+26/11/03 00:17:37 INFO Executor: Fetching spark://nids-exp:37831/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1793639856682
+26/11/03 00:17:37 INFO TransportClientFactory: Successfully created connection to nids-exp/10.0.0.5:37831 after 19 ms (0 ms spent in bootstraps)
+26/11/03 00:17:37 INFO Utils: Fetching spark://nids-exp:37831/jars/com.google.code.findbugs_jsr305-3.0.0.jar to /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/fetchFileTemp17668536747239811722.tmp
+26/11/03 00:17:37 INFO Utils: /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/fetchFileTemp17668536747239811722.tmp has been previously copied to /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/com.google.code.findbugs_jsr305-3.0.0.jar
+26/11/03 00:17:37 INFO Executor: Adding file:/tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/com.google.code.findbugs_jsr305-3.0.0.jar to class loader default
+26/11/03 00:17:37 INFO Executor: Fetching spark://nids-exp:37831/jars/org.apache.commons_commons-pool2-2.11.1.jar with timestamp 1793639856682
+26/11/03 00:17:37 INFO Utils: Fetching spark://nids-exp:37831/jars/org.apache.commons_commons-pool2-2.11.1.jar to /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/fetchFileTemp17731578904210703542.tmp
+26/11/03 00:17:37 INFO Utils: /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/fetchFileTemp17731578904210703542.tmp has been previously copied to /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/org.apache.commons_commons-pool2-2.11.1.jar
+26/11/03 00:17:37 INFO Executor: Adding file:/tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/org.apache.commons_commons-pool2-2.11.1.jar to class loader default
+26/11/03 00:17:37 INFO Executor: Fetching spark://nids-exp:37831/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar with timestamp 1793639856682
+26/11/03 00:17:37 INFO Utils: Fetching spark://nids-exp:37831/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar to /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/fetchFileTemp11730780615513019038.tmp
+26/11/03 00:17:37 INFO Utils: /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/fetchFileTemp11730780615513019038.tmp has been previously copied to /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar
+26/11/03 00:17:37 INFO Executor: Adding file:/tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar to class loader default
+26/11/03 00:17:37 INFO Executor: Fetching spark://nids-exp:37831/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.9.jar with timestamp 1793639856682
+26/11/03 00:17:37 INFO Utils: Fetching spark://nids-exp:37831/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.9.jar to /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/fetchFileTemp1665496284988958586.tmp
+26/11/03 00:17:37 INFO Utils: /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/fetchFileTemp1665496284988958586.tmp has been previously copied to /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.9.jar
+26/11/03 00:17:37 INFO Executor: Adding file:/tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.9.jar to class loader default
+26/11/03 00:17:37 INFO Executor: Fetching spark://nids-exp:37831/jars/org.xerial.snappy_snappy-java-1.1.10.5.jar with timestamp 1793639856682
+26/11/03 00:17:37 INFO Utils: Fetching spark://nids-exp:37831/jars/org.xerial.snappy_snappy-java-1.1.10.5.jar to /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/fetchFileTemp1646052359010467142.tmp
+26/11/03 00:17:37 INFO Utils: /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/fetchFileTemp1646052359010467142.tmp has been previously copied to /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/org.xerial.snappy_snappy-java-1.1.10.5.jar
+26/11/03 00:17:37 INFO Executor: Adding file:/tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/org.xerial.snappy_snappy-java-1.1.10.5.jar to class loader default
+26/11/03 00:17:37 INFO Executor: Fetching spark://nids-exp:37831/jars/org.apache.kafka_kafka-clients-3.4.1.jar with timestamp 1793639856682
+26/11/03 00:17:37 INFO Utils: Fetching spark://nids-exp:37831/jars/org.apache.kafka_kafka-clients-3.4.1.jar to /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/fetchFileTemp3903654099581059926.tmp
+26/11/03 00:17:37 INFO Utils: /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/fetchFileTemp3903654099581059926.tmp has been previously copied to /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/org.apache.kafka_kafka-clients-3.4.1.jar
+26/11/03 00:17:37 INFO Executor: Adding file:/tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/org.apache.kafka_kafka-clients-3.4.1.jar to class loader default
+26/11/03 00:17:37 INFO Executor: Fetching spark://nids-exp:37831/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1793639856682
+26/11/03 00:17:37 INFO Utils: Fetching spark://nids-exp:37831/jars/commons-logging_commons-logging-1.1.3.jar to /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/fetchFileTemp14867871455482102658.tmp
+26/11/03 00:17:37 INFO Utils: /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/fetchFileTemp14867871455482102658.tmp has been previously copied to /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/commons-logging_commons-logging-1.1.3.jar
+26/11/03 00:17:37 INFO Executor: Adding file:/tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/commons-logging_commons-logging-1.1.3.jar to class loader default
+26/11/03 00:17:37 INFO Executor: Fetching spark://nids-exp:37831/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar with timestamp 1793639856682
+26/11/03 00:17:37 INFO Utils: Fetching spark://nids-exp:37831/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar to /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/fetchFileTemp2670800514115378029.tmp
+26/11/03 00:17:37 INFO Utils: /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/fetchFileTemp2670800514115378029.tmp has been previously copied to /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/org.apache.hadoop_hadoop-client-api-3.3.4.jar
+26/11/03 00:17:37 INFO Executor: Adding file:/tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/org.apache.hadoop_hadoop-client-api-3.3.4.jar to class loader default
+26/11/03 00:17:37 INFO Executor: Fetching spark://nids-exp:37831/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.9.jar with timestamp 1793639856682
+26/11/03 00:17:37 INFO Utils: Fetching spark://nids-exp:37831/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.9.jar to /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/fetchFileTemp13537406849610090694.tmp
+26/11/03 00:17:37 INFO Utils: /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/fetchFileTemp13537406849610090694.tmp has been previously copied to /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.9.jar
+26/11/03 00:17:37 INFO Executor: Adding file:/tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.9.jar to class loader default
+26/11/03 00:17:37 INFO Executor: Fetching spark://nids-exp:37831/jars/org.lz4_lz4-java-1.8.0.jar with timestamp 1793639856682
+26/11/03 00:17:37 INFO Utils: Fetching spark://nids-exp:37831/jars/org.lz4_lz4-java-1.8.0.jar to /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/fetchFileTemp8173709171468297255.tmp
+26/11/03 00:17:37 INFO Utils: /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/fetchFileTemp8173709171468297255.tmp has been previously copied to /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/org.lz4_lz4-java-1.8.0.jar
+26/11/03 00:17:37 INFO Executor: Adding file:/tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/org.lz4_lz4-java-1.8.0.jar to class loader default
+26/11/03 00:17:37 INFO Executor: Fetching spark://nids-exp:37831/jars/org.slf4j_slf4j-api-2.0.7.jar with timestamp 1793639856682
+26/11/03 00:17:37 INFO Utils: Fetching spark://nids-exp:37831/jars/org.slf4j_slf4j-api-2.0.7.jar to /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/fetchFileTemp15114411883644198856.tmp
+26/11/03 00:17:37 INFO Utils: /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/fetchFileTemp15114411883644198856.tmp has been previously copied to /tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/org.slf4j_slf4j-api-2.0.7.jar
+26/11/03 00:17:37 INFO Executor: Adding file:/tmp/spark-9059897b-3598-47b6-a27b-4c1bc2dc1507/userFiles-c5bce790-12ba-4d27-a590-2d0256ca016b/org.slf4j_slf4j-api-2.0.7.jar to class loader default
+26/11/03 00:17:37 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 42787.
+26/11/03 00:17:37 INFO NettyBlockTransferService: Server created on nids-exp:42787
+26/11/03 00:17:37 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/11/03 00:17:37 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, nids-exp, 42787, None)
+26/11/03 00:17:37 INFO BlockManagerMasterEndpoint: Registering block manager nids-exp:42787 with 1048.8 MiB RAM, BlockManagerId(driver, nids-exp, 42787, None)
+26/11/03 00:17:37 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, nids-exp, 42787, None)
+26/11/03 00:17:37 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, nids-exp, 42787, None)
+Models loaded. Thresholds: full 0.540, light 0.946. Mode file: /home/ubuntu/nids/runs/cap_full_5k/mode
+26/11/03 00:17:43 WARN ResolveWriteToStream: spark.sql.adaptive.enabled is not supported in streaming DataFrames/Datasets and will be disabled.
+batch   rows    in/s    proc/s   dur_ms  behind  mode
+26/11/03 00:17:43 WARN AdminClientConfig: These configurations '[key.deserializer, value.deserializer, enable.auto.commit, max.poll.records, auto.offset.reset]' were supplied but are not used yet.
+26/11/03 00:17:43 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+    0       0        0        0    1,044       0  full
+26/11/03 00:17:55 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/03 00:17:56 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/03 00:17:56 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/03 00:17:57 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+    1   2,100      420      898    2,339       0  full
+26/11/03 00:18:00 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/03 00:18:02 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/03 00:18:02 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/03 00:18:02 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+    2  24,950    4,991    7,658    3,258       0  full
+26/11/03 00:18:05 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/03 00:18:06 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/03 00:18:07 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/03 00:18:07 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+    3  25,050    5,010   10,154    2,467       0  full
+26/11/03 00:18:10 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/03 00:18:11 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/03 00:18:11 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/03 00:18:11 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+    4  24,950    4,990   13,978    1,785       0  full
+26/11/03 00:18:15 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/03 00:18:16 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/03 00:18:16 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/03 00:18:16 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+    5  25,000    5,000   14,925    1,675       0  full
+26/11/03 00:18:20 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/03 00:18:21 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/03 00:18:21 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/03 00:18:21 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+    6  25,000    5,000   14,749    1,695       0  full
+26/11/03 00:18:25 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/03 00:18:26 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/03 00:18:26 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/03 00:18:26 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+    7  25,000    5,000   16,046    1,558       0  full
+26/11/03 00:18:30 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/03 00:18:31 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/03 00:18:31 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/03 00:18:31 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+    8  25,000    5,000   13,904    1,798       0  full
+26/11/03 00:18:35 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/03 00:18:36 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/03 00:18:36 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/03 00:18:36 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+    9  25,000    5,000   15,198    1,645       0  full
+26/11/03 00:18:40 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/03 00:18:41 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/03 00:18:41 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/03 00:18:41 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+   10  25,000    5,000   13,390    1,867       0  full
+26/11/03 00:18:45 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/03 00:18:46 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/03 00:18:46 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/03 00:18:46 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+   11  25,000    5,000   14,526    1,721       0  full
+26/11/03 00:18:50 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/03 00:18:51 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/03 00:18:51 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/03 00:18:51 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+   12  25,000    5,000   14,037    1,781       0  full
+26/11/03 00:18:55 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/03 00:18:56 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/03 00:18:57 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/03 00:18:57 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+   13  22,950    4,590    9,262    2,478       0  full
+   14       0        0        0        2       0  full
+No new data; stopping.

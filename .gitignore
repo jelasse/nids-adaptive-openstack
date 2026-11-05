@@ -1,0 +1,32 @@
+# --- never commit secrets ---
+local.conf
+openrc*
+*.pem
+*_key
+*_key.pub
+id_*
+.env
+
+# --- never commit data or big outputs ---
+*.parquet
+*.csv.gz
+data/
+replay/
+predictions/
+checkpoint*/
+*.tar
+*.zip
+models/full_rf/
+models/light_lr/
+
+# --- run-control files (no value as evidence) ---
+runs/**/STOP
+runs/**/mode
+
+# --- Python / editor clutter ---
+__pycache__/
+*.pyc
+.venv/
+spark-venv/
+.ipynb_checkpoints/
+.DS_Store
