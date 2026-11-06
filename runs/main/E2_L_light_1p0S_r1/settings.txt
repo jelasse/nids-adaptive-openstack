@@ -1,0 +1,1 @@
+max_offsets=75000 trigger=0 controller=none profile=constant warmup=20@13500 clock_offset_ms=1.0

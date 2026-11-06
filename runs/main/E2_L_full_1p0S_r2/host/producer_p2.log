@@ -1,0 +1,22 @@
+Replay file rows: 9,421,272; sending 3,140,424 from row 6,280,848 at 15,000/s to topic 'E2_L_full_1p0S_r2'
+  sent 150,001  achieved 15,000/s
+  sent 299,153  achieved 14,954/s
+  sent 450,101  achieved 15,000/s
+  sent 599,450  achieved 14,984/s
+  sent 750,102  achieved 15,000/s
+  sent 899,377  achieved 14,988/s
+  sent 1,050,104  achieved 15,000/s
+  sent 1,199,709  achieved 14,995/s
+  sent 1,350,102  achieved 15,000/s
+  sent 1,499,642  achieved 14,995/s
+  sent 1,650,102  achieved 15,000/s
+  sent 1,799,942  achieved 14,999/s
+  sent 1,950,106  achieved 15,000/s
+  sent 2,099,934  achieved 14,999/s
+  sent 2,250,106  achieved 15,000/s
+  sent 2,399,936  achieved 14,999/s
+  sent 2,550,106  achieved 15,000/s
+  sent 2,699,886  achieved 14,999/s
+  sent 2,850,108  achieved 15,000/s
+  sent 2,999,899  achieved 14,999/s
+SENT 3,140,424 records in 209.4 s (planned 209.4 s), achieved 15,000/s (event_id 6,280,848..9,421,271; max lag behind schedule 2.94 s)

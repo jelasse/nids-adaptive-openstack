@@ -34,12 +34,15 @@ while IFS=, read -r -u 3 name vm ip rate records mode controller profile procs w
   # 2. clock offset for this run
   off=$(bash "$DIR/clock_offset.sh" "ubuntu@$ip" -i "$KEY" | awk -F'= ' '/clock offset/{print $2}' | awk '{print $1}')
   [ -n "$off" ] || { log "clock measurement failed: stopping"; break; }
+  if ! python3 -c "import sys; sys.exit(0 if abs(float('$off')) <= 10 else 1)"; then
+    log "clock offset $off ms is above 10 ms: VM clock not synchronized (check chronyc sources). Stopping."; break; fi
   log "clock offset $off ms"
 
   # 3. start the detector in the VM (in the background there), wait until it is ready
   ENVS="CLOCK_OFFSET_MS=$off EXTERNAL=1 EXT_PROCS=$procs WARMUP=20 WARMUP_RATE=$warmup_rate"
   [ -n "$controller" ] && ENVS="$ENVS CONTROLLER='$controller'"
   [ -n "$profile" ] && ENVS="$ENVS PROFILE='$profile'"
+  "${SSH[@]}" "/opt/kafka/bin/kafka-topics.sh --bootstrap-server localhost:9092 --delete --topic $name > /dev/null 2>&1" || true
   "${SSH[@]}" "mkdir -p ~/nids/console; nohup env $ENVS bash ~/nids/stream/run_once.sh $name $rate $records $mode \
       > ~/nids/console/$name.txt 2>&1 < /dev/null &" || { log "could not start the run in the VM"; break; }
   ready=0
