@@ -1,0 +1,7 @@
+Replay file rows: 9,421,260; sending 500,000 from row 500,000 at 10,000/s with profile 20:0.5,20:1.5,0:0.5 to topic 'w7_smoke2'
+  sent 50,001  achieved 5,000/s
+  sent 100,001  achieved 4,988/s
+  sent 250,751  achieved 8,344/s
+  sent 400,001  achieved 9,986/s
+  sent 450,301  achieved 8,995/s
+SENT 500,000 records in 60.0 s (planned 60.0 s), achieved 8,334/s (event_id 500,000..999,999; max lag behind schedule 0.15 s)

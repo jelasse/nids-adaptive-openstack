@@ -26,3 +26,21 @@ HIGH = 100,000 records · LOW = 10,000 records · k = 2 · m = 3 · dwell T = 15
 - Loads: 0.5, 0.8, 1.0, 1.2, 1.5 × S (S = saturation rate of Static-Full); burst 0.6S/60 s → 1.5S/90 s → 0.6S
 - 20 s warm-up at 0.3 S; latency objective 5 s
 - Repetitions: 3 (E1–E3), 5 (E4); randomized order; clock offset VM−host measured per session and subtracted
+
+## Saturation rate S (measured in Week 7)
+- Measured on the **validation** split (first 4,000,000 rows of `val.parquet`), never on the test split,
+  because S sets the load levels (a decision)
+- Static-Full, constant rate, grid of 5,000 records/s; sustainable = 0 missing and backlog at the end of the
+  load phase < 75,000 records (`sustainable` in summary.json)
+
+## Tools (Week 7)
+- `replay_producer.py --profile "60:0.6,90:1.5,0:0.6"`: burst profile (multipliers of the base rate)
+- `produce_parallel.sh`: WARMUP/WARMUP_RATE (validation rows from 9,000,000, event IDs from 1,000,000,000,
+  excluded from analysis); laptop telemetry; everything in `~/w5/host_runs/<run>/`
+- `host_summary.py`: producer ≥ 98% of plan and ≤ 50 MB moved in/out of laptop swap during the measured load
+  (warm-up excluded; swap parked before the run is reported, not counted) -> LAPTOP SIDE VALID
+- `rechunk_replay.py`: replay files stored in row groups of 100,000 rows (≈ 65 MB per producer in memory)
+- Session preparation: close Chrome and other desktop apps; `sudo swapoff -a && sudo swapon -a` when swap is in use
+- `clock_offset.sh`: offset VM − laptop over one shared SSH connection, best of 15, round trip < 10 ms
+- `analyze_run.py`: warm-up excluded; `slo_violation_share` (> 5 s); `backlog_at_load_end`; `drain_s`;
+  `sustainable`; `valid_vm_side`

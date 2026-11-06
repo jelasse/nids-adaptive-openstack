@@ -1,0 +1,34 @@
+{
+  "producers": [
+    {
+      "log": "producer_p0.log",
+      "sent": 500000,
+      "seconds": 60.0,
+      "planned_s": 60.0,
+      "achieved_rps": 8333,
+      "pct_of_plan": 100.0
+    },
+    {
+      "log": "producer_p1.log",
+      "sent": 500000,
+      "seconds": 60.0,
+      "planned_s": 60.0,
+      "achieved_rps": 8333,
+      "pct_of_plan": 100.0
+    }
+  ],
+  "records_sent": 1000000,
+  "host": {
+    "samples": 193,
+    "cpu_mean": 11.2,
+    "cpu_p95": 26.8,
+    "mem_avail_min_mb": 1862.0,
+    "swap_used_max_mb": 3540.0,
+    "swap_used_start_mb": 2737.0,
+    "swap_growth_mb": 803.0
+  },
+  "valid": false,
+  "problems": [
+    "laptop swap grew by 803 MB during the run"
+  ]
+}

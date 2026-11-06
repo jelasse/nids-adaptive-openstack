@@ -2,9 +2,11 @@
 # One streaming run, start to finish (inside the VM).
 # Usage:  bash ~/nids/stream/run_once.sh <run_name> <rate> <records> [mode] [start_row] [replay_file]
 #   e.g.  bash ~/nids/stream/run_once.sh smoke1 2000 60000 full
-# Optional environment settings:
+# Optional environment settings (defaults = the frozen protocol, Section 5 of the paper):
 #   MAX_OFFSETS=75000   cap on records per micro-batch (0 = no cap)
-#   TRIGGER=5           micro-batch interval in seconds (0 = back-to-back batches)
+#   TRIGGER=0           micro-batch interval in seconds (0 = back-to-back batches)
+#   CLOCK_OFFSET_MS=-101  clock offset VM - laptop from clock_offset.sh (subtracted from latencies)
+#   PROFILE, WARMUP, WARMUP_RATE   passed on to the laptop command (see produce_parallel.sh)
 #   CONTROLLER="--high 100000 --low 10000 --k 2 --m 3 --dwell 15"   start the adaptive controller
 #   EXTERNAL=1          the load comes from the laptop (produce_parallel.sh); EXT_PROCS=2 producer processes
 # Change the mode during a run from another terminal:  echo light > ~/nids/runs/<run_name>/mode
@@ -32,7 +34,7 @@ echo "Topic $NAME created. Run directory: $R"
 # 3. Telemetry and the streaming job in the background
 python "$S/telemetry.py" --out "$R/telemetry.csv" --interval 1 & TEL=$!
 spark-submit --driver-memory 2g --packages $PKG "$S/stream_detect.py" \
-   --topic "$NAME" --out "$R" --max-offsets "${MAX_OFFSETS:-0}" --trigger "${TRIGGER:-5}" > "$R/stream.log" 2>&1 & SP=$!
+   --topic "$NAME" --out "$R" --max-offsets "${MAX_OFFSETS:-75000}" --trigger "${TRIGGER:-0}" > "$R/stream.log" 2>&1 & SP=$!
 echo "Waiting for the streaming job to start ..."
 touch "$R/stream.log"
 until grep -q "batch   rows" "$R/stream.log"; do
@@ -50,7 +52,8 @@ fi
 if [ -n "${EXTERNAL:-}" ]; then
   echo
   echo ">>> Detector ready. Now start the load ON THE LAPTOP:"
-  echo ">>>   bash ~/nids-host/stream/produce_parallel.sh $NAME $RATE $LIMIT ${EXT_PROCS:-2}"
+  ENVS="${PROFILE:+PROFILE=\"$PROFILE\" }${WARMUP:+WARMUP=$WARMUP WARMUP_RATE=${WARMUP_RATE:-} }"
+  echo ">>>   ${ENVS}bash ~/nids-host/stream/produce_parallel.sh $NAME $RATE $LIMIT ${EXT_PROCS:-2} ${EXT_REPLAY:-}"
   echo ">>> (this window waits until the detector has processed everything)"
   echo
 else
@@ -65,4 +68,6 @@ touch "$R/STOP"; wait $TEL || true
 echo; echo "=== Streaming job (last lines) ==="
 sed -n '/Models loaded/,$p' "$R/stream.log" | grep -v -E "WARN|INFO" | tail -n 40
 echo; echo "=== Run summary ==="
-spark-submit --driver-memory 2g "$S/analyze_run.py" "$R" --expected "$LIMIT" 2>&1 | grep -v -E "WARN|INFO"
+echo "max_offsets=${MAX_OFFSETS:-75000} trigger=${TRIGGER:-0} controller=${CONTROLLER:-none} profile=${PROFILE:-constant} warmup=${WARMUP:-0}@${WARMUP_RATE:-0} clock_offset_ms=${CLOCK_OFFSET_MS:-0}" > "$R/settings.txt"
+spark-submit --driver-memory 2g "$S/analyze_run.py" "$R" --expected "$LIMIT" \
+   --clock-offset-ms "${CLOCK_OFFSET_MS:-0}" 2>&1 | grep -v -E "WARN|INFO"
