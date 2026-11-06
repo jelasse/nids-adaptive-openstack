@@ -140,7 +140,7 @@ q = (parsed.writeStream.foreachBatch(detect)
 
 PROG = open(os.path.join(a.out, "progress.jsonl"), "a")
 seen, started, t0 = -1, False, time.time()
-last_data = t0
+last_data, last_tb = t0, None
 print("batch   rows    in/s    proc/s   dur_ms   backlog  mode", flush=True)
 try:
     while q.isActive:
@@ -151,6 +151,7 @@ try:
             PROG.write(json.dumps(p) + "\n"); PROG.flush()
             src = p["sources"][0] if p.get("sources") else {}
             tb = total_behind(p)
+            last_tb = tb
             behind = "-" if tb is None else f"{tb:,}"
             rows = p.get("numInputRows", 0)
             print(f"{seen:>5} {rows:>7,} {p.get('inputRowsPerSecond', 0):>8,.0f} "
@@ -158,10 +159,11 @@ try:
                   f"{behind:>9} {read_mode():>5}", flush=True)
             if rows > 0:
                 started, last_data = True, time.time()
-        st = q.status
-        if st.get("isDataAvailable") or st.get("isTriggerActive"):
-            last_data = max(last_data, time.time())   # a batch is running or data is waiting: not idle
-        if a.stop_idle and started and time.time() - last_data > a.stop_idle * max(a.trigger, 5.0):
+        # Idle = data has been seen, the last batch left no backlog in Kafka, and no batch with rows
+        # has completed for stop_idle x max(trigger, 5) s. (Spark's isTriggerActive flag is not used:
+        # with back-to-back batches it flickers while Spark polls Kafka, so it never looks idle.)
+        # A long-running batch cannot cause a false stop: the batch before it reported a backlog.
+        if a.stop_idle and started and (last_tb == 0 or (a.test_dir and last_tb is None)) and time.time() - last_data > a.stop_idle * max(a.trigger, 5.0):
             print("No new data; stopping.", flush=True); break
         if a.duration and time.time() - t0 > a.duration:
             print("Duration reached; stopping.", flush=True); break

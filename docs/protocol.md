@@ -37,8 +37,11 @@ HIGH = 100,000 records · LOW = 10,000 records · k = 2 · m = 3 · dwell T = 15
 - `replay_producer.py --profile "60:0.6,90:1.5,0:0.6"`: burst profile (multipliers of the base rate)
 - `produce_parallel.sh`: WARMUP/WARMUP_RATE (validation rows from 9,000,000, event IDs from 1,000,000,000,
   excluded from analysis); laptop telemetry; everything in `~/w5/host_runs/<run>/`
-- `host_summary.py`: producer ≥ 98% of plan and ≤ 50 MB moved in/out of laptop swap during the measured load
-  (warm-up excluded; swap parked before the run is reported, not counted) -> LAPTOP SIDE VALID
+- `host_summary.py`: producer ≥ 98% of plan and ≤ 10 MB swapped IN on the laptop during the measured load
+  (warm-up excluded). Swap-out (idle memory parked on disk) is reported, warning above 50 MB, but does not
+  invalidate a run, because it does not make running processes wait -> LAPTOP SIDE VALID
+- Laptop setting: `vm.swappiness = 10` (standard for KVM hosts; set permanently in /etc/sysctl.d/99-nids.conf)
+- Detector stops when the last batch left backlog 0 and no rows arrived for 30 s
 - `rechunk_replay.py`: replay files stored in row groups of 100,000 rows (≈ 65 MB per producer in memory)
 - Session preparation: close Chrome and other desktop apps; `sudo swapoff -a && sudo swapon -a` when swap is in use
 - `clock_offset.sh`: offset VM − laptop over one shared SSH connection, best of 15, round trip < 10 ms

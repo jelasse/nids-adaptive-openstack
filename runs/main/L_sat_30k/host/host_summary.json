@@ -1,0 +1,34 @@
+{
+  "producers": [
+    {
+      "log": "producer_p0.log",
+      "sent": 2000000,
+      "seconds": 133.3,
+      "planned_s": 133.3,
+      "achieved_rps": 15000,
+      "pct_of_plan": 100.0
+    },
+    {
+      "log": "producer_p1.log",
+      "sent": 2000000,
+      "seconds": 133.3,
+      "planned_s": 133.3,
+      "achieved_rps": 15000,
+      "pct_of_plan": 100.0
+    }
+  ],
+  "records_sent": 4000000,
+  "host": {
+    "samples": 134,
+    "cpu_mean": 25.8,
+    "cpu_p95": 29.2,
+    "mem_avail_min_mb": 1836.0,
+    "swap_used_before_run_mb": 329.0,
+    "swap_used_max_mb": 371.0,
+    "swap_in_during_load_mb": 0.0,
+    "swap_out_during_load_mb": 0.0,
+    "swap_moved_during_load_mb": 0.0
+  },
+  "valid": true,
+  "problems": []
+}

@@ -5,13 +5,16 @@ while the measured load was running?
 Usage (on the laptop):  python host_summary.py ~/w5/host_runs/<run_name>
 Writes host_summary.json in that folder and prints VALID or INVALID with the reasons.
 
-Swap rule: during the measured load (load_start .. load_end, warm-up excluded), at most 50 MB may be
-moved in or out of swap. Swap that was already used before the run is reported but does not count,
-because idle pages parked on disk earlier do not slow the run down; active swapping does.
+Swap rule: during the measured load (load_start .. load_end, warm-up excluded), at most 10 MB may be
+read back IN from swap. Swap-in means a process had to wait for the disk, which can slow the run.
+Swap-OUT (idle memory parked on disk) does not delay running processes; it is reported, with a warning
+above 50 MB, but does not invalidate the run. Swap used before the run is reported only.
 """
 import csv, glob, json, os, re, statistics, sys
 
-LIMIT_MB = 50.0
+SWAPIN_LIMIT_MB = 10.0
+SWAPOUT_WARN_MB = 50.0
+warnings = []
 D = os.path.expanduser(sys.argv[1])
 S, problems = {}, []
 
@@ -52,24 +55,31 @@ if os.path.exists(T):
         if "swap_in_mb" in load[0]:
             h["swap_in_during_load_mb"] = round(sum(float(r["swap_in_mb"]) for r in load), 1)
             h["swap_out_during_load_mb"] = round(sum(float(r["swap_out_mb"]) for r in load), 1)
-            moved = h["swap_in_during_load_mb"] + h["swap_out_during_load_mb"]
+            if h["swap_in_during_load_mb"] > SWAPIN_LIMIT_MB:
+                problems.append(f"laptop swapped IN {h['swap_in_during_load_mb']:.0f} MB during the measured load")
+            if h["swap_out_during_load_mb"] > SWAPOUT_WARN_MB:
+                warnings.append(f"laptop swapped OUT {h['swap_out_during_load_mb']:.0f} MB (idle memory; run still valid)")
         else:                                      # older telemetry without swap activity columns
-            moved = max(float(r["swap_used_mb"]) for r in load) - float(load[0]["swap_used_mb"])
-        h["swap_moved_during_load_mb"] = round(moved, 1)
-        if moved > LIMIT_MB:
-            problems.append(f"laptop moved {moved:.0f} MB in/out of swap during the measured load")
+            grew = max(float(r["swap_used_mb"]) for r in load) - float(load[0]["swap_used_mb"])
+            h["swap_growth_during_load_mb"] = round(grew, 1)
+            if grew > SWAPIN_LIMIT_MB:
+                problems.append(f"laptop swap grew by {grew:.0f} MB (old telemetry: cannot tell in from out)")
         S["host"] = h
 else:
     problems.append("no host_telemetry.csv")
 
 S["valid"] = not problems
 S["problems"] = problems
+S["warnings"] = warnings
 json.dump(S, open(os.path.join(D, "host_summary.json"), "w"), indent=2)
 for p in prods:
     print(f"  {p['log']}: {p['sent']:,} records, {p['achieved_rps']:,}/s, {p['pct_of_plan']}% of plan")
 if "host" in S:
     h = S["host"]
     print(f"  laptop during load: CPU mean {h['cpu_mean']}% (p95 {h['cpu_p95']}%), min available memory "
-          f"{h['mem_avail_min_mb']:.0f} MB, swap moved {h['swap_moved_during_load_mb']:.0f} MB "
-          f"(swap already used before the run: {h['swap_used_before_run_mb']:.0f} MB)")
+          f"{h['mem_avail_min_mb']:.0f} MB, swap in {h.get('swap_in_during_load_mb', '?')} MB / "
+          f"out {h.get('swap_out_during_load_mb', '?')} MB (already in swap before the run: "
+          f"{h['swap_used_before_run_mb']:.0f} MB)")
+for w in warnings:
+    print("  note: " + w)
 print("LAPTOP SIDE: " + ("VALID" if S["valid"] else "INVALID -> " + "; ".join(problems)))

@@ -1,0 +1,11 @@
+Replay file rows: 9,421,260; sending 2,000,000 from row 2,000,000 at 20,000/s to topic 'L_sat_40k'
+  sent 200,001  achieved 19,741/s
+  sent 401,198  achieved 19,929/s
+  sent 602,134  achieved 19,984/s
+  sent 801,733  achieved 19,978/s
+  sent 1,002,203  achieved 19,992/s
+  sent 1,202,509  achieved 19,998/s
+  sent 1,402,529  achieved 19,999/s
+  sent 1,602,002  achieved 19,992/s
+  sent 1,802,637  achieved 20,000/s
+SENT 2,000,000 records in 100.0 s (planned 100.0 s), achieved 19,999/s (event_id 2,000,000..3,999,999; max lag behind schedule 1.20 s)
