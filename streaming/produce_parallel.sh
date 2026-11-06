@@ -36,6 +36,7 @@ if [ -n "$CPUS" ] && command -v taskset >/dev/null; then PIN=(taskset -c "$CPUS"
 
 # laptop telemetry for the whole run (same tool as in the VM)
 python "$DIR/telemetry.py" --out "$OUT/host_telemetry.csv" --interval 1 & TEL=$!
+trap 'touch "$OUT/STOP"' EXIT          # the laptop telemetry always stops, even if this script fails
 
 if [ -n "${WARMUP:-}" ]; then
   WR=${WARMUP_RATE:?set WARMUP_RATE (records/s) together with WARMUP}

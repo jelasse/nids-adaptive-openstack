@@ -54,3 +54,20 @@ HIGH = 100,000 records · LOW = 10,000 records · k = 2 · m = 3 · dwell T = 15
 - VM vCPU i pinned to its own P-core (CPUs 2-3, 4-5, 6-7, 8-9); QEMU emulator/I-O threads on 0,1,10,11
 - Replay producers pinned to the E-cores 12-15 (`PRODUCER_CPUS`)
 - Saturation runs of 6 November (battery, balanced profile, unpinned) are discarded as calibration only
+
+## Clock (from 6 November 2026)
+- Each VM's clock follows the laptop's through the KVM PTP device: `ptp_kvm` module (linux-modules-extra),
+  chrony with `refclock PHC /dev/ptp0` as the only source. Guest error ~1 µs; measured offset 1.6–1.9 ms,
+  stable (the residual is the asymmetry of the SSH measurement). Before this, the offset drifted by up to 135 ms.
+
+## Saturation rates (Static-Full, validation split, pinned host, 6 November 2026)
+| VM | 15k | 20k | 25k | 30k | 35k | 40k | 45k | 50k | S |
+|---|---|---|---|---|---|---|---|---|---|
+| M | ✓ | ✓ | ✓ | ✓ | ✗ |  |  |  | **30,000** |
+| L |  |  |  |  | ✓ | ✓ | ✓ | ✗ | **45,000** |
+Load levels: M 15k / 24k / 30k / 36k / 45k; L 22.5k / 36k / 45k / 54k / 67.5k.
+
+## Main runs (test split)
+- `make_plan.py <E1..E4> <M|L>` writes the runs of one experiment on one VM in random order (seed 1)
+- `run_queue.sh <plan>` runs them unattended (desktop off): clock offset per run, detector start, load,
+  validity, results to ~/w7/queue_results.csv, small files to ~/w7/runs/, Kafka topic deleted after each run
