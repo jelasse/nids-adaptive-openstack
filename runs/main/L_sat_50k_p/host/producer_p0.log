@@ -1,0 +1,10 @@
+Replay file rows: 9,421,260; sending 1,333,333 from row 0 at 16,666/s to topic 'L_sat_50k_p'
+  sent 166,669  achieved 16,667/s
+  sent 333,340  achieved 16,667/s
+  sent 500,000  achieved 16,667/s
+  sent 666,651  achieved 16,666/s
+  sent 833,322  achieved 16,666/s
+  sent 999,997  achieved 16,666/s
+  sent 1,166,651  achieved 16,666/s
+  sent 1,333,325  achieved 16,666/s
+SENT 1,333,333 records in 80.0 s (planned 80.0 s), achieved 16,662/s (event_id 0..1,333,332; max lag behind schedule 0.11 s)

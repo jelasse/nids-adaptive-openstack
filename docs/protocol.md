@@ -47,3 +47,10 @@ HIGH = 100,000 records · LOW = 10,000 records · k = 2 · m = 3 · dwell T = 15
 - `clock_offset.sh`: offset VM − laptop over one shared SSH connection, best of 15, round trip < 10 ms
 - `analyze_run.py`: warm-up excluded; `slo_violation_share` (> 5 s); `backlog_at_load_end`; `drain_s`;
   `sustainable`; `valid_vm_side`
+
+## Host state (fixed from 7 November 2026; `prepare_session.sh` at the start of every session)
+- Laptop on mains power, power profile `performance`, vm.swappiness = 10, swap emptied
+- i7-13620H is hybrid: CPUs 0-11 = 6 P-cores (2 threads each), 12-15 = 4 E-cores
+- VM vCPU i pinned to its own P-core (CPUs 2-3, 4-5, 6-7, 8-9); QEMU emulator/I-O threads on 0,1,10,11
+- Replay producers pinned to the E-cores 12-15 (`PRODUCER_CPUS`)
+- Saturation runs of 6 November (battery, balanced profile, unpinned) are discarded as calibration only

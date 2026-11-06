@@ -1,0 +1,10 @@
+Replay file rows: 9,421,260; sending 2,000,000 from row 0 at 22,500/s to topic 'L_sat_45k_p'
+  sent 225,001  achieved 22,500/s
+  sent 450,005  achieved 22,500/s
+  sent 675,001  achieved 22,500/s
+  sent 900,001  achieved 22,467/s
+  sent 1,126,313  achieved 22,500/s
+  sent 1,351,315  achieved 22,500/s
+  sent 1,576,316  achieved 22,500/s
+  sent 1,800,467  achieved 22,489/s
+SENT 2,000,000 records in 88.9 s (planned 88.9 s), achieved 22,498/s (event_id 0..1,999,999; max lag behind schedule 0.11 s)
