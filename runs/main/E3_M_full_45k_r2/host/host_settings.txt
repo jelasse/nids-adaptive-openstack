@@ -1,0 +1,2 @@
+producer_cpus=12-15
+2026-11-07T12:17:44+07:00,nids-exp,instance-00000004,ac=1,profile=performance,swappiness=10,pinned=yes

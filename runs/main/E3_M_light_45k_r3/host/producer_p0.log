@@ -1,0 +1,22 @@
+Replay file rows: 9,421,272; sending 3,140,424 from row 0 at 15,000/s to topic 'E3_M_light_45k_r3'
+  sent 150,001  achieved 15,000/s
+  sent 300,001  achieved 14,948/s
+  sent 451,051  achieved 15,000/s
+  sent 600,001  achieved 14,966/s
+  sent 751,374  achieved 15,000/s
+  sent 901,375  achieved 15,000/s
+  sent 1,051,374  achieved 15,000/s
+  sent 1,201,375  achieved 15,000/s
+  sent 1,351,375  achieved 15,000/s
+  sent 1,501,374  achieved 15,000/s
+  sent 1,651,376  achieved 15,000/s
+  sent 1,801,376  achieved 15,000/s
+  sent 1,951,376  achieved 15,000/s
+  sent 2,101,378  achieved 15,000/s
+  sent 2,251,376  achieved 15,000/s
+  sent 2,401,380  achieved 15,000/s
+  sent 2,551,381  achieved 15,000/s
+  sent 2,701,380  achieved 15,000/s
+  sent 2,851,383  achieved 15,000/s
+  sent 3,001,383  achieved 15,000/s
+SENT 3,140,424 records in 209.4 s (planned 209.4 s), achieved 14,995/s (event_id 0..3,140,423; max lag behind schedule 0.14 s)

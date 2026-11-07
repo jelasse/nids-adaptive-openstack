@@ -20,7 +20,12 @@ if [ -e "$R" ]; then echo "Run directory $R already exists: choose a new run nam
 mkdir -p "$R"; echo "$MODE" > "$R/mode"
 source "$HOME/nids-venv/bin/activate"
 
-# 1. Kafka running?
+# 1. Kafka running, with the protocol's heap (512 MB)? A broker started by hand gets Kafka's default 1 GB:
+#    restart it with the right heap, so every run has the same memory budget.
+if ss -ltn | grep -q ':9092 ' && ! pgrep -af kafka.Kafka | grep -q -- '-Xmx512M'; then
+  echo "Kafka is running with a different heap: restarting it with 512 MB ..."
+  $K/kafka-server-stop.sh; for i in $(seq 1 30); do ss -ltn | grep -q ':9092 ' || break; sleep 2; done
+fi
 if ! ss -ltn | grep -q ':9092 '; then
   echo "Starting Kafka ..."
   KAFKA_HEAP_OPTS="-Xmx512M -Xms512M" $K/kafka-server-start.sh -daemon /opt/kafka/config/server.properties
@@ -68,6 +73,7 @@ touch "$R/STOP"; wait $TEL || true
 echo; echo "=== Streaming job (last lines) ==="
 sed -n '/Models loaded/,$p' "$R/stream.log" | grep -v -E "WARN|INFO" | tail -n 40
 echo; echo "=== Run summary ==="
-echo "max_offsets=${MAX_OFFSETS:-75000} trigger=${TRIGGER:-0} controller=${CONTROLLER:-none} profile=${PROFILE:-constant} warmup=${WARMUP:-0}@${WARMUP_RATE:-0} clock_offset_ms=${CLOCK_OFFSET_MS:-0}" > "$R/settings.txt"
+KHEAP=$(pgrep -af kafka.Kafka | grep -o -- '-Xmx[0-9]*[MG]' | head -1)
+echo "kafka_heap=${KHEAP:-unknown} max_offsets=${MAX_OFFSETS:-75000} trigger=${TRIGGER:-0} controller=${CONTROLLER:-none} profile=${PROFILE:-constant} warmup=${WARMUP:-0}@${WARMUP_RATE:-0} clock_offset_ms=${CLOCK_OFFSET_MS:-0}" > "$R/settings.txt"
 spark-submit --driver-memory 2g "$S/analyze_run.py" "$R" --expected "$LIMIT" \
    --clock-offset-ms "${CLOCK_OFFSET_MS:-0}" 2>&1 | grep -v -E "WARN|INFO"
