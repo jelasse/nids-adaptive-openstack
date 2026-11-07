@@ -1,0 +1,19 @@
+Replay file rows: 9,421,272; sending 2,355,318 from row 7,065,954 at 13,500/s to topic 'E2_L_light_1p2S_r1'
+  sent 134,494  achieved 13,449/s
+  sent 270,001  achieved 13,500/s
+  sent 405,002  achieved 13,500/s
+  sent 540,001  achieved 13,500/s
+  sent 674,702  achieved 13,494/s
+  sent 810,022  achieved 13,500/s
+  sent 945,031  achieved 13,500/s
+  sent 1,080,001  achieved 13,500/s
+  sent 1,214,953  achieved 13,499/s
+  sent 1,350,051  achieved 13,500/s
+  sent 1,485,051  achieved 13,500/s
+  sent 1,620,064  achieved 13,500/s
+  sent 1,755,055  achieved 13,500/s
+  sent 1,890,062  achieved 13,500/s
+  sent 2,025,063  achieved 13,500/s
+  sent 2,160,051  achieved 13,500/s
+  sent 2,295,099  achieved 13,500/s
+SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,499/s (event_id 7,065,954..9,421,271; max lag behind schedule 4.65 s)

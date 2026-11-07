@@ -1,0 +1,948 @@
+:: loading settings :: url = jar:file:/home/ubuntu/nids-venv/lib/python3.12/site-packages/pyspark/jars/ivy-2.5.3.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /home/ubuntu/.ivy2/cache
+The jars for the packages stored in: /home/ubuntu/.ivy2/jars
+org.apache.spark#spark-sql-kafka-0-10_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-d2067428-64b2-4332-a060-62c690c7cb98;1.0
+	confs: [default]
+	found org.apache.spark#spark-sql-kafka-0-10_2.12;3.5.9 in central
+	found org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.5.9 in central
+	found org.apache.kafka#kafka-clients;3.4.1 in central
+	found org.lz4#lz4-java;1.8.0 in central
+	found org.xerial.snappy#snappy-java;1.1.10.5 in central
+	found org.slf4j#slf4j-api;2.0.7 in central
+	found org.apache.hadoop#hadoop-client-runtime;3.3.4 in central
+	found org.apache.hadoop#hadoop-client-api;3.3.4 in central
+	found commons-logging#commons-logging;1.1.3 in central
+	found com.google.code.findbugs#jsr305;3.0.0 in central
+	found org.apache.commons#commons-pool2;2.11.1 in central
+:: resolution report :: resolve 202ms :: artifacts dl 6ms
+	:: modules in use:
+	com.google.code.findbugs#jsr305;3.0.0 from central in [default]
+	commons-logging#commons-logging;1.1.3 from central in [default]
+	org.apache.commons#commons-pool2;2.11.1 from central in [default]
+	org.apache.hadoop#hadoop-client-api;3.3.4 from central in [default]
+	org.apache.hadoop#hadoop-client-runtime;3.3.4 from central in [default]
+	org.apache.kafka#kafka-clients;3.4.1 from central in [default]
+	org.apache.spark#spark-sql-kafka-0-10_2.12;3.5.9 from central in [default]
+	org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.5.9 from central in [default]
+	org.lz4#lz4-java;1.8.0 from central in [default]
+	org.slf4j#slf4j-api;2.0.7 from central in [default]
+	org.xerial.snappy#snappy-java;1.1.10.5 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   11  |   0   |   0   |   0   ||   11  |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-d2067428-64b2-4332-a060-62c690c7cb98
+	confs: [default]
+	0 artifacts copied, 11 already retrieved (0kB/4ms)
+26/11/08 00:45:46 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/11/08 00:45:47 INFO SparkContext: Running Spark version 3.5.9
+26/11/08 00:45:47 INFO SparkContext: OS info Linux, 6.8.0-147-generic, amd64
+26/11/08 00:45:47 INFO SparkContext: Java version 17.0.20.1
+26/11/08 00:45:47 INFO ResourceUtils: ==============================================================
+26/11/08 00:45:47 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/11/08 00:45:47 INFO ResourceUtils: ==============================================================
+26/11/08 00:45:47 INFO SparkContext: Submitted application: stream-detect
+26/11/08 00:45:47 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/11/08 00:45:47 INFO ResourceProfile: Limiting resource is cpu
+26/11/08 00:45:47 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/11/08 00:45:47 INFO SecurityManager: Changing view acls to: ubuntu
+26/11/08 00:45:47 INFO SecurityManager: Changing modify acls to: ubuntu
+26/11/08 00:45:47 INFO SecurityManager: Changing view acls groups to: 
+26/11/08 00:45:47 INFO SecurityManager: Changing modify acls groups to: 
+26/11/08 00:45:47 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: ubuntu; groups with view permissions: EMPTY; users with modify permissions: ubuntu; groups with modify permissions: EMPTY
+26/11/08 00:45:47 INFO Utils: Successfully started service 'sparkDriver' on port 41543.
+26/11/08 00:45:47 INFO SparkEnv: Registering MapOutputTracker
+26/11/08 00:45:47 INFO SparkEnv: Registering BlockManagerMaster
+26/11/08 00:45:47 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/11/08 00:45:47 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/11/08 00:45:47 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/11/08 00:45:47 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-48891299-4c93-44a0-8125-d32a803e37b7
+26/11/08 00:45:47 INFO MemoryStore: MemoryStore started with capacity 1048.8 MiB
+26/11/08 00:45:47 INFO SparkEnv: Registering OutputCommitCoordinator
+26/11/08 00:45:47 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/11/08 00:45:48 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/11/08 00:45:48 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.9.jar at spark://nids-exp-l:41543/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.9.jar with timestamp 1794073547694
+26/11/08 00:45:48 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.9.jar at spark://nids-exp-l:41543/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.9.jar with timestamp 1794073547694
+26/11/08 00:45:48 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.apache.kafka_kafka-clients-3.4.1.jar at spark://nids-exp-l:41543/jars/org.apache.kafka_kafka-clients-3.4.1.jar with timestamp 1794073547694
+26/11/08 00:45:48 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar at spark://nids-exp-l:41543/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1794073547694
+26/11/08 00:45:48 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar at spark://nids-exp-l:41543/jars/org.apache.commons_commons-pool2-2.11.1.jar with timestamp 1794073547694
+26/11/08 00:45:48 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar at spark://nids-exp-l:41543/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar with timestamp 1794073547694
+26/11/08 00:45:48 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar at spark://nids-exp-l:41543/jars/org.lz4_lz4-java-1.8.0.jar with timestamp 1794073547694
+26/11/08 00:45:48 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.10.5.jar at spark://nids-exp-l:41543/jars/org.xerial.snappy_snappy-java-1.1.10.5.jar with timestamp 1794073547694
+26/11/08 00:45:48 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.slf4j_slf4j-api-2.0.7.jar at spark://nids-exp-l:41543/jars/org.slf4j_slf4j-api-2.0.7.jar with timestamp 1794073547694
+26/11/08 00:45:48 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar at spark://nids-exp-l:41543/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar with timestamp 1794073547694
+26/11/08 00:45:48 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar at spark://nids-exp-l:41543/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1794073547694
+26/11/08 00:45:48 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.9.jar at file:///home/ubuntu/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.9.jar with timestamp 1794073547694
+26/11/08 00:45:48 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.9.jar to /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.9.jar
+26/11/08 00:45:48 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.9.jar at file:///home/ubuntu/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.9.jar with timestamp 1794073547694
+26/11/08 00:45:48 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.9.jar to /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.9.jar
+26/11/08 00:45:48 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.apache.kafka_kafka-clients-3.4.1.jar at file:///home/ubuntu/.ivy2/jars/org.apache.kafka_kafka-clients-3.4.1.jar with timestamp 1794073547694
+26/11/08 00:45:48 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.apache.kafka_kafka-clients-3.4.1.jar to /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/org.apache.kafka_kafka-clients-3.4.1.jar
+26/11/08 00:45:48 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar at file:///home/ubuntu/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1794073547694
+26/11/08 00:45:48 INFO Utils: Copying /home/ubuntu/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar to /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/com.google.code.findbugs_jsr305-3.0.0.jar
+26/11/08 00:45:48 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar at file:///home/ubuntu/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar with timestamp 1794073547694
+26/11/08 00:45:48 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar to /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/org.apache.commons_commons-pool2-2.11.1.jar
+26/11/08 00:45:48 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar at file:///home/ubuntu/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar with timestamp 1794073547694
+26/11/08 00:45:48 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar to /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar
+26/11/08 00:45:48 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar at file:///home/ubuntu/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar with timestamp 1794073547694
+26/11/08 00:45:48 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar to /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/org.lz4_lz4-java-1.8.0.jar
+26/11/08 00:45:48 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.10.5.jar at file:///home/ubuntu/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.10.5.jar with timestamp 1794073547694
+26/11/08 00:45:48 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.10.5.jar to /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/org.xerial.snappy_snappy-java-1.1.10.5.jar
+26/11/08 00:45:48 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.slf4j_slf4j-api-2.0.7.jar at file:///home/ubuntu/.ivy2/jars/org.slf4j_slf4j-api-2.0.7.jar with timestamp 1794073547694
+26/11/08 00:45:48 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.slf4j_slf4j-api-2.0.7.jar to /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/org.slf4j_slf4j-api-2.0.7.jar
+26/11/08 00:45:48 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar at file:///home/ubuntu/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar with timestamp 1794073547694
+26/11/08 00:45:48 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar to /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/org.apache.hadoop_hadoop-client-api-3.3.4.jar
+26/11/08 00:45:48 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar at file:///home/ubuntu/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1794073547694
+26/11/08 00:45:48 INFO Utils: Copying /home/ubuntu/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar to /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/commons-logging_commons-logging-1.1.3.jar
+26/11/08 00:45:48 INFO Executor: Starting executor ID driver on host nids-exp-l
+26/11/08 00:45:48 INFO Executor: OS info Linux, 6.8.0-147-generic, amd64
+26/11/08 00:45:48 INFO Executor: Java version 17.0.20.1
+26/11/08 00:45:48 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/11/08 00:45:48 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@6b7e4fd3 for default.
+26/11/08 00:45:48 INFO Executor: Fetching file:///home/ubuntu/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.10.5.jar with timestamp 1794073547694
+26/11/08 00:45:48 INFO Utils: /home/ubuntu/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.10.5.jar has been previously copied to /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/org.xerial.snappy_snappy-java-1.1.10.5.jar
+26/11/08 00:45:48 INFO Executor: Fetching file:///home/ubuntu/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar with timestamp 1794073547694
+26/11/08 00:45:48 INFO Utils: /home/ubuntu/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar has been previously copied to /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/org.lz4_lz4-java-1.8.0.jar
+26/11/08 00:45:48 INFO Executor: Fetching file:///home/ubuntu/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.9.jar with timestamp 1794073547694
+26/11/08 00:45:48 INFO Utils: /home/ubuntu/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.9.jar has been previously copied to /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.9.jar
+26/11/08 00:45:48 INFO Executor: Fetching file:///home/ubuntu/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar with timestamp 1794073547694
+26/11/08 00:45:48 INFO Utils: /home/ubuntu/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar has been previously copied to /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/org.apache.commons_commons-pool2-2.11.1.jar
+26/11/08 00:45:48 INFO Executor: Fetching file:///home/ubuntu/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar with timestamp 1794073547694
+26/11/08 00:45:48 INFO Utils: /home/ubuntu/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar has been previously copied to /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/org.apache.hadoop_hadoop-client-api-3.3.4.jar
+26/11/08 00:45:48 INFO Executor: Fetching file:///home/ubuntu/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1794073547694
+26/11/08 00:45:48 INFO Utils: /home/ubuntu/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar has been previously copied to /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/com.google.code.findbugs_jsr305-3.0.0.jar
+26/11/08 00:45:48 INFO Executor: Fetching file:///home/ubuntu/.ivy2/jars/org.slf4j_slf4j-api-2.0.7.jar with timestamp 1794073547694
+26/11/08 00:45:48 INFO Utils: /home/ubuntu/.ivy2/jars/org.slf4j_slf4j-api-2.0.7.jar has been previously copied to /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/org.slf4j_slf4j-api-2.0.7.jar
+26/11/08 00:45:48 INFO Executor: Fetching file:///home/ubuntu/.ivy2/jars/org.apache.kafka_kafka-clients-3.4.1.jar with timestamp 1794073547694
+26/11/08 00:45:48 INFO Utils: /home/ubuntu/.ivy2/jars/org.apache.kafka_kafka-clients-3.4.1.jar has been previously copied to /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/org.apache.kafka_kafka-clients-3.4.1.jar
+26/11/08 00:45:48 INFO Executor: Fetching file:///home/ubuntu/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.9.jar with timestamp 1794073547694
+26/11/08 00:45:48 INFO Utils: /home/ubuntu/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.9.jar has been previously copied to /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.9.jar
+26/11/08 00:45:48 INFO Executor: Fetching file:///home/ubuntu/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar with timestamp 1794073547694
+26/11/08 00:45:48 INFO Utils: /home/ubuntu/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar has been previously copied to /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar
+26/11/08 00:45:48 INFO Executor: Fetching file:///home/ubuntu/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1794073547694
+26/11/08 00:45:48 INFO Utils: /home/ubuntu/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar has been previously copied to /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/commons-logging_commons-logging-1.1.3.jar
+26/11/08 00:45:48 INFO Executor: Fetching spark://nids-exp-l:41543/jars/org.apache.kafka_kafka-clients-3.4.1.jar with timestamp 1794073547694
+26/11/08 00:45:48 INFO TransportClientFactory: Successfully created connection to nids-exp-l/10.0.0.54:41543 after 11 ms (0 ms spent in bootstraps)
+26/11/08 00:45:48 INFO Utils: Fetching spark://nids-exp-l:41543/jars/org.apache.kafka_kafka-clients-3.4.1.jar to /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/fetchFileTemp3035653225455738314.tmp
+26/11/08 00:45:48 INFO Utils: /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/fetchFileTemp3035653225455738314.tmp has been previously copied to /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/org.apache.kafka_kafka-clients-3.4.1.jar
+26/11/08 00:45:48 INFO Executor: Adding file:/tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/org.apache.kafka_kafka-clients-3.4.1.jar to class loader default
+26/11/08 00:45:48 INFO Executor: Fetching spark://nids-exp-l:41543/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.9.jar with timestamp 1794073547694
+26/11/08 00:45:48 INFO Utils: Fetching spark://nids-exp-l:41543/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.9.jar to /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/fetchFileTemp11958239628705154139.tmp
+26/11/08 00:45:48 INFO Utils: /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/fetchFileTemp11958239628705154139.tmp has been previously copied to /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.9.jar
+26/11/08 00:45:48 INFO Executor: Adding file:/tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.9.jar to class loader default
+26/11/08 00:45:48 INFO Executor: Fetching spark://nids-exp-l:41543/jars/org.slf4j_slf4j-api-2.0.7.jar with timestamp 1794073547694
+26/11/08 00:45:48 INFO Utils: Fetching spark://nids-exp-l:41543/jars/org.slf4j_slf4j-api-2.0.7.jar to /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/fetchFileTemp9777658509720019909.tmp
+26/11/08 00:45:48 INFO Utils: /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/fetchFileTemp9777658509720019909.tmp has been previously copied to /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/org.slf4j_slf4j-api-2.0.7.jar
+26/11/08 00:45:48 INFO Executor: Adding file:/tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/org.slf4j_slf4j-api-2.0.7.jar to class loader default
+26/11/08 00:45:48 INFO Executor: Fetching spark://nids-exp-l:41543/jars/org.lz4_lz4-java-1.8.0.jar with timestamp 1794073547694
+26/11/08 00:45:48 INFO Utils: Fetching spark://nids-exp-l:41543/jars/org.lz4_lz4-java-1.8.0.jar to /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/fetchFileTemp16641781403950564692.tmp
+26/11/08 00:45:48 INFO Utils: /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/fetchFileTemp16641781403950564692.tmp has been previously copied to /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/org.lz4_lz4-java-1.8.0.jar
+26/11/08 00:45:48 INFO Executor: Adding file:/tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/org.lz4_lz4-java-1.8.0.jar to class loader default
+26/11/08 00:45:48 INFO Executor: Fetching spark://nids-exp-l:41543/jars/org.apache.commons_commons-pool2-2.11.1.jar with timestamp 1794073547694
+26/11/08 00:45:48 INFO Utils: Fetching spark://nids-exp-l:41543/jars/org.apache.commons_commons-pool2-2.11.1.jar to /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/fetchFileTemp5370942548524277339.tmp
+26/11/08 00:45:48 INFO Utils: /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/fetchFileTemp5370942548524277339.tmp has been previously copied to /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/org.apache.commons_commons-pool2-2.11.1.jar
+26/11/08 00:45:48 INFO Executor: Adding file:/tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/org.apache.commons_commons-pool2-2.11.1.jar to class loader default
+26/11/08 00:45:48 INFO Executor: Fetching spark://nids-exp-l:41543/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar with timestamp 1794073547694
+26/11/08 00:45:48 INFO Utils: Fetching spark://nids-exp-l:41543/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar to /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/fetchFileTemp5709690768082497296.tmp
+26/11/08 00:45:48 INFO Utils: /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/fetchFileTemp5709690768082497296.tmp has been previously copied to /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/org.apache.hadoop_hadoop-client-api-3.3.4.jar
+26/11/08 00:45:48 INFO Executor: Adding file:/tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/org.apache.hadoop_hadoop-client-api-3.3.4.jar to class loader default
+26/11/08 00:45:48 INFO Executor: Fetching spark://nids-exp-l:41543/jars/org.xerial.snappy_snappy-java-1.1.10.5.jar with timestamp 1794073547694
+26/11/08 00:45:48 INFO Utils: Fetching spark://nids-exp-l:41543/jars/org.xerial.snappy_snappy-java-1.1.10.5.jar to /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/fetchFileTemp16081843032223379172.tmp
+26/11/08 00:45:48 INFO Utils: /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/fetchFileTemp16081843032223379172.tmp has been previously copied to /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/org.xerial.snappy_snappy-java-1.1.10.5.jar
+26/11/08 00:45:48 INFO Executor: Adding file:/tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/org.xerial.snappy_snappy-java-1.1.10.5.jar to class loader default
+26/11/08 00:45:48 INFO Executor: Fetching spark://nids-exp-l:41543/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.9.jar with timestamp 1794073547694
+26/11/08 00:45:48 INFO Utils: Fetching spark://nids-exp-l:41543/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.9.jar to /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/fetchFileTemp5096977507015254536.tmp
+26/11/08 00:45:48 INFO Utils: /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/fetchFileTemp5096977507015254536.tmp has been previously copied to /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.9.jar
+26/11/08 00:45:48 INFO Executor: Adding file:/tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.9.jar to class loader default
+26/11/08 00:45:48 INFO Executor: Fetching spark://nids-exp-l:41543/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1794073547694
+26/11/08 00:45:48 INFO Utils: Fetching spark://nids-exp-l:41543/jars/commons-logging_commons-logging-1.1.3.jar to /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/fetchFileTemp14366407422747111523.tmp
+26/11/08 00:45:48 INFO Utils: /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/fetchFileTemp14366407422747111523.tmp has been previously copied to /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/commons-logging_commons-logging-1.1.3.jar
+26/11/08 00:45:48 INFO Executor: Adding file:/tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/commons-logging_commons-logging-1.1.3.jar to class loader default
+26/11/08 00:45:48 INFO Executor: Fetching spark://nids-exp-l:41543/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar with timestamp 1794073547694
+26/11/08 00:45:48 INFO Utils: Fetching spark://nids-exp-l:41543/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar to /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/fetchFileTemp17320969773680060614.tmp
+26/11/08 00:45:48 INFO Utils: /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/fetchFileTemp17320969773680060614.tmp has been previously copied to /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar
+26/11/08 00:45:48 INFO Executor: Adding file:/tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar to class loader default
+26/11/08 00:45:48 INFO Executor: Fetching spark://nids-exp-l:41543/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1794073547694
+26/11/08 00:45:48 INFO Utils: Fetching spark://nids-exp-l:41543/jars/com.google.code.findbugs_jsr305-3.0.0.jar to /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/fetchFileTemp7926088128332366660.tmp
+26/11/08 00:45:48 INFO Utils: /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/fetchFileTemp7926088128332366660.tmp has been previously copied to /tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/com.google.code.findbugs_jsr305-3.0.0.jar
+26/11/08 00:45:48 INFO Executor: Adding file:/tmp/spark-9ab57eb4-e4a6-4876-a0b7-2a2bacf15e39/userFiles-143172f0-8c4d-4e2b-95ef-169db23f3b52/com.google.code.findbugs_jsr305-3.0.0.jar to class loader default
+26/11/08 00:45:48 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 44923.
+26/11/08 00:45:48 INFO NettyBlockTransferService: Server created on nids-exp-l:44923
+26/11/08 00:45:48 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/11/08 00:45:48 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, nids-exp-l, 44923, None)
+26/11/08 00:45:48 INFO BlockManagerMasterEndpoint: Registering block manager nids-exp-l:44923 with 1048.8 MiB RAM, BlockManagerId(driver, nids-exp-l, 44923, None)
+26/11/08 00:45:48 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, nids-exp-l, 44923, None)
+26/11/08 00:45:48 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, nids-exp-l, 44923, None)
+Models loaded. Thresholds: full 0.540, light 0.946. Mode file: /home/ubuntu/nids/runs/E4_L_adapt_burst_r1/mode
+26/11/08 00:45:54 WARN ResolveWriteToStream: spark.sql.adaptive.enabled is not supported in streaming DataFrames/Datasets and will be disabled.
+batch   rows    in/s    proc/s   dur_ms   backlog  mode
+26/11/08 00:45:54 WARN AdminClientConfig: These configurations '[key.deserializer, value.deserializer, enable.auto.commit, max.poll.records, auto.offset.reset]' were supplied but are not used yet.
+26/11/08 00:45:54 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+    0       0        0        0      996         0  full
+    1       0        0        0        0         0  full
+26/11/08 00:46:08 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:09 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:09 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:09 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:46:10 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:11 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:11 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:12 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:46:12 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+    2  57,954   32,724   27,519    2,106         0  full
+26/11/08 00:46:13 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:13 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:13 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:46:13 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+    3  28,451   13,509   21,669    1,313         0  full
+26/11/08 00:46:14 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:14 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:14 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:46:14 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+    4  17,712   13,490   17,467    1,014         0  full
+26/11/08 00:46:15 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:15 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:15 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:46:15 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+    5  13,676   13,487   13,239    1,033         0  full
+26/11/08 00:46:16 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:16 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:16 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:46:16 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+    6  13,963   13,517   14,760      946         0  full
+26/11/08 00:46:17 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:17 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:17 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:46:17 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:18 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+    7  12,724   13,450   13,998      909         0  full
+26/11/08 00:46:18 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:18 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:46:18 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:19 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:19 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+    8  12,262   13,490   13,624      900         0  full
+26/11/08 00:46:19 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:46:19 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:19 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:20 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:20 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+    9  12,238   13,583   13,230      925         0  full
+26/11/08 00:46:20 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:20 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:20 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:21 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+   10  12,450   13,459   13,301      936         0  full
+26/11/08 00:46:21 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:21 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:21 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:21 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+   12  12,250   13,551   14,048      872         0  full
+26/11/08 00:46:22 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:22 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:22 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:22 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:46:23 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+   13  11,750   13,475   12,912      910         0  full
+26/11/08 00:46:23 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:23 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:23 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:46:24 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+   14  12,338   13,543   13,785      895         0  full
+26/11/08 00:46:24 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:24 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:24 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:46:24 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+   15  12,099   13,518   15,030      805         0  full
+26/11/08 00:46:25 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:25 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:25 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:46:25 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:26 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:26 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+   16  10,850   13,478   12,810      847         0  full
+26/11/08 00:46:26 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:46:26 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+   17  11,363   13,416   13,244      858         0  full
+26/11/08 00:46:27 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:27 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:27 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+   18   5,100    5,937    4,096    1,245         0  full
+26/11/08 00:46:28 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:28 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:28 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:28 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:46:29 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+   19     307   27,909      416      738         0  full
+26/11/08 00:46:29 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:29 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:29 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:46:29 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+   20   5,543    7,501    6,401      866         0  full
+26/11/08 00:46:30 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:30 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:30 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:46:30 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+   21  10,532   12,162   10,295    1,023         0  full
+26/11/08 00:46:31 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:31 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:31 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+   22  20,768   20,301   15,710    1,322         0  full
+26/11/08 00:46:32 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:33 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:33 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:33 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:46:33 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+   23  45,398   34,340   33,803    1,343         0  full
+26/11/08 00:46:34 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:34 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:34 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:46:35 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+   24  63,852   47,544   38,745    1,648         0  full
+26/11/08 00:46:36 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:36 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:36 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:46:36 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+   25  44,437   26,964   34,447    1,290         0  full
+26/11/08 00:46:37 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:37 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:37 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:46:37 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+   26  34,963   27,082   26,507    1,319         0  full
+26/11/08 00:46:38 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:38 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:38 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:46:39 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+   27  35,600   26,990   29,397    1,211         0  full
+26/11/08 00:46:39 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:39 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:39 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+   28  32,600   26,920   27,534    1,184         0  full
+26/11/08 00:46:40 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:40 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:40 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:41 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+   29  32,000   27,027   30,858    1,037         0  full
+26/11/08 00:46:41 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:41 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:42 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:42 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:46:42 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:43 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:43 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+   30  28,000   27,001   24,648    1,136         0  full
+26/11/08 00:46:43 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:46:43 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:44 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+   31  30,673   27,001   27,584    1,112         0  full
+26/11/08 00:46:44 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:44 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:46:44 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+   32  30,103   27,071   24,199    1,244         0  full
+26/11/08 00:46:45 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:45 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:45 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:46:45 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+   33  33,624   27,007   29,573    1,137         0  full
+26/11/08 00:46:46 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:46 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:46 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:46:47 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+   34  30,600   26,913   26,132    1,171         0  full
+26/11/08 00:46:47 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:47 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:47 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:46:48 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+   35  31,600   26,985   29,098    1,086         0  full
+26/11/08 00:46:48 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:48 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:49 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+   36  29,400   27,072   24,768    1,187         0  full
+26/11/08 00:46:49 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:50 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:50 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:50 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:46:50 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:51 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:51 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+   37  32,000   26,959   27,211    1,176         0  full
+26/11/08 00:46:51 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:46:51 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+   38  31,800   27,018   26,303    1,209         0  full
+26/11/08 00:46:52 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:52 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:52 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:46:52 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+   39  32,600   26,964   26,721    1,220         0  full
+26/11/08 00:46:53 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:53 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:53 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:46:54 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+   40  33,000   27,049   26,591    1,241         0  full
+26/11/08 00:46:54 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:54 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:55 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+   41  33,513   26,983   27,269    1,229         0  full
+26/11/08 00:46:55 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:56 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:56 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:56 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:46:56 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+   42  33,287   27,063   27,262    1,221         0  full
+26/11/08 00:46:57 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:57 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:57 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:46:57 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+   43  32,962   26,996   26,497    1,244         0  full
+26/11/08 00:46:58 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:58 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:58 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:46:59 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+   44  33,165   26,660   30,652    1,082         0  full
+26/11/08 00:46:59 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:59 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:46:59 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:47:00 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+   45  29,473   27,214   23,466    1,256         0  full
+26/11/08 00:47:00 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:00 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:01 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+   46  34,000   27,070   28,381    1,198         0  full
+26/11/08 00:47:01 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:02 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:02 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:02 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:47:02 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+   47  32,400   27,045   24,847    1,304         0  full
+26/11/08 00:47:03 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:03 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:03 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:47:04 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+   48  35,200   26,994   30,085    1,170         0  full
+26/11/08 00:47:04 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:04 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:04 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:47:05 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+   49  31,600   27,009   27,288    1,158         0  full
+26/11/08 00:47:05 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:05 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:06 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:47:06 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+   50  31,200   26,943   26,109    1,195         0  full
+26/11/08 00:47:06 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:07 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:07 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+   51  32,400   27,113   27,250    1,189         0  full
+26/11/08 00:47:07 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:08 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:08 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:08 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:47:08 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:09 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:09 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+   52  32,000   26,891   27,280    1,173         0  full
+26/11/08 00:47:09 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:47:09 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+   53  31,800   27,110   29,390    1,082         0  full
+26/11/08 00:47:10 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:10 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:10 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:47:11 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+   54  28,997   26,799   23,105    1,255         0  full
+26/11/08 00:47:11 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:11 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:11 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:47:12 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+   55  34,003   27,094   27,224    1,249         0  full
+26/11/08 00:47:12 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:13 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:13 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+   56  33,800   27,040   27,040    1,250         0  full
+26/11/08 00:47:13 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:14 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:14 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:14 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:47:14 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:15 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:15 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:15 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+   57  33,750   27,000   29,246    1,154         0  full
+26/11/08 00:47:15 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:16 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:16 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:16 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+   58  31,050   26,906   30,865    1,006         0  full
+26/11/08 00:47:16 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:17 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:17 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:17 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+   59  26,900   26,713   27,393      982         0  full
+26/11/08 00:47:17 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:18 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:18 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:18 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+   60  26,900   27,393   25,940    1,037         0  full
+26/11/08 00:47:18 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:19 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:19 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:19 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+   61  28,000   26,975   27,211    1,029         0  full
+26/11/08 00:47:19 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:20 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:20 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+   62  27,800   27,017   27,940      995         0  full
+26/11/08 00:47:20 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:47:20 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:21 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:21 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+   63  26,800   26,935   25,969    1,032         0  full
+26/11/08 00:47:21 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:47:21 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:22 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+   64  28,000   27,132   27,184    1,030         0  full
+26/11/08 00:47:22 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:22 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:47:22 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+   65  27,800   26,990   23,283    1,194         0  full
+26/11/08 00:47:23 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:23 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:23 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:47:23 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+   66  31,964   26,748   30,913    1,034         0  full
+26/11/08 00:47:24 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:24 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:24 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:47:24 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+   67  28,236   27,308   28,152    1,003         0  full
+26/11/08 00:47:25 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:25 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:25 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:47:26 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+   68  27,000   26,892   23,894    1,130         0  full
+26/11/08 00:47:26 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:26 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:26 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:47:27 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+   69  30,600   27,080   30,692      997         0  full
+26/11/08 00:47:27 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:27 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:27 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:47:28 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+   70  26,800   26,881   24,655    1,087         0  full
+26/11/08 00:47:28 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:28 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:29 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:47:29 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+   71  29,182   26,846   24,626    1,185         0  full
+26/11/08 00:47:30 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:30 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:30 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:47:31 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+   72  74,999   63,237   45,289    1,656     5,102  full
+26/11/08 00:47:32 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:32 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:32 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:47:32 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+   73  74,998   45,289   43,202    1,736    42,271  full
+26/11/08 00:47:33 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:34 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:34 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:47:34 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+   74  74,998   43,177   44,936    1,669    84,510  full
+26/11/08 00:47:35 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:35 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:35 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:47:35 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+   75  74,998   44,936   47,678    1,573   121,536  full
+26/11/08 00:47:37 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:37 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:37 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:47:37 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+   76  74,997   47,647   42,419    1,768   153,390  full
+26/11/08 00:47:39 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:39 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:47:39 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:47:39 WARN InstanceBuilder: Failed to load implementation from:dev.ludovic.netlib.blas.JNIBLAS
+26/11/08 00:47:39 WARN InstanceBuilder: Failed to load implementation from:dev.ludovic.netlib.blas.VectorBLAS
+   77  74,998   42,420   43,326    1,731   197,780 light
+   78  74,998   43,276   58,319    1,286   238,001 light
+   80  74,998   71,975   82,597      908   246,584 light
+   81  74,998   82,597   82,145      913   232,486 light
+   82  74,998   82,145   81,343      922   219,509 light
+   83  74,998   81,255   83,797      895   206,943 light
+   84  74,998   83,797   78,368      957   192,471 light
+   85  74,998   78,368   81,255      923   182,195 light
+   86  74,998   81,255   82,779      906   169,471 light
+   87  74,999   82,689   77,398      969   155,764 light
+   88  74,998   77,318   82,325      911   145,850 light
+   89  74,997   82,234   72,391    1,036   132,452 light
+   90  74,998   72,322   82,597      908   127,855 light
+   91  74,998   82,506   76,373      982   114,107 light
+   92  74,998   76,295   81,965      915   104,980 light
+   93  74,998   81,876   81,786      917    91,561 light
+   95  74,998   80,384   84,362      889    67,115 light
+   96  74,997   84,361   86,802      864    52,168 light
+   97  74,998   86,703   89,496      838    35,070 light
+   98  74,999   89,498   91,018      824    17,084 light
+  100  52,786   67,674   80,100      659         0 light
+  101  44,450   67,451   65,464      679         0 light
+  103  44,585   68,382   59,210      753         0 light
+26/11/08 00:48:03 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+  104  50,628   67,235   78,860      642         0  full
+26/11/08 00:48:04 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:48:04 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:48:04 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+  105  43,522   67,791   32,191    1,352         0  full
+26/11/08 00:48:04 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:48:06 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:48:06 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:48:06 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:48:06 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+  106  74,999   55,473   39,808    1,884    16,200  full
+26/11/08 00:48:07 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:48:07 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:48:07 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:48:08 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+  107  74,999   39,808   44,616    1,681    68,248  full
+26/11/08 00:48:09 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:48:09 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:48:09 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:48:09 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+  108  74,999   44,616   44,856    1,672   106,665  full
+26/11/08 00:48:11 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:48:11 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:48:11 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+  109  74,998   44,855   42,252    1,775   144,784  full
+26/11/08 00:48:11 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:48:12 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:48:13 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:48:13 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:48:13 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+  110  74,999   42,253   47,318    1,585   188,656  full
+26/11/08 00:48:14 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:48:14 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:48:14 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:48:15 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+  111  74,998   47,317   40,760    1,840   221,372  full
+26/11/08 00:48:16 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:48:16 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:48:16 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+  112  74,998   40,760   46,844    1,601   270,797  full
+26/11/08 00:48:16 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:48:17 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:48:18 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:48:18 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:48:18 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+  113  74,998   46,844   47,377    1,583   303,090  full
+26/11/08 00:48:19 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:48:19 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:48:19 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+  114  74,999   47,378   41,643    1,801   335,513 light
+  115  74,999   41,620   80,471      932   381,520 light
+  117  74,998   88,966   92,590      810   352,097 light
+  118  74,997   92,589   90,686      827   331,790 light
+  119  74,999   90,579   89,819      835   312,172 light
+  120  74,998   89,818   85,908      873   293,670 light
+  121  74,998   85,908   81,520      920   277,963 light
+  122  74,998   81,520   87,820      854   264,985 light
+  124  74,998   88,650   89,603      837   229,756 light
+  125  74,998   89,496   86,106      871   211,396 light
+  126  74,997   86,104   88,232      850   195,237 light
+  127  74,998   88,233   87,923      853   177,539 light
+  128  74,999   87,924   87,616      856   160,240 light
+  130  74,998   90,034   88,026      852   124,144 light
+  131  74,997   88,025   86,006      872   106,584 light
+  132  74,999   86,008   86,504      867    90,547 light
+  133  74,998   86,403   81,697      918    73,999 light
+  134  74,999   81,698   78,369      957    61,102 light
+  135  74,998   78,368   81,697      918    49,878 light
+  136  74,997   81,696   81,874      916    37,220 light
+  137  74,999   81,877   83,611      897    24,337 light
+  138  74,998   83,610   81,520      920     9,594 light
+  140  63,200   67,521   76,792      823         0 light
+  141  55,462   67,308   77,245      718         0 light
+26/11/08 00:48:44 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+  142  48,638   67,741   73,250      664         0  full
+26/11/08 00:48:45 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:48:45 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:48:45 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:48:45 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+  143  44,663   67,264   32,016    1,395         0  full
+26/11/08 00:48:46 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:48:46 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:48:47 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:48:47 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+  144  74,998   53,762   42,710    1,756    19,315  full
+26/11/08 00:48:48 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:48:48 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:48:48 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+  145  74,999   42,710   47,288    1,586    62,965  full
+26/11/08 00:48:49 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:48:50 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:48:50 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:48:50 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:48:50 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+  146  74,997   47,287   44,828    1,673    94,794  full
+26/11/08 00:48:51 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:48:51 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:48:52 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:48:52 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+  147  74,997   44,828   43,552    1,722   132,846  full
+26/11/08 00:48:53 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:48:53 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:48:53 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:48:54 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+  148  74,999   43,528   42,516    1,764   174,272  full
+26/11/08 00:48:55 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:48:55 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:48:55 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+  149  74,997   42,515   42,467    1,766   218,350  full
+26/11/08 00:48:56 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:48:57 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:48:57 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:48:57 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:48:57 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+  150  74,998   42,444   41,117    1,824   262,466  full
+26/11/08 00:48:58 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:48:59 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:48:59 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:48:59 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+  151  74,998   41,117   43,680    1,717   310,684  full
+26/11/08 00:49:00 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:00 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:00 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+  152  74,998   43,680   42,807    1,752   297,856 light
+  154  74,998   79,447   84,648      886   220,660 light
+  155  74,998   84,648   86,603      866   169,662 light
+  156  74,998   86,503   89,390      839   118,064 light
+  157  74,998   89,390   87,512      857    65,666 light
+  159  35,266   44,528   69,421      508         0 light
+  162   9,200   26,901   30,263      304         0 light
+  165   8,096   26,808   26,286      308         0 light
+  168   8,600   26,543   28,477      302         0 light
+  172   8,000   27,491   24,922      321         0 light
+  175   8,200   26,974   24,699      332         0 light
+  178   7,600   27,143   22,485      338         0 light
+  181   7,600   27,143   22,961      331         0 light
+  185   9,200   26,513   31,834      289         0 light
+26/11/08 00:49:15 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:15 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:15 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+  186   7,800   26,990   22,874      341         0  full
+26/11/08 00:49:16 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:49:16 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:16 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+  187   9,200   26,979   10,773      854         0  full
+26/11/08 00:49:17 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:17 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:49:17 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+  188  23,200   27,166   20,789    1,116         0  full
+26/11/08 00:49:18 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:18 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:18 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:49:18 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+  189  30,000   26,882   24,291    1,235         0  full
+26/11/08 00:49:19 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:19 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:19 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:49:19 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+  190  33,600   27,184   31,848    1,055         0  full
+26/11/08 00:49:20 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:20 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:20 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:49:20 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+  191  28,400   26,919   23,165    1,226         0  full
+26/11/08 00:49:21 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:21 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:21 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+  192  33,000   26,917   28,326    1,165         0  full
+26/11/08 00:49:22 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:22 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:22 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:23 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:49:23 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:23 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:24 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+  193  31,400   26,953   27,812    1,129         0  full
+26/11/08 00:49:24 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:49:24 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+  194  30,600   27,104   26,748    1,144         0  full
+26/11/08 00:49:25 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:25 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:25 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:49:25 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+  195  30,800   26,900   27,257    1,130         0  full
+26/11/08 00:49:26 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:26 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:26 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:49:26 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+  196  30,600   27,056   26,702    1,146         0  full
+26/11/08 00:49:27 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:27 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:27 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:49:27 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+  197  31,000   27,051   27,385    1,132         0  full
+26/11/08 00:49:28 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:28 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:28 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:49:28 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+  198  30,600   27,032   30,327    1,009         0  full
+26/11/08 00:49:29 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:29 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:29 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:49:29 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+  199  27,200   26,957   27,011    1,007         0  full
+26/11/08 00:49:30 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:30 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:30 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:49:30 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+  200  28,800   28,600   25,830    1,115         0  full
+26/11/08 00:49:31 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:31 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:31 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:49:31 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+  201  28,182   25,253   26,943    1,046         0  full
+26/11/08 00:49:32 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:32 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:32 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:49:33 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+  202  28,618   27,333   26,572    1,077         0  full
+26/11/08 00:49:33 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:33 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:33 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+  203  29,000   26,902   25,439    1,140         0  full
+26/11/08 00:49:34 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:34 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:34 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:35 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:49:35 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:36 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:36 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+  204  30,800   27,018   25,497    1,208         0  full
+26/11/08 00:49:36 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:49:36 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+  205  32,600   26,987   28,079    1,161         0  full
+26/11/08 00:49:37 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:37 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:37 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:49:37 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+  206  31,400   27,046   29,020    1,082         0  full
+26/11/08 00:49:38 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:38 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:38 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:49:38 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+  207  29,200   26,987   25,281    1,155         0  full
+26/11/08 00:49:39 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:39 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:39 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:49:40 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+  208  31,250   27,033   24,762    1,262         0  full
+26/11/08 00:49:40 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:40 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:40 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+  209  34,125   27,040   28,461    1,199         0  full
+26/11/08 00:49:41 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:41 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:42 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:42 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+  210  32,425   27,021   29,558    1,097         0  full
+26/11/08 00:49:42 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:43 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:43 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:43 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:49:43 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:44 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+  211  29,600   26,983   25,539    1,159         0  full
+26/11/08 00:49:44 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:44 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:49:44 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+  212  31,200   26,920   27,201    1,147         0  full
+26/11/08 00:49:45 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:45 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:45 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:49:45 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+  213  31,000   27,003   29,218    1,061         0  full
+26/11/08 00:49:46 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:46 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:46 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:49:46 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+  214  28,482   26,844   26,694    1,067         0  full
+26/11/08 00:49:47 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:47 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:47 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:49:48 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+  215  28,918   27,077   24,240    1,193         0  full
+26/11/08 00:49:48 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:48 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:48 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:49:49 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+  216  32,270   27,049   27,843    1,159         0  full
+26/11/08 00:49:49 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:49 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:50 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+  217  31,330   27,032   27,196    1,152         0  full
+26/11/08 00:49:50 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:50 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:51 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:51 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:49:51 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:52 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:52 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+  218  31,200   27,083   26,307    1,186         0  full
+26/11/08 00:49:52 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:49:52 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:53 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:53 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+  219  32,000   26,981   31,527    1,015         0  full
+26/11/08 00:49:53 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:49:53 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:54 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+  220  27,400   26,995   25,849    1,060         0  full
+26/11/08 00:49:54 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:54 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:49:54 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+  221  28,600   26,981   24,978    1,145         0  full
+26/11/08 00:49:55 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:55 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:55 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:49:55 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+  222  30,680   26,795   25,210    1,217         0  full
+26/11/08 00:49:56 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:56 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:56 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:49:57 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+  223  33,120   27,214   26,731    1,239         0  full
+26/11/08 00:49:57 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:57 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:57 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+  224  33,400   26,957   28,943    1,154         0  full
+26/11/08 00:49:58 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:58 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:59 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:49:59 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+  225  31,200   27,036   28,545    1,093         0  full
+26/11/08 00:49:59 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:50:00 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:50:00 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:50:00 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:50:00 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:50:01 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+  226  29,400   26,898   24,623    1,194         0  full
+26/11/08 00:50:01 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:50:01 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:50:01 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+  227  32,200   26,968   28,295    1,138         0  full
+26/11/08 00:50:02 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:50:02 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:50:02 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+26/11/08 00:50:02 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+  228  30,800   27,041   26,806    1,149         0  full
+26/11/08 00:50:03 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:50:03 WARN DAGScheduler: Broadcasting large task binary with size 4.0 MiB
+26/11/08 00:50:03 WARN DAGScheduler: Broadcasting large task binary with size 4.2 MiB
+  229   9,672    8,418    7,921    1,221         0  full
+  230       0        0        0        1         0  full
+No new data; stopping.

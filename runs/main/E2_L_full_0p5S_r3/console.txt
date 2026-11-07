@@ -1,0 +1,135 @@
+Topic E2_L_full_0p5S_r3 created. Run directory: /home/ubuntu/nids/runs/E2_L_full_0p5S_r3
+Waiting for the streaming job to start ...
+
+>>> Detector ready. Now start the load ON THE LAPTOP:
+>>>   WARMUP=20 WARMUP_RATE=13500 bash ~/nids-host/stream/produce_parallel.sh E2_L_full_0p5S_r3 22500 9421272 2 
+>>> (this window waits until the detector has processed everything)
+
+
+=== Streaming job (last lines) ===
+  401  21,895   22,549   23,903      916         0  full
+  402  20,566   22,452   20,922      983         0  full
+  403  22,137   22,520   21,534    1,028         0  full
+  404  23,126   22,496   20,233    1,143         0  full
+  405  25,714   22,497   26,592      967         0  full
+  406  21,732   22,474   20,235    1,074         0  full
+  407  24,158   22,493   23,824    1,014         0  full
+  408  22,824   22,509   22,095    1,033         0  full
+  409  23,252   22,509   22,251    1,045         0  full
+  410  23,512   22,478   22,961    1,024         0  full
+  411  23,043   22,503   22,394    1,029         0  full
+  412  23,247   22,570   23,746      979         0  full
+  413  21,984   22,433   19,913    1,104         0  full
+  414  24,879   22,535   26,188      950         0  full
+  415  21,341   22,464   19,419    1,099         0  full
+  416  24,749   22,520   26,079      949         0  full
+  417  21,362   22,510   23,788      898         0  full
+  418  20,144   22,432   22,259      905         0  full
+  419  20,413   22,556   23,517      868         0  full
+  421  20,493   22,446   21,526      952         0  full
+  422  21,459   22,541   22,330      961         0  full
+  423  21,610   22,487   22,605      956         0  full
+  424  21,514   22,504   21,842      985         0  full
+  425  22,150   22,487   21,505    1,030         0  full
+  426  23,122   22,449   23,618      979         0  full
+  427  22,046   22,519   22,658      973         0  full
+  428  21,900   22,508   22,121      990         0  full
+  429  22,271   22,496   22,271    1,000         0  full
+  430  22,493   22,493   21,923    1,026         0  full
+  431  23,098   22,491   23,355      989         0  full
+  432  22,318   22,566   23,542      948         0  full
+  433  21,300   22,445   21,236    1,003         0  full
+  434  22,597   22,529   22,988      983         0  full
+  435  22,129   22,512   22,218      996         0  full
+  436  22,361   22,451   23,763      941         0  full
+  437  21,188   22,516   22,613      937         0  full
+  438  21,072   22,489   14,613    1,442         0  full
+  439   1,472    1,020    1,284    1,146         0  full
+  440       0        0        0        1         0  full
+No new data; stopping.
+
+=== Run summary ===
+{
+  "clock_offset_ms": 1.8,
+  "warmup_records": 270000,
+  "slo_ms": 5000.0,
+  "rows": 9421272,
+  "unique": 9421272,
+  "duplicates": 0,
+  "missing": 0,
+  "span_s": 420.8,
+  "throughput_rps": 22392,
+  "latency_ms": {
+    "p50": 1071,
+    "p95": 1543,
+    "p99": 1643,
+    "max": 2186,
+    "mean": 1074
+  },
+  "slo_violation_share": 0.0,
+  "load_s": 418.6,
+  "drain_s": 2.1,
+  "detection": {
+    "tp": 529573,
+    "fp": 267,
+    "fn": 734,
+    "tn": 8890698,
+    "recall": 0.99862,
+    "precision": 0.9995,
+    "fpr": 3e-05,
+    "macro_f1": 0.9995
+  },
+  "by_mode": {
+    "full": {
+      "rows": 9421272,
+      "latency_ms": {
+        "p50": 1071,
+        "p95": 1543,
+        "p99": 1643,
+        "max": 2186,
+        "mean": 1074
+      },
+      "detection": {
+        "tp": 529573,
+        "fp": 267,
+        "fn": 734,
+        "tn": 8890698,
+        "recall": 0.99862,
+        "precision": 0.9995,
+        "fpr": 3e-05,
+        "macro_f1": 0.9995
+      }
+    }
+  },
+  "family_recall": {
+    "Web": 0.925,
+    "BruteForce": 1.0,
+    "DoS": 0.9978,
+    "DDoS": 0.9999,
+    "Botnet": 1.0,
+    "Infiltration": 0.9913
+  },
+  "batches": {
+    "count": 439,
+    "mean_total_s": 0.94,
+    "max_total_s": 2.164,
+    "mean_rows": 22076,
+    "modes": {
+      "full": 439
+    }
+  },
+  "backlog_max_records": 0,
+  "backlog_at_load_end": 0,
+  "sustainable": true,
+  "telemetry": {
+    "samples": 421,
+    "cpu_mean": 69.2,
+    "cpu_p95": 73.9,
+    "cpu_max": 77.6,
+    "mem_used_max_mb": 4156.0,
+    "mem_avail_min_mb": 1770.0,
+    "swap_used_max_mb": 0.0,
+    "steal_max": 0.5
+  },
+  "valid_vm_side": true
+}
