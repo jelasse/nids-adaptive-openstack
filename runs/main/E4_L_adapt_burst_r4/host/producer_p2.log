@@ -1,0 +1,23 @@
+Replay file rows: 9,421,272; sending 2,355,318 from row 4,710,636 at 11,250/s with profile 60:0.6,90:1.5,0:0.6 to topic 'E4_L_adapt_burst_r4'
+  sent 67,501  achieved 6,749/s
+  sent 135,051  achieved 6,750/s
+  sent 202,553  achieved 6,750/s
+  sent 270,053  achieved 6,750/s
+  sent 337,554  achieved 6,750/s
+  sent 405,151  achieved 6,752/s
+  sent 573,901  achieved 8,198/s
+  sent 742,652  achieved 9,282/s
+  sent 911,403  achieved 10,126/s
+  sent 1,080,119  achieved 10,800/s
+  sent 1,248,927  achieved 11,353/s
+  sent 1,417,678  achieved 11,813/s
+  sent 1,586,408  achieved 12,202/s
+  sent 1,755,182  achieved 12,536/s
+  sent 1,923,851  achieved 12,824/s
+  sent 1,991,352  achieved 12,445/s
+  sent 2,058,852  achieved 12,110/s
+  sent 2,126,352  achieved 11,812/s
+  sent 2,193,855  achieved 11,546/s
+  sent 2,261,355  achieved 11,306/s
+  sent 2,328,853  achieved 11,089/s
+SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 4,710,636..7,065,953; max lag behind schedule 2.91 s)

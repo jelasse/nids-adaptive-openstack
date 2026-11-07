@@ -1,0 +1,421 @@
+:: loading settings :: url = jar:file:/home/ubuntu/nids-venv/lib/python3.12/site-packages/pyspark/jars/ivy-2.5.3.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /home/ubuntu/.ivy2/cache
+The jars for the packages stored in: /home/ubuntu/.ivy2/jars
+org.apache.spark#spark-sql-kafka-0-10_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-3ece375f-5df5-40a5-af72-0ccbdf994805;1.0
+	confs: [default]
+	found org.apache.spark#spark-sql-kafka-0-10_2.12;3.5.9 in central
+	found org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.5.9 in central
+	found org.apache.kafka#kafka-clients;3.4.1 in central
+	found org.lz4#lz4-java;1.8.0 in central
+	found org.xerial.snappy#snappy-java;1.1.10.5 in central
+	found org.slf4j#slf4j-api;2.0.7 in central
+	found org.apache.hadoop#hadoop-client-runtime;3.3.4 in central
+	found org.apache.hadoop#hadoop-client-api;3.3.4 in central
+	found commons-logging#commons-logging;1.1.3 in central
+	found com.google.code.findbugs#jsr305;3.0.0 in central
+	found org.apache.commons#commons-pool2;2.11.1 in central
+:: resolution report :: resolve 210ms :: artifacts dl 5ms
+	:: modules in use:
+	com.google.code.findbugs#jsr305;3.0.0 from central in [default]
+	commons-logging#commons-logging;1.1.3 from central in [default]
+	org.apache.commons#commons-pool2;2.11.1 from central in [default]
+	org.apache.hadoop#hadoop-client-api;3.3.4 from central in [default]
+	org.apache.hadoop#hadoop-client-runtime;3.3.4 from central in [default]
+	org.apache.kafka#kafka-clients;3.4.1 from central in [default]
+	org.apache.spark#spark-sql-kafka-0-10_2.12;3.5.9 from central in [default]
+	org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.5.9 from central in [default]
+	org.lz4#lz4-java;1.8.0 from central in [default]
+	org.slf4j#slf4j-api;2.0.7 from central in [default]
+	org.xerial.snappy#snappy-java;1.1.10.5 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   11  |   0   |   0   |   0   ||   11  |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-3ece375f-5df5-40a5-af72-0ccbdf994805
+	confs: [default]
+	0 artifacts copied, 11 already retrieved (0kB/3ms)
+26/11/07 10:52:22 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/11/07 10:52:23 INFO SparkContext: Running Spark version 3.5.9
+26/11/07 10:52:23 INFO SparkContext: OS info Linux, 6.8.0-147-generic, amd64
+26/11/07 10:52:23 INFO SparkContext: Java version 17.0.20.1
+26/11/07 10:52:23 INFO ResourceUtils: ==============================================================
+26/11/07 10:52:23 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/11/07 10:52:23 INFO ResourceUtils: ==============================================================
+26/11/07 10:52:23 INFO SparkContext: Submitted application: stream-detect
+26/11/07 10:52:23 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/11/07 10:52:23 INFO ResourceProfile: Limiting resource is cpu
+26/11/07 10:52:23 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/11/07 10:52:23 INFO SecurityManager: Changing view acls to: ubuntu
+26/11/07 10:52:23 INFO SecurityManager: Changing modify acls to: ubuntu
+26/11/07 10:52:23 INFO SecurityManager: Changing view acls groups to: 
+26/11/07 10:52:23 INFO SecurityManager: Changing modify acls groups to: 
+26/11/07 10:52:23 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: ubuntu; groups with view permissions: EMPTY; users with modify permissions: ubuntu; groups with modify permissions: EMPTY
+26/11/07 10:52:23 INFO Utils: Successfully started service 'sparkDriver' on port 40587.
+26/11/07 10:52:23 INFO SparkEnv: Registering MapOutputTracker
+26/11/07 10:52:23 INFO SparkEnv: Registering BlockManagerMaster
+26/11/07 10:52:23 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/11/07 10:52:23 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/11/07 10:52:23 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/11/07 10:52:23 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-acdc0e89-1ed7-4a96-bd5d-05dc8e89bf4d
+26/11/07 10:52:23 INFO MemoryStore: MemoryStore started with capacity 1048.8 MiB
+26/11/07 10:52:23 INFO SparkEnv: Registering OutputCommitCoordinator
+26/11/07 10:52:23 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/11/07 10:52:23 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/11/07 10:52:23 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.9.jar at spark://nids-exp-l:40587/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.9.jar with timestamp 1794023543205
+26/11/07 10:52:23 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.9.jar at spark://nids-exp-l:40587/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.9.jar with timestamp 1794023543205
+26/11/07 10:52:23 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.apache.kafka_kafka-clients-3.4.1.jar at spark://nids-exp-l:40587/jars/org.apache.kafka_kafka-clients-3.4.1.jar with timestamp 1794023543205
+26/11/07 10:52:23 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar at spark://nids-exp-l:40587/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1794023543205
+26/11/07 10:52:23 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar at spark://nids-exp-l:40587/jars/org.apache.commons_commons-pool2-2.11.1.jar with timestamp 1794023543205
+26/11/07 10:52:23 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar at spark://nids-exp-l:40587/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar with timestamp 1794023543205
+26/11/07 10:52:23 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar at spark://nids-exp-l:40587/jars/org.lz4_lz4-java-1.8.0.jar with timestamp 1794023543205
+26/11/07 10:52:23 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.10.5.jar at spark://nids-exp-l:40587/jars/org.xerial.snappy_snappy-java-1.1.10.5.jar with timestamp 1794023543205
+26/11/07 10:52:23 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.slf4j_slf4j-api-2.0.7.jar at spark://nids-exp-l:40587/jars/org.slf4j_slf4j-api-2.0.7.jar with timestamp 1794023543205
+26/11/07 10:52:23 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar at spark://nids-exp-l:40587/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar with timestamp 1794023543205
+26/11/07 10:52:23 INFO SparkContext: Added JAR file:///home/ubuntu/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar at spark://nids-exp-l:40587/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1794023543205
+26/11/07 10:52:23 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.9.jar at file:///home/ubuntu/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.9.jar with timestamp 1794023543205
+26/11/07 10:52:23 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.9.jar to /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.9.jar
+26/11/07 10:52:23 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.9.jar at file:///home/ubuntu/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.9.jar with timestamp 1794023543205
+26/11/07 10:52:23 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.9.jar to /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.9.jar
+26/11/07 10:52:23 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.apache.kafka_kafka-clients-3.4.1.jar at file:///home/ubuntu/.ivy2/jars/org.apache.kafka_kafka-clients-3.4.1.jar with timestamp 1794023543205
+26/11/07 10:52:23 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.apache.kafka_kafka-clients-3.4.1.jar to /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/org.apache.kafka_kafka-clients-3.4.1.jar
+26/11/07 10:52:23 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar at file:///home/ubuntu/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1794023543205
+26/11/07 10:52:23 INFO Utils: Copying /home/ubuntu/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar to /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/com.google.code.findbugs_jsr305-3.0.0.jar
+26/11/07 10:52:23 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar at file:///home/ubuntu/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar with timestamp 1794023543205
+26/11/07 10:52:23 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar to /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/org.apache.commons_commons-pool2-2.11.1.jar
+26/11/07 10:52:23 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar at file:///home/ubuntu/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar with timestamp 1794023543205
+26/11/07 10:52:23 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar to /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar
+26/11/07 10:52:23 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar at file:///home/ubuntu/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar with timestamp 1794023543205
+26/11/07 10:52:23 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar to /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/org.lz4_lz4-java-1.8.0.jar
+26/11/07 10:52:23 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.10.5.jar at file:///home/ubuntu/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.10.5.jar with timestamp 1794023543205
+26/11/07 10:52:23 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.10.5.jar to /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/org.xerial.snappy_snappy-java-1.1.10.5.jar
+26/11/07 10:52:23 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.slf4j_slf4j-api-2.0.7.jar at file:///home/ubuntu/.ivy2/jars/org.slf4j_slf4j-api-2.0.7.jar with timestamp 1794023543205
+26/11/07 10:52:23 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.slf4j_slf4j-api-2.0.7.jar to /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/org.slf4j_slf4j-api-2.0.7.jar
+26/11/07 10:52:23 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar at file:///home/ubuntu/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar with timestamp 1794023543205
+26/11/07 10:52:23 INFO Utils: Copying /home/ubuntu/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar to /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/org.apache.hadoop_hadoop-client-api-3.3.4.jar
+26/11/07 10:52:23 INFO SparkContext: Added file file:///home/ubuntu/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar at file:///home/ubuntu/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1794023543205
+26/11/07 10:52:23 INFO Utils: Copying /home/ubuntu/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar to /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/commons-logging_commons-logging-1.1.3.jar
+26/11/07 10:52:23 INFO Executor: Starting executor ID driver on host nids-exp-l
+26/11/07 10:52:23 INFO Executor: OS info Linux, 6.8.0-147-generic, amd64
+26/11/07 10:52:23 INFO Executor: Java version 17.0.20.1
+26/11/07 10:52:23 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/11/07 10:52:23 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@44268265 for default.
+26/11/07 10:52:23 INFO Executor: Fetching file:///home/ubuntu/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.10.5.jar with timestamp 1794023543205
+26/11/07 10:52:23 INFO Utils: /home/ubuntu/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.10.5.jar has been previously copied to /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/org.xerial.snappy_snappy-java-1.1.10.5.jar
+26/11/07 10:52:23 INFO Executor: Fetching file:///home/ubuntu/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar with timestamp 1794023543205
+26/11/07 10:52:23 INFO Utils: /home/ubuntu/.ivy2/jars/org.lz4_lz4-java-1.8.0.jar has been previously copied to /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/org.lz4_lz4-java-1.8.0.jar
+26/11/07 10:52:23 INFO Executor: Fetching file:///home/ubuntu/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.9.jar with timestamp 1794023543205
+26/11/07 10:52:23 INFO Utils: /home/ubuntu/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.9.jar has been previously copied to /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.9.jar
+26/11/07 10:52:23 INFO Executor: Fetching file:///home/ubuntu/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar with timestamp 1794023543205
+26/11/07 10:52:23 INFO Utils: /home/ubuntu/.ivy2/jars/org.apache.commons_commons-pool2-2.11.1.jar has been previously copied to /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/org.apache.commons_commons-pool2-2.11.1.jar
+26/11/07 10:52:23 INFO Executor: Fetching file:///home/ubuntu/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar with timestamp 1794023543205
+26/11/07 10:52:23 INFO Utils: /home/ubuntu/.ivy2/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar has been previously copied to /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/org.apache.hadoop_hadoop-client-api-3.3.4.jar
+26/11/07 10:52:23 INFO Executor: Fetching file:///home/ubuntu/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1794023543205
+26/11/07 10:52:23 INFO Utils: /home/ubuntu/.ivy2/jars/com.google.code.findbugs_jsr305-3.0.0.jar has been previously copied to /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/com.google.code.findbugs_jsr305-3.0.0.jar
+26/11/07 10:52:23 INFO Executor: Fetching file:///home/ubuntu/.ivy2/jars/org.slf4j_slf4j-api-2.0.7.jar with timestamp 1794023543205
+26/11/07 10:52:23 INFO Utils: /home/ubuntu/.ivy2/jars/org.slf4j_slf4j-api-2.0.7.jar has been previously copied to /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/org.slf4j_slf4j-api-2.0.7.jar
+26/11/07 10:52:23 INFO Executor: Fetching file:///home/ubuntu/.ivy2/jars/org.apache.kafka_kafka-clients-3.4.1.jar with timestamp 1794023543205
+26/11/07 10:52:23 INFO Utils: /home/ubuntu/.ivy2/jars/org.apache.kafka_kafka-clients-3.4.1.jar has been previously copied to /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/org.apache.kafka_kafka-clients-3.4.1.jar
+26/11/07 10:52:23 INFO Executor: Fetching file:///home/ubuntu/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.9.jar with timestamp 1794023543205
+26/11/07 10:52:23 INFO Utils: /home/ubuntu/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.9.jar has been previously copied to /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.9.jar
+26/11/07 10:52:23 INFO Executor: Fetching file:///home/ubuntu/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar with timestamp 1794023543205
+26/11/07 10:52:23 INFO Utils: /home/ubuntu/.ivy2/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar has been previously copied to /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar
+26/11/07 10:52:23 INFO Executor: Fetching file:///home/ubuntu/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1794023543205
+26/11/07 10:52:23 INFO Utils: /home/ubuntu/.ivy2/jars/commons-logging_commons-logging-1.1.3.jar has been previously copied to /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/commons-logging_commons-logging-1.1.3.jar
+26/11/07 10:52:23 INFO Executor: Fetching spark://nids-exp-l:40587/jars/org.lz4_lz4-java-1.8.0.jar with timestamp 1794023543205
+26/11/07 10:52:23 INFO TransportClientFactory: Successfully created connection to nids-exp-l/10.0.0.54:40587 after 12 ms (0 ms spent in bootstraps)
+26/11/07 10:52:23 INFO Utils: Fetching spark://nids-exp-l:40587/jars/org.lz4_lz4-java-1.8.0.jar to /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/fetchFileTemp128363531869335899.tmp
+26/11/07 10:52:23 INFO Utils: /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/fetchFileTemp128363531869335899.tmp has been previously copied to /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/org.lz4_lz4-java-1.8.0.jar
+26/11/07 10:52:23 INFO Executor: Adding file:/tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/org.lz4_lz4-java-1.8.0.jar to class loader default
+26/11/07 10:52:23 INFO Executor: Fetching spark://nids-exp-l:40587/jars/org.xerial.snappy_snappy-java-1.1.10.5.jar with timestamp 1794023543205
+26/11/07 10:52:23 INFO Utils: Fetching spark://nids-exp-l:40587/jars/org.xerial.snappy_snappy-java-1.1.10.5.jar to /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/fetchFileTemp6560334649545168223.tmp
+26/11/07 10:52:23 INFO Utils: /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/fetchFileTemp6560334649545168223.tmp has been previously copied to /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/org.xerial.snappy_snappy-java-1.1.10.5.jar
+26/11/07 10:52:23 INFO Executor: Adding file:/tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/org.xerial.snappy_snappy-java-1.1.10.5.jar to class loader default
+26/11/07 10:52:23 INFO Executor: Fetching spark://nids-exp-l:40587/jars/org.apache.commons_commons-pool2-2.11.1.jar with timestamp 1794023543205
+26/11/07 10:52:23 INFO Utils: Fetching spark://nids-exp-l:40587/jars/org.apache.commons_commons-pool2-2.11.1.jar to /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/fetchFileTemp4061532444982220383.tmp
+26/11/07 10:52:23 INFO Utils: /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/fetchFileTemp4061532444982220383.tmp has been previously copied to /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/org.apache.commons_commons-pool2-2.11.1.jar
+26/11/07 10:52:23 INFO Executor: Adding file:/tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/org.apache.commons_commons-pool2-2.11.1.jar to class loader default
+26/11/07 10:52:23 INFO Executor: Fetching spark://nids-exp-l:40587/jars/com.google.code.findbugs_jsr305-3.0.0.jar with timestamp 1794023543205
+26/11/07 10:52:23 INFO Utils: Fetching spark://nids-exp-l:40587/jars/com.google.code.findbugs_jsr305-3.0.0.jar to /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/fetchFileTemp14168300472877431816.tmp
+26/11/07 10:52:23 INFO Utils: /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/fetchFileTemp14168300472877431816.tmp has been previously copied to /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/com.google.code.findbugs_jsr305-3.0.0.jar
+26/11/07 10:52:23 INFO Executor: Adding file:/tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/com.google.code.findbugs_jsr305-3.0.0.jar to class loader default
+26/11/07 10:52:23 INFO Executor: Fetching spark://nids-exp-l:40587/jars/commons-logging_commons-logging-1.1.3.jar with timestamp 1794023543205
+26/11/07 10:52:23 INFO Utils: Fetching spark://nids-exp-l:40587/jars/commons-logging_commons-logging-1.1.3.jar to /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/fetchFileTemp13580173402315023534.tmp
+26/11/07 10:52:23 INFO Utils: /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/fetchFileTemp13580173402315023534.tmp has been previously copied to /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/commons-logging_commons-logging-1.1.3.jar
+26/11/07 10:52:23 INFO Executor: Adding file:/tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/commons-logging_commons-logging-1.1.3.jar to class loader default
+26/11/07 10:52:23 INFO Executor: Fetching spark://nids-exp-l:40587/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar with timestamp 1794023543205
+26/11/07 10:52:23 INFO Utils: Fetching spark://nids-exp-l:40587/jars/org.apache.hadoop_hadoop-client-api-3.3.4.jar to /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/fetchFileTemp12049653291892435357.tmp
+26/11/07 10:52:23 INFO Utils: /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/fetchFileTemp12049653291892435357.tmp has been previously copied to /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/org.apache.hadoop_hadoop-client-api-3.3.4.jar
+26/11/07 10:52:23 INFO Executor: Adding file:/tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/org.apache.hadoop_hadoop-client-api-3.3.4.jar to class loader default
+26/11/07 10:52:23 INFO Executor: Fetching spark://nids-exp-l:40587/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar with timestamp 1794023543205
+26/11/07 10:52:23 INFO Utils: Fetching spark://nids-exp-l:40587/jars/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar to /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/fetchFileTemp4092059954233373832.tmp
+26/11/07 10:52:23 INFO Utils: /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/fetchFileTemp4092059954233373832.tmp has been previously copied to /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar
+26/11/07 10:52:23 INFO Executor: Adding file:/tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/org.apache.hadoop_hadoop-client-runtime-3.3.4.jar to class loader default
+26/11/07 10:52:23 INFO Executor: Fetching spark://nids-exp-l:40587/jars/org.apache.kafka_kafka-clients-3.4.1.jar with timestamp 1794023543205
+26/11/07 10:52:23 INFO Utils: Fetching spark://nids-exp-l:40587/jars/org.apache.kafka_kafka-clients-3.4.1.jar to /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/fetchFileTemp15373530706090501705.tmp
+26/11/07 10:52:23 INFO Utils: /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/fetchFileTemp15373530706090501705.tmp has been previously copied to /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/org.apache.kafka_kafka-clients-3.4.1.jar
+26/11/07 10:52:23 INFO Executor: Adding file:/tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/org.apache.kafka_kafka-clients-3.4.1.jar to class loader default
+26/11/07 10:52:23 INFO Executor: Fetching spark://nids-exp-l:40587/jars/org.slf4j_slf4j-api-2.0.7.jar with timestamp 1794023543205
+26/11/07 10:52:23 INFO Utils: Fetching spark://nids-exp-l:40587/jars/org.slf4j_slf4j-api-2.0.7.jar to /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/fetchFileTemp18221756530045178431.tmp
+26/11/07 10:52:23 INFO Utils: /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/fetchFileTemp18221756530045178431.tmp has been previously copied to /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/org.slf4j_slf4j-api-2.0.7.jar
+26/11/07 10:52:23 INFO Executor: Adding file:/tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/org.slf4j_slf4j-api-2.0.7.jar to class loader default
+26/11/07 10:52:23 INFO Executor: Fetching spark://nids-exp-l:40587/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.9.jar with timestamp 1794023543205
+26/11/07 10:52:23 INFO Utils: Fetching spark://nids-exp-l:40587/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.9.jar to /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/fetchFileTemp3052305634579840588.tmp
+26/11/07 10:52:23 INFO Utils: /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/fetchFileTemp3052305634579840588.tmp has been previously copied to /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.9.jar
+26/11/07 10:52:23 INFO Executor: Adding file:/tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.5.9.jar to class loader default
+26/11/07 10:52:23 INFO Executor: Fetching spark://nids-exp-l:40587/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.9.jar with timestamp 1794023543205
+26/11/07 10:52:23 INFO Utils: Fetching spark://nids-exp-l:40587/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.9.jar to /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/fetchFileTemp10503090119350494219.tmp
+26/11/07 10:52:23 INFO Utils: /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/fetchFileTemp10503090119350494219.tmp has been previously copied to /tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.9.jar
+26/11/07 10:52:23 INFO Executor: Adding file:/tmp/spark-0c51e1f6-702a-4b27-aa1e-ff6d7358bfb8/userFiles-3db10e87-ad2b-4a39-aaba-db7eaecf4372/org.apache.spark_spark-sql-kafka-0-10_2.12-3.5.9.jar to class loader default
+26/11/07 10:52:23 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 33127.
+26/11/07 10:52:23 INFO NettyBlockTransferService: Server created on nids-exp-l:33127
+26/11/07 10:52:23 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/11/07 10:52:23 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, nids-exp-l, 33127, None)
+26/11/07 10:52:23 INFO BlockManagerMasterEndpoint: Registering block manager nids-exp-l:33127 with 1048.8 MiB RAM, BlockManagerId(driver, nids-exp-l, 33127, None)
+26/11/07 10:52:23 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, nids-exp-l, 33127, None)
+26/11/07 10:52:23 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, nids-exp-l, 33127, None)
+Models loaded. Thresholds: full 0.540, light 0.946. Mode file: /home/ubuntu/nids/runs/E4_L_light_burst_r4/mode
+26/11/07 10:52:29 WARN ResolveWriteToStream: spark.sql.adaptive.enabled is not supported in streaming DataFrames/Datasets and will be disabled.
+batch   rows    in/s    proc/s   dur_ms   backlog  mode
+26/11/07 10:52:29 WARN AdminClientConfig: These configurations '[key.deserializer, value.deserializer, enable.auto.commit, max.poll.records, auto.offset.reset]' were supplied but are not used yet.
+26/11/07 10:52:29 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+    0       0        0        0      905         0 light
+    1       0        0        0        0         0 light
+26/11/07 10:52:44 WARN InstanceBuilder: Failed to load implementation from:dev.ludovic.netlib.blas.JNIBLAS
+26/11/07 10:52:44 WARN InstanceBuilder: Failed to load implementation from:dev.ludovic.netlib.blas.VectorBLAS
+    3  25,924   21,496   34,844      744         0 light
+    5   7,252   13,555   15,046      482         0 light
+    7   6,549   13,559   15,160      432         0 light
+    9   5,463   13,456   14,301      382         0 light
+   12   5,687   13,540   14,042      405         0 light
+   14   5,197   13,499   14,277      364         0 light
+   17   4,614   13,452   13,335      346         0 light
+   21   4,412   13,410   15,007      294         0 light
+   24   4,326   13,435   14,045      308         0 light
+   27   4,276   13,404   12,503      342         0 light
+   30   4,424   15,308   14,134      313         0 light
+   34   3,463   11,207   12,237      283         0 light
+   37   3,976   13,478   13,854      287         0 light
+   41   3,838   13,514   14,110      272         0 light
+   44   3,849   13,272   13,553      284         0 light
+   46   3,861   13,500   13,691      282         0 light
+   47   2,864   10,120    3,749      764         0 light
+   48     213   19,364      681      313         0 light
+   51   2,100    6,774    6,604      318         0 light
+   54  12,018   31,878   29,748      404         0 light
+   56   5,333   15,778   15,685      340         0 light
+   59  15,650   34,245   40,128      390         0 light
+   61  22,650   55,109   48,815      464         0 light
+   64  10,200   27,200   29,143      350         0 light
+   67   9,000   26,627   28,302      318         0 light
+   70   9,600   27,119   27,119      354         0 light
+   73   8,575   26,965   26,466      324         0 light
+   76   8,600   27,129   28,571      301         0 light
+   80   8,054   27,118   26,407      305         0 light
+   83   8,350   27,926   29,401      284         0 light
+   86   8,200   27,243   26,537      309         0 light
+   90   8,204   28,786   26,723      307         0 light
+   93   7,800   26,990   26,263      297         0 light
+   96   8,200   27,333   26,797      306         0 light
+  100   8,200   26,974   27,609      297         0 light
+  103   8,000   26,756   27,875      287         0 light
+  106   8,000   26,667   27,491      291         0 light
+  110   7,600   27,437   26,855      283         0 light
+  113   8,000   27,397   28,571      280         0 light
+  117   8,000   26,936   27,304      293         0 light
+  120   8,200   27,063   27,152      302         0 light
+  123   8,200   27,243   28,374      289         0 light
+  127   8,325   26,855   28,707      290         0 light
+  130   7,600   26,855   26,855      283         0 light
+  133   8,000   26,756   28,369      282         0 light
+  137   8,063   26,699   28,192      286         0 light
+  140   7,904   28,638   26,347      300         0 light
+  144   8,200   26,537   25,868      317         0 light
+  147   7,600   26,855   24,437      311         0 light
+  150   7,800   26,804   27,083      288         0 light
+  154   7,600   26,950   27,636      275         0 light
+  157   8,400   27,097   28,571      294         0 light
+  161   7,964   27,557   27,368      291         0 light
+  164   7,600   26,481   24,837      306         0 light
+  167   7,600   26,761   27,737      274         0 light
+  171   7,600   26,573   27,046      281         0 light
+  175   7,400   26,715   26,148      283         0 light
+  178   7,786   27,610   28,313      275         0 light
+  182   7,400   27,407   25,085      295         0 light
+  185   7,419   26,402   24,980      297         0 light
+  189   7,400   26,812   25,606      289         0 light
+  192   8,400   26,498   26,332      319         0 light
+  195   7,582   26,235   25,529      297         0 light
+  199   7,400   27,206   24,342      304         0 light
+  202   7,400   27,007   27,206      272         0 light
+  206   7,877   27,256   27,446      287         0 light
+  209   7,887   27,010   27,010      292         0 light
+  213   7,200   27,068   24,913      289         0 light
+  216   7,800   26,531   27,857      280         0 light
+  220   8,061   26,781   26,960      299         0 light
+  223   8,200   26,537   28,873      284         0 light
+  227   8,031   27,983   27,410      293         0 light
+  230   7,600   26,667   26,481      287         0 light
+  234   7,875   26,877   28,125      280         0 light
+  237   8,200   27,152   27,063      303         0 light
+  241   7,346   26,908   24,569      299         0 light
+  244   7,600   27,437   26,027      292         0 light
+  247  12,876   42,078   39,018      330         0 light
+  249  26,400   67,176   63,923      413         0 light
+  252  32,661   67,902   69,788      468         0 light
+  254  31,236   69,106   69,106      452         0 light
+  256  32,680   68,655   65,491      499         0 light
+  258  34,815   66,441   71,342      488         0 light
+  260  34,101   67,393   66,865      510         0 light
+  262  34,950   67,083   71,181      491         0 light
+  264  33,129   66,792   66,658      497         0 light
+  266  34,438   68,465   68,329      504         0 light
+  268  32,198   65,710   66,525      484         0 light
+  270  32,489   67,126   64,978      500         0 light
+  272  35,393   67,544   71,501      495         0 light
+  274  33,522   65,859   69,260      484         0 light
+  276  32,236   67,581   62,232      518         0 light
+  278  33,636   70,221   68,227      493         0 light
+  280  34,297   67,647   72,663      472         0 light
+  282  37,212   67,658   74,275      501         0 light
+  284  33,593   70,278   68,697      489         0 light
+  286  31,662   66,517   67,081      472         0 light
+  288  30,384   66,341   63,037      482         0 light
+  290  32,186   67,760   71,208      452         0 light
+  293  30,700   66,164   65,458      469         0 light
+  295  31,081   65,989   69,069      450         0 light
+  297  32,413   67,387   64,568      502         0 light
+  299  36,050   68,406   70,273      513         0 light
+  301  32,195   67,637   69,686      462         0 light
+  303  32,349   67,818   70,786      457         0 light
+  305  34,366   68,458   70,278      489         0 light
+  307  32,722   65,707   67,191      487         0 light
+  309  32,802   67,633   70,391      466         0 light
+  311  31,935   67,659   62,618      510         0 light
+  313  32,650   67,043   66,093      494         0 light
+  315  32,013   66,006   64,154      499         0 light
+  317  34,439   67,660   68,061      506         0 light
+  319  31,912   68,481   67,325      474         0 light
+  322  31,636   68,774   66,884      473         0 light
+  324  31,474   69,479   66,682      472         0 light
+  326  30,573   68,396   65,188      469         0 light
+  328  30,451   67,519   63,572      479         0 light
+  330  30,350   66,557   67,746      448         0 light
+  332  31,736   67,095   69,293      458         0 light
+  335  30,638   67,783   64,774      473         0 light
+  337  32,508   66,343   71,446      455         0 light
+  339  30,814   65,983   66,553      463         0 light
+  341  29,576   66,018   66,763      443         0 light
+  343  34,150   66,054   70,267      486         0 light
+  345  33,401   68,868   66,802      500         0 light
+  347  32,414   67,529   65,351      496         0 light
+  349  32,547   67,385   72,488      449         0 light
+  352  30,322   67,084   68,139      445         0 light
+  354  30,385   67,522   66,343      458         0 light
+  356  32,022   66,436   64,044      500         0 light
+  358  32,408   67,376   68,227      475         0 light
+  360  34,247   68,631   74,450      460         0 light
+  362  31,141   67,993   67,993      458         0 light
+  364  30,490   67,906   65,150      468         0 light
+  366  32,306   66,610   68,883      469         0 light
+  368  31,340   65,840   66,118      474         0 light
+  371  33,132   67,341   68,739      482         0 light
+  373  31,730   68,090   64,492      492         0 light
+  375  31,911   68,479   69,071      462         0 light
+  377  34,282   66,309   69,538      493         0 light
+  379  33,875   67,615   68,159      497         0 light
+  381  33,225   67,530   66,851      497         0 light
+  383  30,008   67,434   60,016      500         0 light
+  385  34,072   66,939   72,034      473         0 light
+  387  30,950   67,576   68,931      449         0 light
+  389  33,346   67,639   65,771      507         0 light
+  391  33,899   66,209   71,517      474         0 light
+  393  32,739   67,643   67,364      486         0 light
+  395  32,317   68,036   66,223      488         0 light
+  397  31,199   68,120   65,682      475         0 light
+  399  33,598   66,399   69,996      480         0 light
+  401  31,152   63,576   61,687      505         0 light
+  403  35,545   67,576   68,225      521         0 light
+  405  39,552   67,495   73,654      537         0 light
+  407  33,588   66,775   67,446      498         0 light
+  409  32,677   67,514   68,505      477         0 light
+  412  30,169   67,042   65,728      459         0 light
+  414  32,162   66,450   66,313      485         0 light
+  416  31,388   67,647   68,235      460         0 light
+  418  31,012   67,712   67,860      457         0 light
+  420  32,074   67,524   67,382      476         0 light
+  422  30,649   67,213   65,912      465         0 light
+  424  32,239   67,587   68,740      469         0 light
+  427  31,158   68,329   64,111      486         0 light
+  428  32,799   67,349   67,074      489         0 light
+  430  37,412   67,531   73,357      510         0 light
+  433  31,468   68,858   66,109      476         0 light
+  435  18,915   42,315   49,130      385         0 light
+  439   7,863   26,836   27,687      284         0 light
+  442   7,350   26,727   25,699      286         0 light
+  446   7,800   27,465   26,000      300         0 light
+  449   7,600   26,950   26,855      283         0 light
+  453   7,200   26,568   24,407      295         0 light
+  456   8,200   24,332   27,333      300         0 light
+  460   7,200   26,866   25,993      277         0 light
+  463   7,400   27,306   27,820      266         0 light
+  467   7,200   27,068   26,374      273         0 light
+  471   7,400   27,509   25,000      296         0 light
+  474   7,400   26,812   27,509      269         0 light
+  478   7,000   27,237   24,648      284         0 light
+  482   7,200   26,866   27,170      265         0 light
+  485   7,600   26,855   27,143      280         0 light
+  489   7,600   27,536   25,503      298         0 light
+  493   7,400   26,812   27,612      268         0 light
+  497   6,800   27,092   26,357      258         0 light
+  500   7,000   27,027   25,362      276         0 light
+  504   7,000   27,027   24,055      291         0 light
+  508   6,961   26,981   25,974      268         0 light
+  511   7,200   27,170   26,766      269         0 light
+  515   7,400   26,619   27,509      269         0 light
+  519   7,200   27,068   26,471      272         0 light
+  523   7,000   26,718   26,316      266         0 light
+  526   7,200   27,068   26,471      272         0 light
+  530   7,600   26,950   28,148      270         0 light
+  533   7,600   26,950   27,839      273         0 light
+  537   7,604   26,965   27,551      276         0 light
+  541   7,400   27,007   27,306      271         0 light
+  544   7,800   26,990   28,364      275         0 light
+  548   7,400   26,715   27,612      268         0 light
+  552   6,800   26,984   25,954      262         0 light
+  556   7,000   26,718   26,820      261         0 light
+  560   7,400   27,407   26,812      276         0 light
+  563   7,376   27,729   23,416      315         0 light
+  567   7,800   27,368   27,562      283         0 light
+  570   8,000   27,211   30,534      262         0 light
+  574   7,600   27,046   26,855      283         0 light
+  577   7,210   26,803   27,414      263         0 light
+  581   7,000   27,132   26,820      261         0 light
+  585   7,200   26,966   26,667      270         0 light
+  589   7,086   27,149   27,465      258         0 light
+  592   7,449   26,989   27,186      274         0 light
+  596   7,200   27,068   26,866      268         0 light
+  600   7,000   26,415   26,316      266         0 light
+  604   7,200   27,068   26,866      268         0 light
+  607   7,400   26,335   27,106      273         0 light
+  611   7,510   28,340   25,897      290         0 light
+  615   7,200   26,766   27,907      258         0 light
+  618   7,400   27,306   27,612      268         0 light
+  622   7,000   26,820   27,132      258         0 light
+  626   7,000   27,027   26,923      260         0 light
+  630   7,200   26,866   26,966      267         0 light
+  633   7,549   27,057   26,770      282         0 light
+  637   7,200   27,481   27,068      266         0 light
+  641   8,400   26,923   30,657      274         0 light
+  644   7,400   27,007   27,820      266         0 light
+  648   7,135   26,925   26,232      272         0 light
+  652   7,200   26,866   26,667      270         0 light
+  655   7,200   26,866   27,481      262         0 light
+  659   7,200   26,966   26,866      268         0 light
+  663   7,000   26,616   26,217      267         0 light
+  667   7,200   27,068   26,374      273         0 light
+  669      72       93      364      198         0 light
+  670       0        0        0        0         0 light
+No new data; stopping.

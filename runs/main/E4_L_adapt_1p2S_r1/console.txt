@@ -1,0 +1,169 @@
+Topic E4_L_adapt_1p2S_r1 created. Run directory: /home/ubuntu/nids/runs/E4_L_adapt_1p2S_r1
+Waiting for the streaming job to start ...
+Controller started: --high 100000 --low 10000 --k 2 --m 3 --dwell 15
+
+>>> Detector ready. Now start the load ON THE LAPTOP:
+>>>   WARMUP=20 WARMUP_RATE=13500 bash ~/nids-host/stream/produce_parallel.sh E4_L_adapt_1p2S_r1 54000 9421272 4 
+>>> (this window waits until the detector has processed everything)
+
+
+=== Controller decisions ===
+batch 26: backlog 149,044 -> switch full -> light
+batch 51: backlog 0 -> switch light -> full
+batch 67: backlog 111,614 -> switch full -> light
+batch 97: backlog 0 -> switch light -> full
+batch 115: backlog 120,629 -> switch full -> light
+batch 142: backlog 0 -> switch light -> full
+batch 156: backlog 114,515 -> switch full -> light
+batch 187: backlog 0 -> switch light -> full
+batch 199: backlog 131,512 -> switch full -> light
+batch 226: backlog 0 -> switch light -> full
+
+=== Streaming job (last lines) ===
+  162  74,998   93,165   99,467      754    14,301 light
+  164  33,372   54,440   69,237      482         0 light
+  166  23,590   54,106   59,123      399         0 light
+  169  20,962   53,474   57,430      365         0 light
+  172  20,768   53,943   55,978      371         0 light
+  174  21,019   53,757   55,606      378         0 light
+  177  22,650   54,187   59,449      381         0 light
+  179  20,078   53,684   51,747      388         0 light
+  182  20,743   53,599   53,051      391         0 light
+  185  20,185   52,979   55,606      363         0 light
+  187  19,996   54,634   50,115      399         0 light
+  189  22,263   54,168   54,036      412         0  full
+  190  22,192   53,734   21,380    1,038         0  full
+  191  56,015   53,964   40,620    1,379         0  full
+  192  74,553   54,024   44,993    1,657         0  full
+  193  74,999   45,262   44,483    1,686    14,478  full
+  194  74,997   44,482   44,962    1,668    30,674  full
+  195  74,998   44,936   41,642    1,801    45,600  full
+  196  74,998   41,619   44,963    1,668    68,043  full
+  197  74,999   44,963   38,981    1,924    83,072  full
+  198  74,998   38,960   42,832    1,751   112,086  full
+  199  74,998   42,832   44,483    1,686   131,512  full
+  200  74,999   44,457   41,666    1,800   147,717 light
+  201  74,999   41,643   74,924    1,001   169,903 light
+  202  74,997   74,847   88,544      847   148,992 light
+  203  74,998   88,441   91,797      817   119,670 light
+  205  74,999   79,532   86,804      864    64,887 light
+  206  74,998   86,803   97,527      769    36,657 light
+  208  43,244   58,202   83,969      515         0 light
+  210  22,441   53,945   54,734      410         0 light
+  213  21,493   54,413   57,162      376         0 light
+  215  21,655   54,410   54,547      397         0 light
+  218  20,569   54,272   53,426      385         0 light
+  220  19,927   54,003   48,367      412         0 light
+  223  21,235   54,309   54,589      389         0 light
+  226  19,446   54,318   51,995      374         0 light
+  227  20,165   53,917   51,441      392         0  full
+  228   8,582   21,893    7,341    1,169         0  full
+  229       0        0        0        0         0  full
+No new data; stopping.
+
+=== Run summary ===
+{
+  "clock_offset_ms": 1.7,
+  "warmup_records": 270000,
+  "slo_ms": 5000.0,
+  "rows": 9421272,
+  "unique": 9421272,
+  "duplicates": 0,
+  "missing": 0,
+  "span_s": 175.4,
+  "throughput_rps": 53717,
+  "latency_ms": {
+    "p50": 2226,
+    "p95": 4391,
+    "p99": 4872,
+    "max": 5428,
+    "mean": 2185
+  },
+  "slo_violation_share": 0.00597,
+  "load_s": 174.3,
+  "drain_s": 1.0,
+  "detection": {
+    "tp": 495714,
+    "fp": 4540,
+    "fn": 34593,
+    "tn": 8886425,
+    "recall": 0.93477,
+    "precision": 0.99092,
+    "fpr": 0.000511,
+    "macro_f1": 0.97992
+  },
+  "by_mode": {
+    "full": {
+      "rows": 4530395,
+      "latency_ms": {
+        "p50": 2844,
+        "p95": 4477,
+        "p99": 4878,
+        "max": 5428,
+        "mean": 2868
+      },
+      "detection": {
+        "tp": 108771,
+        "fp": 139,
+        "fn": 354,
+        "tn": 4421131,
+        "recall": 0.99676,
+        "precision": 0.99872,
+        "fpr": 3.1e-05,
+        "macro_f1": 0.99884
+      }
+    },
+    "light": {
+      "rows": 4890877,
+      "latency_ms": {
+        "p50": 717,
+        "p95": 4225,
+        "p99": 4853,
+        "max": 5346,
+        "mean": 1553
+      },
+      "detection": {
+        "tp": 386943,
+        "fp": 4401,
+        "fn": 34239,
+        "tn": 4465294,
+        "recall": 0.91871,
+        "precision": 0.98875,
+        "fpr": 0.000985,
+        "macro_f1": 0.97407
+      }
+    }
+  },
+  "family_recall": {
+    "DoS": 0.9803,
+    "DDoS": 0.9987,
+    "Infiltration": 0.447,
+    "Web": 0.475,
+    "Botnet": 0.0,
+    "BruteForce": 1.0
+  },
+  "batches": {
+    "count": 228,
+    "mean_total_s": 0.8,
+    "max_total_s": 2.174,
+    "mean_rows": 42506,
+    "modes": {
+      "light": 142,
+      "full": 86
+    }
+  },
+  "backlog_max_records": 169903,
+  "backlog_at_load_end": 0,
+  "sustainable": true,
+  "telemetry": {
+    "samples": 175,
+    "cpu_mean": 72.7,
+    "cpu_p95": 87.7,
+    "cpu_max": 96.7,
+    "mem_used_max_mb": 4620.0,
+    "mem_avail_min_mb": 1306.0,
+    "swap_used_max_mb": 0.0,
+    "steal_max": 0.3
+  },
+  "valid_vm_side": true
+}
