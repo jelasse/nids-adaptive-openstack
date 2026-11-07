@@ -12,7 +12,7 @@ Outputs in --out:
   tables.md         the main tables, ready to copy into the paper
   e4_effects.csv    Adaptive vs Static-Full and vs Static-Light: mean difference, 95% bootstrap CI, Hedges' g
   fig_e2_latency.png  latency (p50, p95) vs offered load for Full and Light on L (E2), log scale
-Run names: <EXP>_<VM>_<policy>_<load>_r<N>[b], e.g. E2_L_full_1p2S_r3, E4_L_adapt_burst_r2, E2_L_light_0p5S_r1b.
+Run names (C2/C4 = Kafka-heap sensitivity check of E2/E4): <EXP>_<VM>_<policy>_<load>_r<N>[b], e.g. E2_L_full_1p2S_r3, E4_L_adapt_burst_r2, E2_L_light_0p5S_r1b.
 """
 import argparse, csv, glob, json, math, os, re, statistics
 from collections import defaultdict
@@ -26,7 +26,7 @@ RUNS, HOST, OUT = (os.path.expanduser(x) for x in (a.runs, a.host, a.out))
 os.makedirs(OUT, exist_ok=True)
 
 T975 = {1: 12.706, 2: 4.303, 3: 3.182, 4: 2.776, 5: 2.571, 6: 2.447, 7: 2.365, 8: 2.306, 9: 2.262, 10: 2.228}
-NAME = re.compile(r"^(E\d)_([ML])_([a-z]+)_([0-9p]+S|burst|\d+k)_r(\d+)(b?)$")
+NAME = re.compile(r"^([EC]\d)_([ML])_([a-z]+)_([0-9p]+S|burst|\d+k)_r(\d+)([bc]?)$")
 FAMS = ["BruteForce", "DoS", "DDoS", "Web", "Infiltration", "Botnet"]
 
 
