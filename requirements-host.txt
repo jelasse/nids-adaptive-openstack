@@ -1,0 +1,4 @@
+# Laptop (OpenStack host): replay producers, telemetry, run queue, aggregation
+confluent-kafka>=2.4
+pyarrow>=16
+matplotlib>=3.8

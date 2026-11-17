@@ -1,0 +1,4 @@
+name,vm,ip,rate,records,mode,controller,profile,procs,warmup_rate
+E1_L_full_0p5S_r2,nids-exp-l,172.24.4.36,22500,9421272,full,,,2,13500
+E1_L_full_0p5S_r3,nids-exp-l,172.24.4.36,22500,9421272,full,,,2,13500
+E1_L_full_0p5S_r1,nids-exp-l,172.24.4.36,22500,9421272,full,,,2,13500

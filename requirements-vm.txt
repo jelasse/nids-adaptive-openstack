@@ -1,0 +1,4 @@
+# Experiment VM: streaming detector, controller, per-run analysis
+# plus OpenJDK 17 and Apache Kafka 4.3.1 (official binary release, KRaft mode)
+pyspark==3.5.9
+pyarrow>=16

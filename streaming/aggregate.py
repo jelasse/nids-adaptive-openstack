@@ -2,7 +2,8 @@
 """Turn the run folders into the paper's tables and figures (Section 5.8 / Section 6).
 
 Usage (on the laptop):  python aggregate.py [~/w7/runs] [--out ~/w7/analysis]
-Reads every <run>/summary.json (VM side) and ~/w5/host_runs/<run>/host_summary.json (laptop side).
+Reads every <run>/summary.json (VM side) and the laptop-side host_summary.json, from --host/<run>/ or, as in the
+published results/, from <run>/host/.
 A run is VALID if both sides are valid (0 missing, 0 duplicates, producers >= 98% of plan, no laptop swap-in).
 Invalid runs are listed in invalid_runs.csv and excluded from the statistics.
 
@@ -45,7 +46,7 @@ for d in sorted(glob.glob(os.path.join(RUNS, "E*"))):
         continue
     exp, vm, pol, load, rep, redo = m.groups()
     v = load_json(os.path.join(d, "summary.json"))
-    h = load_json(os.path.join(HOST, name, "host_summary.json"))
+    h = load_json(os.path.join(HOST, name, "host_summary.json")) or load_json(os.path.join(d, "host", "host_summary.json"))
     if v is None:
         continue
     L, D = v.get("latency_ms", {}), v.get("detection", {})

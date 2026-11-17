@@ -6,6 +6,7 @@ openrc*
 *_key.pub
 id_*
 .env
+clouds.yaml
 
 # --- never commit data or big outputs ---
 *.parquet
@@ -20,8 +21,8 @@ models/full_rf/
 models/light_lr/
 
 # --- run-control files (no value as evidence) ---
-runs/**/STOP
-runs/**/mode
+results/**/STOP
+results/**/mode
 
 # --- Python / editor clutter ---
 __pycache__/

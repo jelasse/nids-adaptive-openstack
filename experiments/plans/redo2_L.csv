@@ -1,0 +1,2 @@
+name,vm,ip,rate,records,mode,controller,profile,procs,warmup_rate
+E2_L_light_1p2S_r3b,nids-exp-l,172.24.4.36,54000,9421272,light,,,4,13500
