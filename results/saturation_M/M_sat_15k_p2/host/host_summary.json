@@ -1,0 +1,36 @@
+{
+  "producers": [
+    {
+      "log": "producer_p0.log",
+      "sent": 2000000,
+      "seconds": 266.7,
+      "planned_s": 266.7,
+      "achieved_rps": 7500,
+      "pct_of_plan": 100.0
+    },
+    {
+      "log": "producer_p1.log",
+      "sent": 2000000,
+      "seconds": 266.7,
+      "planned_s": 266.7,
+      "achieved_rps": 7500,
+      "pct_of_plan": 100.0
+    }
+  ],
+  "records_sent": 4000000,
+  "host": {
+    "samples": 267,
+    "cpu_mean": 14.7,
+    "cpu_p95": 16.0,
+    "mem_avail_min_mb": 2946.0,
+    "swap_used_before_run_mb": 49.0,
+    "swap_used_max_mb": 450.0,
+    "swap_in_during_load_mb": 0.2,
+    "swap_out_during_load_mb": 109.5
+  },
+  "valid": true,
+  "problems": [],
+  "warnings": [
+    "laptop swapped OUT 110 MB (idle memory; run still valid)"
+  ]
+}

@@ -1,0 +1,28 @@
+Replay file rows: 9,421,260; sending 2,000,000 from row 2,000,000 at 7,500/s to topic 'M_sat_15k_p2'
+  sent 75,001  achieved 7,500/s
+  sent 150,003  achieved 7,500/s
+  sent 225,001  achieved 7,500/s
+  sent 300,001  achieved 7,489/s
+  sent 375,451  achieved 7,500/s
+  sent 450,451  achieved 7,500/s
+  sent 525,454  achieved 7,500/s
+  sent 600,418  achieved 7,500/s
+  sent 675,457  achieved 7,500/s
+  sent 750,457  achieved 7,500/s
+  sent 825,455  achieved 7,500/s
+  sent 900,451  achieved 7,500/s
+  sent 975,457  achieved 7,500/s
+  sent 1,050,458  achieved 7,500/s
+  sent 1,125,460  achieved 7,500/s
+  sent 1,200,460  achieved 7,500/s
+  sent 1,275,458  achieved 7,500/s
+  sent 1,350,457  achieved 7,500/s
+  sent 1,425,456  achieved 7,500/s
+  sent 1,500,460  achieved 7,500/s
+  sent 1,575,463  achieved 7,500/s
+  sent 1,650,464  achieved 7,500/s
+  sent 1,725,463  achieved 7,500/s
+  sent 1,800,460  achieved 7,500/s
+  sent 1,875,464  achieved 7,500/s
+  sent 1,950,464  achieved 7,500/s
+SENT 2,000,000 records in 266.7 s (planned 266.7 s), achieved 7,500/s (event_id 2,000,000..3,999,999; max lag behind schedule 0.70 s)

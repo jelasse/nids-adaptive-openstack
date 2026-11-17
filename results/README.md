@@ -7,6 +7,7 @@ not included.
 |---|---|---|
 | `final/` | Experiments E1–E4 with the frozen protocol (Kafka heap 512 MB). These are the runs reported in the paper. | 85 (84 valid + 1 invalid) |
 | `saturation_L/` | Saturation measurement of Static-Full on L (validation split, final host state): S(L) = 45,000 records/s. | 8 |
+| `saturation_M/` | Saturation measurement of Static-Full on M (validation split, final host state): S(M) = 30,000 records/s. | 5 |
 | `set_aside_kafka1g/` | First set of the L runs (E1-L, E2, E4) with a 1 GB Kafka heap. Set aside and repeated; used only for the robustness check. | 65 (incl. 2 repetitions of invalid runs) |
 | `pilots/M`, `pilots/L` | Pilot runs on the validation split used to fix the batch cap, the trigger and the controller thresholds before the main experiments. | 18 |
 | `clock_offsets.csv` | VM − host clock offset measured before each run. | – |
