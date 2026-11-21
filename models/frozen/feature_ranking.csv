@@ -1,0 +1,79 @@
+rank,feature,importance
+1,"Bwd Init Win Bytes",0.127294
+2,"Packet Length Max",0.068810
+3,"FIN Flag Count",0.063704
+4,"FWD Init Win Bytes",0.059120
+5,"Flow IAT Min",0.040722
+6,"Bwd Packet Length Max",0.035812
+7,"Bwd IAT Std",0.031652
+8,"Fwd Packet Length Max",0.030167
+9,"Fwd Seg Size Min",0.030140
+10,"Flow Bytes/s",0.027478
+11,"Total Bwd packets",0.027207
+12,"Total TCP Flow Time",0.026017
+13,"Fwd Segment Size Avg",0.025852
+14,"Fwd Packets/s",0.025396
+15,"Bwd PSH Flags",0.025278
+16,"Packet Length Std",0.023338
+17,"Flow IAT Mean",0.023189
+18,"Total Length of Bwd Packet",0.022547
+19,"Fwd Packet Length Std",0.020504
+20,"Total Length of Fwd Packet",0.019547
+21,"Bwd IAT Total",0.017033
+22,"Bwd IAT Mean",0.016773
+23,"Bwd IAT Max",0.013476
+24,"ECE Flag Count",0.012739
+25,"Bwd Packets/s",0.012448
+26,"Fwd PSH Flags",0.012234
+27,"Fwd IAT Total",0.011547
+28,"Total Fwd Packet",0.009144
+29,"Fwd IAT Mean",0.008925
+30,"Flow IAT Std",0.008839
+31,"Flow Duration",0.008818
+32,"Fwd Header Length",0.008740
+33,"Packet Length Variance",0.008331
+34,"Bwd Packet Length Std",0.008308
+35,"SYN Flag Count",0.007799
+36,"Packet Length Mean",0.007671
+37,"Fwd IAT Min",0.007414
+38,"Fwd Packet Length Mean",0.006890
+39,"Bwd Header Length",0.005606
+40,"ACK Flag Count",0.005577
+41,"Bwd Segment Size Avg",0.005437
+42,"Subflow Bwd Bytes",0.005285
+43,"Subflow Fwd Bytes",0.004820
+44,"Flow Packets/s",0.004136
+45,"Active Max",0.003821
+46,"Flow IAT Max",0.003768
+47,"Average Packet Size",0.002825
+48,"PSH Flag Count",0.002684
+49,"Fwd RST Flags",0.002618
+50,"Fwd IAT Max",0.002356
+51,"Bwd Packet Length Mean",0.001846
+52,"RST Flag Count",0.001440
+53,"Down/Up Ratio",0.001062
+54,"Fwd Act Data Pkts",0.001056
+55,"Active Min",0.000691
+56,"Fwd Bulk Rate Avg",0.000488
+57,"Fwd Packet/Bulk Avg",0.000447
+58,"CWR Flag Count",0.000416
+59,"Active Mean",0.000409
+60,"Fwd IAT Std",0.000338
+61,"Fwd Bytes/Bulk Avg",0.000299
+62,"Bwd Bulk Rate Avg",0.000277
+63,"Bwd RST Flags",0.000240
+64,"Fwd URG Flags",0.000213
+65,"Bwd Packet Length Min",0.000180
+66,"Idle Mean",0.000157
+67,"Bwd IAT Min",0.000136
+68,"Idle Max",0.000122
+69,"Idle Min",0.000072
+70,"Protocol",0.000063
+71,"ICMP Code",0.000063
+72,"Fwd Packet Length Min",0.000032
+73,"Packet Length Min",0.000029
+74,"Active Std",0.000026
+75,"Bwd Packet/Bulk Avg",0.000017
+76,"Bwd Bytes/Bulk Avg",0.000016
+77,"Idle Std",0.000014
+78,"ICMP Type",0.000012

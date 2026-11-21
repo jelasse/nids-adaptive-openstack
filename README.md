@@ -38,7 +38,7 @@ rates, below and beyond the detector's measured capacity. The policies compared 
 |---|---|
 | `testbed/` | DevStack `local.conf` example (no passwords), version recording |
 | `data_prep/` | Profiling, label mapping, duplicate check, cleaning, time-ordered train/validation/test split; revision checks of the split (`revision_checks.py`) |
-| `models/` | Training, tuning and freezing of the Full and Light models; selection of the security-aware fallback (`freeze_fallback.py`); test-split evaluation of the frozen models (`eval_frozen.py`); in-VM scoring speed check |
+| `models/` | Frozen models of the paper (`frozen/`: Full, Light, security-aware fallback, thresholds, feature lists); training, tuning and freezing of the Full and Light models; selection of the security-aware fallback (`freeze_fallback.py`); test-split evaluation of the frozen models (`eval_frozen.py`); in-VM scoring speed check |
 | `streaming/` | Replay producers, streaming detector, controller, telemetry, host session and Kafka start scripts, run script, run queue, per-run analysis, aggregation |
 | `experiments/plans/` | Randomized run plans of E1–E4 and R1–R5 (one CSV line per run) |
 | `experiments/workloads/` | Manifests of the five evasion workloads of R3 |

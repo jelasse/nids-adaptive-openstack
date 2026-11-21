@@ -19,7 +19,7 @@ S = 45,000 flows/s) with the same testbed, frozen models and validity rules as E
   at about 0.45 GB. With pre-buffering the producers grew towards the file size and the host swapped.
 - **Security-aware fallback** (`models/freeze_fallback.py`): among 18 small Random Forests with at least 4× the offline
   throughput of Full, the highest worst-family recall on validation. Chosen: 10 trees, depth 10, top 20 features,
-  threshold 0.306 (`light_rf`). Test-split evaluation of all frozen models: `models/eval_frozen.py`.
+  threshold 0.306 (`light_rf`, in `models/frozen/`). Test-split evaluation of all frozen models: `models/eval_frozen.py`.
 - **Controllers** (`streaming/controller.py`): `--policy proportional` sends each micro-batch to the fallback with
   probability *f*, with per-flow costs learned from saturated batches (≥ 60,000 flows). The detector
   (`streaming/stream_detect.py`) reads `mix:<f>` and `FULL_SAMPLE`; the choice is made per micro-batch, seeded by

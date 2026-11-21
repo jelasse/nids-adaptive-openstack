@@ -1,0 +1,118 @@
+{
+  "full_rf": {
+    "threshold": 0.54,
+    "params": {
+      "trees": 50,
+      "depth": 20
+    },
+    "validation": {
+      "name": "full_rf",
+      "fit_s": 114.9,
+      "val_rows": 9421260,
+      "val_rows_per_s": 383656,
+      "thr": 0.54,
+      "macro_f1": 0.99976,
+      "precision": 0.9993,
+      "recall": 0.99978,
+      "fpr": 4e-05,
+      "fp": 373,
+      "fn": 117,
+      "pr_auc": 0.99998,
+      "family_recall": {
+        "Botnet": 1.0,
+        "BruteForce": 1.0,
+        "DDoS": 0.9999,
+        "DoS": 1.0,
+        "Infiltration": 0.9924,
+        "Web": 0.9756
+      }
+    }
+  },
+  "light_lr": {
+    "threshold": 0.946,
+    "params": {
+      "k": 10,
+      "reg": 0.01,
+      "features": [
+        "Bwd Init Win Bytes",
+        "Packet Length Max",
+        "FIN Flag Count",
+        "FWD Init Win Bytes",
+        "Flow IAT Min",
+        "Bwd Packet Length Max",
+        "Bwd IAT Std",
+        "Fwd Packet Length Max",
+        "Fwd Seg Size Min",
+        "Flow Bytes/s"
+      ]
+    },
+    "validation": {
+      "name": "light_lr",
+      "fit_s": 7.1,
+      "val_rows": 9421260,
+      "val_rows_per_s": 2995720,
+      "thr": 0.946,
+      "macro_f1": 0.94966,
+      "precision": 0.97666,
+      "recall": 0.84243,
+      "fpr": 0.0012,
+      "fp": 10677,
+      "fn": 83560,
+      "pr_auc": 0.87021,
+      "family_recall": {
+        "Botnet": 0.0,
+        "BruteForce": 1.0,
+        "DDoS": 0.7875,
+        "DoS": 0.9815,
+        "Infiltration": 0.0181,
+        "Web": 0.0
+      }
+    }
+  },
+  "light_rf": {
+    "threshold": 0.306,
+    "params": {
+      "trees": 10,
+      "depth": 10,
+      "k": 20,
+      "features": [
+        "Bwd Init Win Bytes",
+        "Packet Length Max",
+        "FIN Flag Count",
+        "FWD Init Win Bytes",
+        "Flow IAT Min",
+        "Bwd Packet Length Max",
+        "Bwd IAT Std",
+        "Fwd Packet Length Max",
+        "Fwd Seg Size Min",
+        "Flow Bytes/s",
+        "Total Bwd packets",
+        "Total TCP Flow Time",
+        "Fwd Segment Size Avg",
+        "Fwd Packets/s",
+        "Bwd PSH Flags",
+        "Packet Length Std",
+        "Flow IAT Mean",
+        "Total Length of Bwd Packet",
+        "Fwd Packet Length Std",
+        "Total Length of Fwd Packet"
+      ],
+      "budget": 4.0,
+      "rule": "max worst-family validation recall within throughput budget"
+    },
+    "validation": {
+      "macro_f1": 0.9995210842594777,
+      "recall": 0.99940978252466,
+      "fpr": 7.265817690736431e-05,
+      "family_recall": {
+        "Botnet": 1.0,
+        "BruteForce": 1.0,
+        "DDoS": 0.9999,
+        "DoS": 1.0,
+        "Infiltration": 0.9778,
+        "Web": 0.9756
+      },
+      "rows_per_s": 2326487
+    }
+  }
+}

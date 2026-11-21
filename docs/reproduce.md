@@ -64,3 +64,41 @@ python3 ~/nids-host/stream/aggregate.py ~/w7/runs --host ~/w5/host_runs --out ~/
 Outputs: `runs.csv`, `conditions.csv`, `tables.md`, `e4_effects.csv` (bootstrap CIs, Hedges' g),
 `fig_e2_latency.png`. The aggregated outputs of the study are in `analysis/`; they can be recomputed from the
 published run files with `python3 streaming/aggregate.py results/final --out analysis`.
+
+## 7. Revision experiments (R1–R5)
+The frozen models of the paper, including the security-aware fallback, are in `models/frozen/` (Spark
+PipelineModels with `frozen_models.json`, `features.txt` and `feature_ranking.csv`). Copy `full_rf`, `light_lr`,
+`light_rf` and `frozen_models.json` to `~/nids/models/` in the VM to use exactly the models of the paper, or
+recreate them with steps 3 and 7.1.
+
+1. **Dataset checks and models** (laptop, Spark venv; outputs in `~/w8/rev`):
+   ```bash
+   spark-submit --driver-memory 10g data_prep/revision_checks.py split     ~/w4/data ~/w8/rev
+   spark-submit --driver-memory 10g data_prep/revision_checks.py ablation  ~/w4/data ~/w8/rev --ranking ~/w5/models/feature_ranking.csv
+   spark-submit --driver-memory 10g data_prep/revision_checks.py lodo      ~/w4/data ~/w8/rev
+   spark-submit --driver-memory 10g data_prep/revision_checks.py attempted ~/w4/data ~/w8/rev --models ~/w5/models
+   spark-submit --driver-memory 8g  models/freeze_fallback.py ~/w4/data ~/w5/models ~/w8/rev   # -> light_rf
+   spark-submit --driver-memory 8g  models/eval_frozen.py     ~/w4/data ~/w5/models ~/w8/rev   # test-split table
+   ```
+2. **Tools**: copy `streaming/` to `~/nids-host/stream/` on the laptop and to `~/nids/stream/` in the VM, and the
+   fallback model to `~/nids/models/light_rf` with its entry in `frozen_models.json`. Pin the guest kernel to one that
+   includes the `ptp_kvm` module and disable unattended upgrades; otherwise the clock check stops the queue.
+3. **Evasion workloads** (R3), about 8.1 M rows each:
+   ```bash
+   for s in 1 2 3 4 5; do python ~/nids-host/stream/compose_workload.py ~/w5/replay/test.parquet ~/w8/workloads --seed $s; done
+   ```
+4. **Plans**: `python3 ~/nids-host/stream/make_plan_rev.py R1` (and `R2` … `R5`) writes `~/w8/plans/R<n>_L.csv`.
+   On another host, first edit `S`, `VM` and `IP` at the top of `make_plan_rev.py` to the measured saturation rate,
+   the VM name and its address.
+5. **Runs**: as in Section 5, one queue per plan, e.g.
+   `nohup bash ~/nids-host/stream/run_queue.sh ~/w8/plans/R2_L.csv > ~/w8/queue_R2.log 2>&1 &`. The plan columns set
+   the replay file, the order-preserving replay (`INTERLEAVE=1`), the fallback model and the controller; after each
+   run the queue computes `deadline.csv` (and `evasion.csv` for R3) in the VM and copies them to `~/w7/runs/<run>/`.
+   The 28 M-flow runs of R4 need about 14 GB of free disk in the VM for the Kafka topic.
+6. **Repeats**: `python3 ~/nids-host/stream/make_plan_rev.py R2 --redo` writes `~/w8/plans/R2_L_redo.csv` with only the
+   runs still missing, invalid ones renamed with a `b` (then `c`) suffix.
+7. **Analysis**:
+   ```bash
+   python3 analysis/revision/rev_analysis.py ~/w7/runs ~/w7/queue_results.csv ~/w8/analysis
+   python3 analysis/revision/rev_figs.py ~/w7/runs ~/w7/queue_results.csv analysis/revision/w7_deadline_L.csv ~/w8/analysis
+   ```
