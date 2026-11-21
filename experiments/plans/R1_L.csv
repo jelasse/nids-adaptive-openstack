@@ -1,0 +1,4 @@
+name,vm,ip,rate,records,mode,controller,profile,procs,warmup_rate,replay,vm_env,host_env
+R1_L_lightrf_63k_r1,nids-exp-l,172.24.4.36,63000,4000000,light,,,4,13500,~/w5/replay/val.parquet,LIGHT_MODEL=light_rf,INTERLEAVE=1
+R1_L_lightrf_67k_r1,nids-exp-l,172.24.4.36,67500,4000000,light,,,4,13500,~/w5/replay/val.parquet,LIGHT_MODEL=light_rf,INTERLEAVE=1
+R1_L_lightrf_54k_r1,nids-exp-l,172.24.4.36,54000,4000000,light,,,4,13500,~/w5/replay/val.parquet,LIGHT_MODEL=light_rf,INTERLEAVE=1

@@ -8,6 +8,9 @@
 # Stop after the current run:  touch ~/w7/STOP_QUEUE
 # Resumes where it left off: runs whose results are already in ~/w7/runs/<name> are skipped.
 # Results: one line per run in ~/w7/queue_results.csv.
+# Optional plan columns (revision experiments): replay (replay file on the laptop; default test.parquet),
+#   vm_env ("KEY=VAL;KEY=VAL" for run_once.sh in the VM, e.g. LIGHT_MODEL=light_rf;FULL_SAMPLE=0.1),
+#   host_env ("KEY=VAL;..." for produce_parallel.sh on the laptop, e.g. INTERLEAVE=1).
 set -uo pipefail
 PLAN=$1
 KEY=${KEY:-$HOME/.ssh/testbed_key}
@@ -19,13 +22,14 @@ rm -f "$HOME/w7/STOP_QUEUE"
 log() { echo "[$(date '+%H:%M:%S')] $*"; }
 
 # the plan is read on file descriptor 3, so that ssh and the producers cannot consume its lines
-while IFS=, read -r -u 3 name vm ip rate records mode controller profile procs warmup_rate; do
-  warmup_rate=${warmup_rate%$'\r'}            # tolerate Windows line endings in the plan
+while IFS=, read -r -u 3 name vm ip rate records mode controller profile procs warmup_rate replay vm_env host_env; do
+  warmup_rate=${warmup_rate%$'\r'}; replay=${replay%$'\r'}; vm_env=${vm_env%$'\r'}; host_env=${host_env%$'\r'}
+  replay=${replay:-$HOME/w5/replay/test.parquet}; replay=${replay/#\~/$HOME}
   profile=${profile//;/,}
   [ -e "$HOME/w7/STOP_QUEUE" ] && { log "STOP_QUEUE found: stopping before $name"; break; }
   if [ -f "$HOME/w7/runs/$name/summary.json" ]; then log "skip $name (already done)"; continue; fi
   SSH=(ssh -n -i "$KEY" -o BatchMode=yes -o ConnectTimeout=10 "ubuntu@$ip")
-  log "=== $name: $rate/s, $mode${controller:+, adaptive}${profile:+, burst $profile}, $procs producers"
+  log "=== $name: $rate/s, $mode${controller:+, controller}${profile:+, profile $profile}, $procs producers${vm_env:+, $vm_env}${host_env:+, $host_env}, $(basename "$replay")"
 
   # 1. host still in the fixed state? (charger, profile; pinning is checked by prepare_session.sh)
   if [ -z "${SKIP_AC:-}" ] && [ "$(cat /sys/class/power_supply/AC*/online 2>/dev/null | head -1)" != "1" ]; then
@@ -42,6 +46,7 @@ while IFS=, read -r -u 3 name vm ip rate records mode controller profile procs w
   ENVS="CLOCK_OFFSET_MS=$off EXTERNAL=1 EXT_PROCS=$procs WARMUP=20 WARMUP_RATE=$warmup_rate"
   [ -n "$controller" ] && ENVS="$ENVS CONTROLLER='$controller'"
   [ -n "$profile" ] && ENVS="$ENVS PROFILE='$profile'"
+  [ -n "$vm_env" ] && ENVS="$ENVS ${vm_env//;/ }"
   "${SSH[@]}" "/opt/kafka/bin/kafka-topics.sh --bootstrap-server localhost:9092 --delete --topic $name > /dev/null 2>&1" || true
   "${SSH[@]}" "mkdir -p ~/nids/console; nohup env $ENVS bash ~/nids/stream/run_once.sh $name $rate $records $mode \
       > ~/nids/console/$name.txt 2>&1 < /dev/null &" || { log "could not start the run in the VM"; break; }
@@ -54,8 +59,8 @@ while IFS=, read -r -u 3 name vm ip rate records mode controller profile procs w
   [ "$ready" = 1 ] || { log "detector did not become ready; console:"; "${SSH[@]}" "tail -5 ~/nids/console/$name.txt"; break; }
 
   # 4. offer the load from the laptop
-  env WARMUP=20 WARMUP_RATE="$warmup_rate" PROFILE="$profile" \
-    bash "$DIR/produce_parallel.sh" "$name" "$rate" "$records" "$procs" "$HOME/w5/replay/test.parquet" "$ip:9094" < /dev/null \
+  env WARMUP=20 WARMUP_RATE="$warmup_rate" PROFILE="$profile" ${host_env//;/ } \
+    bash "$DIR/produce_parallel.sh" "$name" "$rate" "$records" "$procs" "$replay" "$ip:9094" < /dev/null \
     | grep -E "SENT|WARNING|LAPTOP SIDE|note:" | sed 's/^/    /'
 
   # 5. wait until the VM side has finished (detector stopped and analysis written)
@@ -82,6 +87,14 @@ EOF
 )
   echo "$(date -Is),$name,$line" >> "$RES"
   log "result: $line"
+  # per-flow metrics computed in the VM (deadline-constrained detection; evasion metrics for R3 runs), then the
+  # per-flow predictions are deleted to protect the VM disk (kept for the evasion runs R3_*)
+  "${SSH[@]}" "R=~/nids/runs/$name; P=~/nids-venv/bin/python; \
+      \$P ~/nids/stream/deadline_metrics.py \$R \$R/deadline.csv > /dev/null 2>&1; \
+      case $name in R3_*) \$P ~/nids/stream/evasion_metrics.py \$R \$R/evasion.csv > /dev/null 2>&1 ;; \
+                    *) [ -f \$R/deadline.csv ] && [ -z \"\${KEEP_PRED:-}\" ] && rm -rf \$R/predictions ;; esac" || true
+  rsync -a -e "ssh -i $KEY" "ubuntu@$ip:~/nids/runs/$name/deadline.csv" "ubuntu@$ip:~/nids/runs/$name/evasion.csv" \
+        "$HOME/w7/runs/$name/" 2>/dev/null || true
   "${SSH[@]}" "/opt/kafka/bin/kafka-topics.sh --bootstrap-server localhost:9092 --delete --topic $name > /dev/null 2>&1; \
                rm -rf ~/nids/runs/$name/checkpoint" || true
   sleep 30                                  # let the VM settle before the next run

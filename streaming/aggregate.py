@@ -27,7 +27,7 @@ RUNS, HOST, OUT = (os.path.expanduser(x) for x in (a.runs, a.host, a.out))
 os.makedirs(OUT, exist_ok=True)
 
 T975 = {1: 12.706, 2: 4.303, 3: 3.182, 4: 2.776, 5: 2.571, 6: 2.447, 7: 2.365, 8: 2.306, 9: 2.262, 10: 2.228}
-NAME = re.compile(r"^([EC]\d)_([ML])_([a-z]+)_([0-9p]+S|burst|\d+k)_r(\d+)([bc]?)$")
+NAME = re.compile(r"^([ECR]\d)_([ML])_([a-z]+)_([0-9p]+S|burst\d?|\d+k|ev\d+)_r(\d+)([bc]?)$")
 FAMS = ["BruteForce", "DoS", "DDoS", "Web", "Infiltration", "Botnet"]
 
 
@@ -39,7 +39,7 @@ def load_json(p):
 
 
 rows = []
-for d in sorted(glob.glob(os.path.join(RUNS, "E*"))):
+for d in sorted(glob.glob(os.path.join(RUNS, "[ER]*"))):
     name = os.path.basename(d)
     m = NAME.match(name)
     if not m:
@@ -105,7 +105,13 @@ for r in rows:
 
 
 def load_key(l):
-    return float(l[:-1].replace("p", ".")) if l.endswith("S") else (99 if l == "burst" else float(l[:-1]) / 1000)
+    if l.endswith("S"):
+        return float(l[:-1].replace("p", "."))
+    if l.startswith("burst"):
+        return 99 + (int(l[5:]) if l[5:] else 0)
+    if l.startswith("ev"):
+        return 200 + int(l[2:])
+    return float(l[:-1]) / 1000
 
 
 cond = []

@@ -1,0 +1,1 @@
+kafka_heap=-Xmx512M max_offsets=75000 trigger=0 controller=--policy proportional --low 10000 --cap-full 45000 --cap-light 90000 --horizon 10 light_model=light_lr full_sample=0 profile=60:0.6,90:1.5,0:0.6 warmup=20@13500 clock_offset_ms=1.4

@@ -1,0 +1,8 @@
+family,test_rows,exact_in_train,exact_share,near_in_train,near_share
+Benign,8890965,2093788,0.2355,2494085,0.28052
+Botnet,21438,0,0.0,1,5e-05
+BruteForce,14129,0,0.0,0,0.0
+DDoS,206121,0,0.0,14,7e-05
+DoS,275132,0,0.0,0,0.0
+Infiltration,13447,11425,0.84963,11742,0.87321
+Web,40,0,0.0,0,0.0

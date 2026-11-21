@@ -1,0 +1,2 @@
+producer_cpus=12-15 interleave=1 loops=1 replay=/home/mazite/w5/replay/test.parquet
+2026-11-21T10:49:46+07:00,nids-exp-l,instance-00000005,ac=1,profile=performance,swappiness=10,pinned=yes

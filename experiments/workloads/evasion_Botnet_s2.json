@@ -1,0 +1,33 @@
+{
+  "file": "/home/mazite/w8/workloads/evasion_Botnet_s2.parquet",
+  "rows": 8100000,
+  "seed": 2,
+  "family": "Botnet",
+  "flood_family": "DoS",
+  "s": 45000,
+  "timeline": {
+    "pre": 40,
+    "flood": 90,
+    "post": 50,
+    "bg": 0.6,
+    "fl": 0.8
+  },
+  "profile_rate": 45000,
+  "profile": "40:0.6;90:1.4;0:0.6",
+  "episodes": {
+    "control": {
+      "start_s": 12,
+      "end_s": 27,
+      "flows": 1500
+    },
+    "attack": {
+      "start_s": 97,
+      "end_s": 112,
+      "flows": 1500
+    }
+  },
+  "attack_offset_s": 57,
+  "benign_rows": 4857000,
+  "flood_rows": 3240000,
+  "hidden_rows": 3000
+}

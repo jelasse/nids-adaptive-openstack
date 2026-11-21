@@ -1,0 +1,109 @@
+{
+  "clock_offset_ms": -9.3,
+  "warmup_records": 270000,
+  "slo_ms": 5000.0,
+  "rows": 8100000,
+  "unique": 8100000,
+  "duplicates": 0,
+  "missing": 0,
+  "span_s": 180.5,
+  "throughput_rps": 44888,
+  "latency_ms": {
+    "p50": 447,
+    "p95": 791,
+    "p99": 1323,
+    "max": 2061,
+    "mean": 474
+  },
+  "slo_violation_share": 0.0,
+  "load_s": 179.7,
+  "drain_s": 0.7,
+  "detection": {
+    "tp": 3175250,
+    "fp": 4071,
+    "fn": 67750,
+    "tn": 4852929,
+    "recall": 0.97911,
+    "precision": 0.99872,
+    "fpr": 0.000838,
+    "macro_f1": 0.99074
+  },
+  "by_mode": {
+    "full": {
+      "rows": 288075,
+      "latency_ms": {
+        "p50": 814,
+        "p95": 1780,
+        "p99": 1994,
+        "max": 2061,
+        "mean": 910
+      },
+      "detection": {
+        "tp": 191,
+        "fp": 20,
+        "fn": 0,
+        "tn": 287864,
+        "recall": 1.0,
+        "precision": 0.90521,
+        "fpr": 6.9e-05,
+        "macro_f1": 0.97511
+      }
+    },
+    "light": {
+      "rows": 7811925,
+      "latency_ms": {
+        "p50": 441,
+        "p95": 728,
+        "p99": 1039,
+        "max": 1880,
+        "mean": 458
+      },
+      "detection": {
+        "tp": 3175059,
+        "fp": 4051,
+        "fn": 67750,
+        "tn": 4565065,
+        "recall": 0.97911,
+        "precision": 0.99873,
+        "fpr": 0.000887,
+        "macro_f1": 0.99051
+      }
+    }
+  },
+  "family_recall": {
+    "DoS": 0.98,
+    "Botnet": 0.0637
+  },
+  "batches": {
+    "count": 520,
+    "mean_total_s": 0.34,
+    "max_total_s": 1.947,
+    "mean_rows": 16096,
+    "modes": {
+      "mix:0.85": 14,
+      "mix:0.70": 1,
+      "mix:0.00": 3,
+      "mix:1.00": 350,
+      "full": 19,
+      "mix:0.95": 71,
+      "mix:0.65": 2,
+      "mix:0.90": 54,
+      "mix:0.75": 5,
+      "mix:0.80": 1
+    }
+  },
+  "backlog_max_records": 0,
+  "backlog_at_load_end": 0,
+  "sustainable": true,
+  "telemetry": {
+    "samples": 181,
+    "cpu_mean": 64.5,
+    "cpu_p95": 74.5,
+    "cpu_max": 79.5,
+    "mem_used_max_mb": 3956.0,
+    "mem_avail_min_mb": 1969.0,
+    "swap_used_max_mb": 0.0,
+    "steal_max": 0.3
+  },
+  "valid_vm_side": true
+}

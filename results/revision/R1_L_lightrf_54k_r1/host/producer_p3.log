@@ -1,0 +1,9 @@
+Replay file rows: 9,421,260; sending 1,000,000 from row 3 at 13,500/s (every 4th row) to topic 'R1_L_lightrf_54k_r1'
+  sent 135,001  achieved 13,468/s
+  sent 270,001  achieved 13,468/s
+  sent 405,431  achieved 13,493/s
+  sent 540,352  achieved 13,493/s
+  sent 675,346  achieved 13,494/s
+  sent 810,369  achieved 13,495/s
+  sent 945,541  achieved 13,499/s
+SENT 1,000,000 records in 74.1 s (planned 74.1 s), achieved 13,496/s (event_id 3..3,999,999; max lag behind schedule 0.35 s)

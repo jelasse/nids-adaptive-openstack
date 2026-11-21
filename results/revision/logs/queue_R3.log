@@ -1,0 +1,227 @@
+[01:30:15] === R3_L_full_ev3_r1: 45000/s, full, profile 40:0.6,90:1.4,0:0.6, 4 producers, INTERLEAVE=1, evasion_Botnet_s3.parquet
+[01:30:16] clock offset 1.6 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,499/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 2.55 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 0..8,099,996; max lag behind schedule 0.29 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 1..8,099,997; max lag behind schedule 0.28 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 2..8,099,998; max lag behind schedule 0.28 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 3..8,099,999; max lag behind schedule 0.28 s)
+      note: laptop swapped OUT 79 MB (idle memory; run still valid)
+    LAPTOP SIDE: INVALID -> laptop swapped IN 63 MB during the measured load
+[01:36:03] result: 1.6,True,False,False,20065,36573,0.80425,1643804,41127,0.99788,160,0
+[01:36:37] === R3_L_full_ev5_r1: 45000/s, full, profile 40:0.6,90:1.4,0:0.6, 4 producers, INTERLEAVE=1, evasion_Botnet_s5.parquet
+[01:36:37] clock offset 1.9 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,499/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 2.58 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 0..8,099,996; max lag behind schedule 0.29 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 1..8,099,997; max lag behind schedule 0.29 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 2..8,099,998; max lag behind schedule 0.29 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 3..8,099,999; max lag behind schedule 0.29 s)
+    LAPTOP SIDE: INVALID -> laptop swapped IN 21 MB during the measured load
+[01:42:24] result: 1.9,True,False,False,19640,35489,0.79224,1639696,41423,0.99788,160,0
+[01:42:59] === R3_L_prop_ev5_r1: 45000/s, full, controller, profile 40:0.6,90:1.4,0:0.6, 4 producers, INTERLEAVE=1, evasion_Botnet_s5.parquet
+[01:42:59] clock offset 1.9 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,498/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 2.69 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 0..8,099,996; max lag behind schedule 0.29 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 1..8,099,997; max lag behind schedule 0.29 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 2..8,099,998; max lag behind schedule 0.29 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 3..8,099,999; max lag behind schedule 0.29 s)
+    LAPTOP SIDE: VALID
+[01:48:46] result: 1.9,True,True,True,655,5575,0.06926,324496,44880,0.97933,4109,0
+[01:49:21] === R3_L_adapt_ev5_r1: 45000/s, full, controller, profile 40:0.6,90:1.4,0:0.6, 4 producers, INTERLEAVE=1, evasion_Botnet_s5.parquet
+[01:49:21] clock offset 1.8 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,499/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 2.62 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 0..8,099,996; max lag behind schedule 0.28 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 1..8,099,997; max lag behind schedule 0.28 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 2..8,099,998; max lag behind schedule 0.28 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 3..8,099,999; max lag behind schedule 0.28 s)
+    LAPTOP SIDE: VALID
+[01:55:08] result: 1.8,True,True,True,1949,5174,0.06348,283975,44646,0.98484,1930,0
+[01:55:43] === R3_L_adapts_ev5_r1: 45000/s, full, controller, profile 40:0.6,90:1.4,0:0.6, 4 producers, FULL_SAMPLE=0.1, INTERLEAVE=1, evasion_Botnet_s5.parquet
+[01:55:43] clock offset 1.8 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,499/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 2.63 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 0..8,099,996; max lag behind schedule 0.30 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 1..8,099,997; max lag behind schedule 0.30 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 2..8,099,998; max lag behind schedule 0.30 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 3..8,099,999; max lag behind schedule 0.30 s)
+    LAPTOP SIDE: INVALID -> laptop swapped IN 40 MB during the measured load
+[02:01:46] result: 1.8,True,False,False,44060,79901,0.79024,2647228,32421,0.98395,3220,0
+[02:02:20] === R3_L_full_ev2_r1: 45000/s, full, profile 40:0.6,90:1.4,0:0.6, 4 producers, INTERLEAVE=1, evasion_Botnet_s2.parquet
+[02:02:21] clock offset 1.5 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,498/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 2.58 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 0..8,099,996; max lag behind schedule 0.29 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 1..8,099,997; max lag behind schedule 0.30 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 2..8,099,998; max lag behind schedule 0.29 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 3..8,099,999; max lag behind schedule 0.30 s)
+    LAPTOP SIDE: VALID
+[02:08:08] result: 1.5,True,True,False,22208,40284,0.79987,1768033,40489,0.99788,160,0
+[02:08:42] === R3_L_adaptrf_ev5_r1: 45000/s, full, controller, profile 40:0.6,90:1.4,0:0.6, 4 producers, LIGHT_MODEL=light_rf, INTERLEAVE=1, evasion_Botnet_s5.parquet
+[02:08:43] clock offset 1.8 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,498/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 2.55 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 0..8,099,996; max lag behind schedule 0.28 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 1..8,099,997; max lag behind schedule 0.28 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 2..8,099,998; max lag behind schedule 0.28 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 3..8,099,999; max lag behind schedule 0.28 s)
+    LAPTOP SIDE: INVALID -> laptop swapped IN 98 MB during the measured load
+[02:14:30] result: 1.8,True,False,True,2572,5746,0.14518,296509,44644,0.99894,234,0
+[02:15:04] === R3_L_adapts_ev3_r1: 45000/s, full, controller, profile 40:0.6,90:1.4,0:0.6, 4 producers, FULL_SAMPLE=0.1, INTERLEAVE=1, evasion_Botnet_s3.parquet
+[02:15:05] clock offset 1.8 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,498/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 2.55 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 0..8,099,996; max lag behind schedule 0.30 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 1..8,099,997; max lag behind schedule 0.30 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 2..8,099,998; max lag behind schedule 0.30 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 3..8,099,999; max lag behind schedule 0.30 s)
+    LAPTOP SIDE: VALID
+[02:21:07] result: 1.8,True,True,False,46476,83116,0.80908,2731624,32026,0.98352,3262,0
+[02:21:41] === R3_L_adapt_ev4_r1: 45000/s, full, controller, profile 40:0.6,90:1.4,0:0.6, 4 producers, INTERLEAVE=1, evasion_Botnet_s4.parquet
+[02:21:42] clock offset 1.8 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,498/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 2.58 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 0..8,099,996; max lag behind schedule 0.29 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 1..8,099,997; max lag behind schedule 0.29 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 2..8,099,998; max lag behind schedule 0.29 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 3..8,099,999; max lag behind schedule 0.29 s)
+    LAPTOP SIDE: VALID
+[02:27:29] result: 1.8,True,True,True,1685,4468,0.00923,227749,44632,0.98667,1899,0
+[02:28:03] === R3_L_prop_ev2_r1: 45000/s, full, controller, profile 40:0.6,90:1.4,0:0.6, 4 producers, INTERLEAVE=1, evasion_Botnet_s2.parquet
+[02:28:04] clock offset 1.6 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,498/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 2.57 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 0..8,099,996; max lag behind schedule 0.30 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 1..8,099,997; max lag behind schedule 0.30 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 2..8,099,998; max lag behind schedule 0.29 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 3..8,099,999; max lag behind schedule 0.29 s)
+    LAPTOP SIDE: VALID
+[02:33:51] result: 1.6,True,True,True,2795,7531,0.13774,458659,44535,0.9799,3583,0
+[02:34:25] === R3_L_adapt_ev3_r1: 45000/s, full, controller, profile 40:0.6,90:1.4,0:0.6, 4 producers, INTERLEAVE=1, evasion_Botnet_s3.parquet
+[02:34:26] clock offset 1.7 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,498/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 2.54 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 0..8,099,996; max lag behind schedule 0.29 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 1..8,099,997; max lag behind schedule 0.29 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 2..8,099,998; max lag behind schedule 0.29 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 3..8,099,999; max lag behind schedule 0.29 s)
+    LAPTOP SIDE: VALID
+[02:40:13] result: 1.7,True,True,True,1958,5009,0.05086,262615,44733,0.98857,2019,0
+[02:40:47] === R3_L_adaptrf_ev4_r1: 45000/s, full, controller, profile 40:0.6,90:1.4,0:0.6, 4 producers, LIGHT_MODEL=light_rf, INTERLEAVE=1, evasion_Botnet_s4.parquet
+[02:40:48] clock offset 1.7 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,498/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 2.55 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 0..8,099,996; max lag behind schedule 0.30 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 1..8,099,997; max lag behind schedule 0.30 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 2..8,099,998; max lag behind schedule 0.30 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 3..8,099,999; max lag behind schedule 0.30 s)
+    LAPTOP SIDE: VALID
+[02:46:35] result: 1.7,True,True,True,1894,5017,0.05145,277268,44738,0.99908,201,0
+[02:47:09] === R3_L_full_ev1_r1: 45000/s, full, profile 40:0.6,90:1.4,0:0.6, 4 producers, INTERLEAVE=1, evasion_Botnet_s1.parquet
+[02:47:10] clock offset 1.7 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,498/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 2.54 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 0..8,099,996; max lag behind schedule 0.29 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 1..8,099,997; max lag behind schedule 0.29 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 2..8,099,998; max lag behind schedule 0.29 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 3..8,099,999; max lag behind schedule 0.29 s)
+    LAPTOP SIDE: VALID
+[02:52:56] result: 1.7,True,True,False,20296,36531,0.80369,1664311,41282,0.99788,160,0
+[02:53:31] === R3_L_adaptrf_ev2_r1: 45000/s, full, controller, profile 40:0.6,90:1.4,0:0.6, 4 producers, LIGHT_MODEL=light_rf, INTERLEAVE=1, evasion_Botnet_s2.parquet
+[02:53:31] clock offset 1.8 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,499/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 2.54 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 0..8,099,996; max lag behind schedule 0.29 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 1..8,099,997; max lag behind schedule 0.29 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 2..8,099,998; max lag behind schedule 0.28 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 3..8,099,999; max lag behind schedule 0.29 s)
+    LAPTOP SIDE: VALID
+[02:59:18] result: 1.8,True,True,True,1635,5131,0.05744,295254,44523,0.99897,204,0
+[02:59:53] === R3_L_adapt_ev1_r1: 45000/s, full, controller, profile 40:0.6,90:1.4,0:0.6, 4 producers, INTERLEAVE=1, evasion_Botnet_s1.parquet
+[02:59:53] clock offset 1.7 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,498/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 2.55 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 0..8,099,996; max lag behind schedule 0.29 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 1..8,099,997; max lag behind schedule 0.30 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 2..8,099,998; max lag behind schedule 0.30 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 3..8,099,999; max lag behind schedule 0.29 s)
+    LAPTOP SIDE: INVALID -> laptop swapped IN 56 MB during the measured load
+[03:05:40] result: 1.7,True,False,True,2175,5455,0.10186,281703,44637,0.98732,2050,0
+[03:06:14] === R3_L_adapt_ev2_r1: 45000/s, full, controller, profile 40:0.6,90:1.4,0:0.6, 4 producers, INTERLEAVE=1, evasion_Botnet_s2.parquet
+[03:06:15] clock offset 1.7 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,499/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 2.53 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 0..8,099,996; max lag behind schedule 0.31 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 1..8,099,997; max lag behind schedule 0.31 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 2..8,099,998; max lag behind schedule 0.31 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 3..8,099,999; max lag behind schedule 0.31 s)
+    LAPTOP SIDE: VALID
+[03:12:02] result: 1.7,True,True,True,1743,4763,0.02699,225908,44806,0.98586,1927,0
+[03:12:36] === R3_L_adaptrf_ev3_r1: 45000/s, full, controller, profile 40:0.6,90:1.4,0:0.6, 4 producers, LIGHT_MODEL=light_rf, INTERLEAVE=1, evasion_Botnet_s3.parquet
+[03:12:37] clock offset 1.8 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,498/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 2.52 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 0..8,099,996; max lag behind schedule 0.29 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 1..8,099,997; max lag behind schedule 0.29 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 2..8,099,998; max lag behind schedule 0.29 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 3..8,099,999; max lag behind schedule 0.29 s)
+    LAPTOP SIDE: VALID
+[03:18:24] result: 1.8,True,True,True,1924,5188,0.07303,258387,44659,0.99909,199,0
+[03:18:58] === R3_L_prop_ev4_r1: 45000/s, full, controller, profile 40:0.6,90:1.4,0:0.6, 4 producers, INTERLEAVE=1, evasion_Botnet_s4.parquet
+[03:18:59] clock offset 1.5 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,498/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 2.54 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 0..8,099,996; max lag behind schedule 0.31 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 1..8,099,997; max lag behind schedule 0.31 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 2..8,099,998; max lag behind schedule 0.31 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 3..8,099,999; max lag behind schedule 0.32 s)
+    LAPTOP SIDE: VALID
+[03:24:46] result: 1.5,True,True,True,639,6048,0.0906,353323,44878,0.97933,4089,0
+[03:25:20] === R3_L_prop_ev3_r1: 45000/s, full, controller, profile 40:0.6,90:1.4,0:0.6, 4 producers, INTERLEAVE=1, evasion_Botnet_s3.parquet
+[03:25:21] clock offset 1.7 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,498/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 2.53 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 0..8,099,996; max lag behind schedule 0.30 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 1..8,099,997; max lag behind schedule 0.30 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 2..8,099,998; max lag behind schedule 0.30 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 3..8,099,999; max lag behind schedule 0.30 s)
+    LAPTOP SIDE: VALID
+[03:31:08] result: 1.7,True,True,True,613,5304,0.06117,306612,44875,0.97923,4112,0
+[03:31:42] === R3_L_full_ev4_r1: 45000/s, full, profile 40:0.6,90:1.4,0:0.6, 4 producers, INTERLEAVE=1, evasion_Botnet_s4.parquet
+[03:31:43] clock offset 1.7 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,499/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 2.57 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 0..8,099,996; max lag behind schedule 0.28 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 1..8,099,997; max lag behind schedule 0.29 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 2..8,099,998; max lag behind schedule 0.28 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 3..8,099,999; max lag behind schedule 0.29 s)
+    LAPTOP SIDE: VALID
+[03:37:30] result: 1.7,True,True,False,20127,36483,0.80055,1698304,41407,0.99788,160,0
+[03:38:04] === R3_L_adapts_ev1_r1: 45000/s, full, controller, profile 40:0.6,90:1.4,0:0.6, 4 producers, FULL_SAMPLE=0.1, INTERLEAVE=1, evasion_Botnet_s1.parquet
+[03:38:05] clock offset 1.9 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,499/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 2.55 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 0..8,099,996; max lag behind schedule 0.29 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 1..8,099,997; max lag behind schedule 0.29 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 2..8,099,998; max lag behind schedule 0.29 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 3..8,099,999; max lag behind schedule 0.29 s)
+    LAPTOP SIDE: VALID
+[03:44:18] result: 1.9,True,True,False,45798,86057,0.79474,2697184,31692,0.98391,3201,0
+[03:44:53] === R3_L_adapts_ev2_r1: 45000/s, full, controller, profile 40:0.6,90:1.4,0:0.6, 4 producers, FULL_SAMPLE=0.1, INTERLEAVE=1, evasion_Botnet_s2.parquet
+[03:44:53] clock offset 1.9 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,497/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 2.62 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 0..8,099,996; max lag behind schedule 0.28 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 1..8,099,997; max lag behind schedule 0.29 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 2..8,099,998; max lag behind schedule 0.28 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 3..8,099,999; max lag behind schedule 0.29 s)
+    LAPTOP SIDE: VALID
+[03:50:56] result: 1.9,True,True,False,47512,83317,0.81166,2754392,31972,0.98329,3255,0
+[03:51:30] === R3_L_adaptrf_ev1_r1: 45000/s, full, controller, profile 40:0.6,90:1.4,0:0.6, 4 producers, LIGHT_MODEL=light_rf, INTERLEAVE=1, evasion_Botnet_s1.parquet
+[03:51:31] clock offset 2.0 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,498/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 2.53 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 0..8,099,996; max lag behind schedule 0.29 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 1..8,099,997; max lag behind schedule 0.29 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 2..8,099,998; max lag behind schedule 0.28 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 3..8,099,999; max lag behind schedule 0.29 s)
+    LAPTOP SIDE: VALID
+[03:57:18] result: 2.0,True,True,True,1878,5027,0.05179,280018,44736,0.99894,209,0
+[03:57:52] === R3_L_adapts_ev4_r1: 45000/s, full, controller, profile 40:0.6,90:1.4,0:0.6, 4 producers, FULL_SAMPLE=0.1, INTERLEAVE=1, evasion_Botnet_s4.parquet
+[03:57:53] clock offset 1.8 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,499/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 2.55 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 0..8,099,996; max lag behind schedule 0.31 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 1..8,099,997; max lag behind schedule 0.31 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 2..8,099,998; max lag behind schedule 0.31 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 3..8,099,999; max lag behind schedule 0.31 s)
+    LAPTOP SIDE: VALID
+[04:03:55] result: 1.8,True,True,False,47481,83406,0.80988,2764573,32017,0.98326,3229,0
+[04:04:30] === R3_L_prop_ev1_r1: 45000/s, full, controller, profile 40:0.6,90:1.4,0:0.6, 4 producers, INTERLEAVE=1, evasion_Botnet_s1.parquet
+[04:04:30] clock offset 1.8 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,498/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 2.55 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 0..8,099,996; max lag behind schedule 0.30 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 1..8,099,997; max lag behind schedule 0.30 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 2..8,099,998; max lag behind schedule 0.30 s)
+    SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 3..8,099,999; max lag behind schedule 0.30 s)
+    LAPTOP SIDE: VALID
+[04:10:17] result: 1.8,True,True,True,483,1024,0.0,0,44860,0.97905,4185,0
+[04:10:52] queue finished

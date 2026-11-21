@@ -1,0 +1,21 @@
+model,threshold,label,rows,flagged,share_flagged
+full_rf,0.54,Botnet Ares - Attempted,262,258,0.9847
+full_rf,0.54,DDoS-LOIC-UDP - Attempted,251,0,0.0
+full_rf,0.54,DoS GoldenEye - Attempted,4301,980,0.2279
+full_rf,0.54,DoS Hulk - Attempted,86,0,0.0
+full_rf,0.54,DoS Slowloris - Attempted,2280,0,0.0
+full_rf,0.54,FTP-BruteForce - Attempted,298874,0,0.0
+full_rf,0.54,Infiltration - Dropbox Download - Attempted,28,0,0.0
+full_rf,0.54,Web Attack - Brute Force - Attempted,137,36,0.2628
+full_rf,0.54,Web Attack - SQL - Attempted,14,3,0.2143
+full_rf,0.54,Web Attack - XSS - Attempted,4,0,0.0
+light_lr,0.946,Botnet Ares - Attempted,262,0,0.0
+light_lr,0.946,DDoS-LOIC-UDP - Attempted,251,0,0.0
+light_lr,0.946,DoS GoldenEye - Attempted,4301,0,0.0
+light_lr,0.946,DoS Hulk - Attempted,86,0,0.0
+light_lr,0.946,DoS Slowloris - Attempted,2280,0,0.0
+light_lr,0.946,FTP-BruteForce - Attempted,298874,298874,1.0
+light_lr,0.946,Infiltration - Dropbox Download - Attempted,28,0,0.0
+light_lr,0.946,Web Attack - Brute Force - Attempted,137,0,0.0
+light_lr,0.946,Web Attack - SQL - Attempted,14,0,0.0
+light_lr,0.946,Web Attack - XSS - Attempted,4,0,0.0

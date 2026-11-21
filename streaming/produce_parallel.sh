@@ -9,6 +9,9 @@
 #   WARMUP=20 WARMUP_RATE=9000      warm-up: WARMUP seconds at WARMUP_RATE from the VALIDATION file,
 #                                   event IDs from 1,000,000,000 (excluded from the analysis)
 #   HOST_TAIL=120                   seconds the laptop telemetry keeps running after the last record
+#   INTERLEAVE=1                    process i sends rows i, i+P, i+2P ... (keeps the file's global order);
+#                                   default: process i sends a contiguous slice (as in the original runs)
+#   LOOPS=3                         replay the file 3 times (long runs; implies INTERLEAVE; <records> = rows x LOOPS)
 #   PRODUCER_CPUS=12-15             CPUs for the producers (the E-cores; the VM is pinned to P-cores
 #                                   by prepare_session.sh). Set PRODUCER_CPUS= (empty) to disable.
 #
@@ -51,13 +54,20 @@ echo "Sending $TOTAL records from $(basename "$REPLAY") to $TOPIC at $RATE/s${PR
      "using $P processes via $BOOT"
 START_AT=$(python -c "import time; print(time.time() + 2)")   # all processes start together
 echo "$START_AT" > "$OUT/load_start"
-echo "producer_cpus=${CPUS:-any}" > "$OUT/host_settings.txt"
+echo "producer_cpus=${CPUS:-any} interleave=${INTERLEAVE:-0} loops=${LOOPS:-1} replay=$REPLAY" > "$OUT/host_settings.txt"
 tail -1 "$HOME/w5/sessions.csv" >> "$OUT/host_settings.txt" 2>/dev/null || true
 pids=()
 for i in $(seq 0 $((P - 1))); do
-  n=$N; [ "$i" -eq $((P - 1)) ] && n=$(( TOTAL - i * N ))       # last process takes any remainder
+  LP=${LOOPS:-1}
+  if [ -n "${INTERLEAVE:-}" ] || [ "$LP" -gt 1 ]; then
+    ROWS=$(( TOTAL / LP ))
+    n=$(( LP * ((ROWS - i + P - 1) / P) )); SR=$i; ST="--stride $P --loops $LP"
+  else
+    n=$N; [ "$i" -eq $((P - 1)) ] && n=$(( TOTAL - i * N ))     # last process takes any remainder
+    SR=$((i * N)); ST=""
+  fi
   "${PIN[@]}" python "$DIR/replay_producer.py" --replay "$REPLAY" --bootstrap "$BOOT" --topic "$TOPIC" \
-     --rate "$R" ${PROFILE:+--profile "$PROFILE"} --limit "$n" --start-row $((i * N)) --start-id $((i * N)) \
+     --rate "$R" ${PROFILE:+--profile "$PROFILE"} --limit "$n" --start-row $SR --start-id $SR $ST \
      --start-at "$START_AT" > "$OUT/producer_p$i.log" 2>&1 &
   pids+=($!)
 done

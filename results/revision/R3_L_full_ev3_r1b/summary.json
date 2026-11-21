@@ -1,0 +1,80 @@
+{
+  "clock_offset_ms": 1.7,
+  "warmup_records": 270000,
+  "slo_ms": 5000.0,
+  "rows": 8100000,
+  "unique": 8100000,
+  "duplicates": 0,
+  "missing": 0,
+  "span_s": 192.8,
+  "throughput_rps": 42011,
+  "latency_ms": {
+    "p50": 18697,
+    "p95": 34145,
+    "p99": 35497,
+    "max": 36365,
+    "mean": 17852
+  },
+  "slo_violation_share": 0.79442,
+  "load_s": 179.7,
+  "drain_s": 13.1,
+  "detection": {
+    "tp": 3236112,
+    "fp": 160,
+    "fn": 6888,
+    "tn": 4856840,
+    "recall": 0.99788,
+    "precision": 0.99995,
+    "fpr": 3.3e-05,
+    "macro_f1": 0.99909
+  },
+  "by_mode": {
+    "full": {
+      "rows": 8100000,
+      "latency_ms": {
+        "p50": 18697,
+        "p95": 34145,
+        "p99": 35497,
+        "max": 36365,
+        "mean": 17852
+      },
+      "detection": {
+        "tp": 3236112,
+        "fp": 160,
+        "fn": 6888,
+        "tn": 4856840,
+        "recall": 0.99788,
+        "precision": 0.99995,
+        "fpr": 3.3e-05,
+        "macro_f1": 0.99909
+      }
+    }
+  },
+  "family_recall": {
+    "Botnet": 1.0,
+    "DoS": 0.9979
+  },
+  "batches": {
+    "count": 155,
+    "mean_total_s": 1.32,
+    "max_total_s": 1.98,
+    "mean_rows": 54000,
+    "modes": {
+      "full": 155
+    }
+  },
+  "backlog_max_records": 1616804,
+  "backlog_at_load_end": 603216,
+  "sustainable": false,
+  "telemetry": {
+    "samples": 193,
+    "cpu_mean": 74.8,
+    "cpu_p95": 88.2,
+    "cpu_max": 94.5,
+    "mem_used_max_mb": 4110.0,
+    "mem_avail_min_mb": 1816.0,
+    "swap_used_max_mb": 0.0,
+    "steal_max": 0.3
+  },
+  "valid_vm_side": true
+}

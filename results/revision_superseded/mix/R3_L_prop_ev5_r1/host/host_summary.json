@@ -1,0 +1,50 @@
+{
+  "producers": [
+    {
+      "log": "producer_p0.log",
+      "sent": 2025000,
+      "seconds": 180.0,
+      "planned_s": 180.0,
+      "achieved_rps": 11250,
+      "pct_of_plan": 100.0
+    },
+    {
+      "log": "producer_p1.log",
+      "sent": 2025000,
+      "seconds": 180.0,
+      "planned_s": 180.0,
+      "achieved_rps": 11250,
+      "pct_of_plan": 100.0
+    },
+    {
+      "log": "producer_p2.log",
+      "sent": 2025000,
+      "seconds": 180.0,
+      "planned_s": 180.0,
+      "achieved_rps": 11250,
+      "pct_of_plan": 100.0
+    },
+    {
+      "log": "producer_p3.log",
+      "sent": 2025000,
+      "seconds": 180.0,
+      "planned_s": 180.0,
+      "achieved_rps": 11250,
+      "pct_of_plan": 100.0
+    }
+  ],
+  "records_sent": 8100000,
+  "host": {
+    "samples": 181,
+    "cpu_mean": 30.9,
+    "cpu_p95": 38.5,
+    "mem_avail_min_mb": 1953.0,
+    "swap_used_before_run_mb": 3498.0,
+    "swap_used_max_mb": 3508.0,
+    "swap_in_during_load_mb": 6.6,
+    "swap_out_during_load_mb": 15.6
+  },
+  "valid": true,
+  "problems": [],
+  "warnings": []
+}

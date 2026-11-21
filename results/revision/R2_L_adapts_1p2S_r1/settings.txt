@@ -1,0 +1,1 @@
+kafka_heap=-Xmx512M max_offsets=75000 trigger=0 controller=--high 100000 --low 10000 --k 2 --m 3 --dwell 15 light_model=light_lr full_sample=0.1 profile=constant warmup=20@13500 clock_offset_ms=1.5

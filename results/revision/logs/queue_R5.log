@@ -1,0 +1,67 @@
+[00:47:13] === R5_L_adapt_burst2_r3: 45000/s, full, controller, profile 30:0.6,60:1.8,0:0.6, 5 producers, INTERLEAVE=1, test.parquet
+[00:47:14] clock offset 1.5 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,498/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 2.54 s)
+    SENT 1,884,255 records in 228.9 s (planned 228.9 s), achieved 8,230/s (event_id 0..9,421,270; max lag behind schedule 0.42 s)
+    SENT 1,884,255 records in 228.9 s (planned 228.9 s), achieved 8,230/s (event_id 1..9,421,271; max lag behind schedule 0.31 s)
+    SENT 1,884,254 records in 228.9 s (planned 228.9 s), achieved 8,230/s (event_id 2..9,421,267; max lag behind schedule 0.37 s)
+    SENT 1,884,254 records in 228.9 s (planned 228.9 s), achieved 8,230/s (event_id 3..9,421,268; max lag behind schedule 0.28 s)
+    SENT 1,884,254 records in 228.9 s (planned 228.9 s), achieved 8,230/s (event_id 4..9,421,269; max lag behind schedule 0.32 s)
+      note: laptop swapped OUT 665 MB (idle memory; run still valid)
+    LAPTOP SIDE: INVALID -> laptop swapped IN 243 MB during the measured load
+[00:53:50] result: 1.5,True,False,True,2400,7235,0.32236,494078,40961,0.91501,4969,0
+[00:54:24] === R5_L_adaptrf_burst2_r1: 45000/s, full, controller, profile 30:0.6,60:1.8,0:0.6, 5 producers, LIGHT_MODEL=light_rf, INTERLEAVE=1, test.parquet
+[00:54:24] clock offset 1.8 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,498/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 2.55 s)
+    SENT 1,884,255 records in 228.9 s (planned 228.9 s), achieved 8,230/s (event_id 0..9,421,270; max lag behind schedule 0.44 s)
+    SENT 1,884,255 records in 228.9 s (planned 228.9 s), achieved 8,230/s (event_id 1..9,421,271; max lag behind schedule 0.44 s)
+    SENT 1,884,254 records in 228.9 s (planned 228.9 s), achieved 8,230/s (event_id 2..9,421,267; max lag behind schedule 0.29 s)
+    SENT 1,884,254 records in 228.9 s (planned 228.9 s), achieved 8,230/s (event_id 3..9,421,268; max lag behind schedule 0.30 s)
+    SENT 1,884,254 records in 228.9 s (planned 228.9 s), achieved 8,230/s (event_id 4..9,421,269; max lag behind schedule 0.30 s)
+      note: laptop swapped OUT 722 MB (idle memory; run still valid)
+    LAPTOP SIDE: INVALID -> laptop swapped IN 263 MB during the measured load
+[01:01:00] result: 1.8,True,False,True,1794,5599,0.13914,363257,40972,0.99897,404,0
+[01:01:34] === R5_L_adaptrf_burst2_r3: 45000/s, full, controller, profile 30:0.6,60:1.8,0:0.6, 5 producers, LIGHT_MODEL=light_rf, INTERLEAVE=1, test.parquet
+[01:01:35] clock offset 1.6 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,499/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 2.53 s)
+    SENT 1,884,255 records in 228.9 s (planned 228.9 s), achieved 8,230/s (event_id 0..9,421,270; max lag behind schedule 0.29 s)
+    SENT 1,884,255 records in 228.9 s (planned 228.9 s), achieved 8,230/s (event_id 1..9,421,271; max lag behind schedule 0.29 s)
+    SENT 1,884,254 records in 228.9 s (planned 228.9 s), achieved 8,230/s (event_id 2..9,421,267; max lag behind schedule 0.45 s)
+    SENT 1,884,254 records in 228.9 s (planned 228.9 s), achieved 8,230/s (event_id 3..9,421,268; max lag behind schedule 0.29 s)
+    SENT 1,884,254 records in 228.9 s (planned 228.9 s), achieved 8,230/s (event_id 4..9,421,269; max lag behind schedule 0.42 s)
+      note: laptop swapped OUT 881 MB (idle memory; run still valid)
+    LAPTOP SIDE: INVALID -> laptop swapped IN 359 MB during the measured load
+[01:08:11] result: 1.6,True,False,True,1625,5892,0.1472,400513,40969,0.99897,385,0
+[01:08:44] === R5_L_adapt_burst2_r1: 45000/s, full, controller, profile 30:0.6,60:1.8,0:0.6, 5 producers, INTERLEAVE=1, test.parquet
+[01:08:45] clock offset 1.7 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,498/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 2.56 s)
+    SENT 1,884,255 records in 228.9 s (planned 228.9 s), achieved 8,230/s (event_id 0..9,421,270; max lag behind schedule 0.45 s)
+    SENT 1,884,255 records in 228.9 s (planned 228.9 s), achieved 8,230/s (event_id 1..9,421,271; max lag behind schedule 0.42 s)
+    SENT 1,884,254 records in 228.9 s (planned 228.9 s), achieved 8,230/s (event_id 2..9,421,267; max lag behind schedule 0.34 s)
+    SENT 1,884,254 records in 228.9 s (planned 228.9 s), achieved 8,230/s (event_id 3..9,421,268; max lag behind schedule 0.30 s)
+    SENT 1,884,254 records in 228.9 s (planned 228.9 s), achieved 8,230/s (event_id 4..9,421,269; max lag behind schedule 0.30 s)
+      note: laptop swapped OUT 773 MB (idle memory; run still valid)
+    LAPTOP SIDE: INVALID -> laptop swapped IN 240 MB during the measured load
+[01:15:21] result: 1.7,True,False,True,1763,7749,0.11599,529139,40985,0.91505,4774,0
+[01:15:55] === R5_L_adaptrf_burst2_r2: 45000/s, full, controller, profile 30:0.6,60:1.8,0:0.6, 5 producers, LIGHT_MODEL=light_rf, INTERLEAVE=1, test.parquet
+[01:15:55] clock offset 1.7 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,498/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 2.54 s)
+    SENT 1,884,255 records in 228.9 s (planned 228.9 s), achieved 8,230/s (event_id 0..9,421,270; max lag behind schedule 0.39 s)
+    SENT 1,884,255 records in 228.9 s (planned 228.9 s), achieved 8,230/s (event_id 1..9,421,271; max lag behind schedule 0.33 s)
+    SENT 1,884,254 records in 228.9 s (planned 228.9 s), achieved 8,230/s (event_id 2..9,421,267; max lag behind schedule 0.33 s)
+    SENT 1,884,254 records in 228.9 s (planned 228.9 s), achieved 8,230/s (event_id 3..9,421,268; max lag behind schedule 0.45 s)
+    SENT 1,884,254 records in 228.9 s (planned 228.9 s), achieved 8,230/s (event_id 4..9,421,269; max lag behind schedule 0.29 s)
+      note: laptop swapped OUT 753 MB (idle memory; run still valid)
+    LAPTOP SIDE: INVALID -> laptop swapped IN 298 MB during the measured load
+[01:22:31] result: 1.7,True,False,True,1644,5619,0.12808,371924,40961,0.99897,394,0
+[01:23:05] === R5_L_adapt_burst2_r2: 45000/s, full, controller, profile 30:0.6,60:1.8,0:0.6, 5 producers, INTERLEAVE=1, test.parquet
+[01:23:05] clock offset 1.7 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,498/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 2.55 s)
+    SENT 1,884,255 records in 228.9 s (planned 228.9 s), achieved 8,230/s (event_id 0..9,421,270; max lag behind schedule 0.44 s)
+    SENT 1,884,255 records in 228.9 s (planned 228.9 s), achieved 8,230/s (event_id 1..9,421,271; max lag behind schedule 0.33 s)
+    SENT 1,884,254 records in 228.9 s (planned 228.9 s), achieved 8,230/s (event_id 2..9,421,267; max lag behind schedule 0.39 s)
+    SENT 1,884,254 records in 228.9 s (planned 228.9 s), achieved 8,230/s (event_id 3..9,421,268; max lag behind schedule 0.31 s)
+    SENT 1,884,254 records in 228.9 s (planned 228.9 s), achieved 8,230/s (event_id 4..9,421,269; max lag behind schedule 0.33 s)
+      note: laptop swapped OUT 815 MB (idle memory; run still valid)
+    LAPTOP SIDE: INVALID -> laptop swapped IN 291 MB during the measured load
+[01:29:41] result: 1.7,True,False,True,1758,7311,0.17014,433233,40881,0.91505,4756,0
+[01:30:15] queue finished

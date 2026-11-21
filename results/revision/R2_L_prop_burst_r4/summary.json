@@ -1,0 +1,114 @@
+{
+  "clock_offset_ms": 1.7,
+  "warmup_records": 270000,
+  "slo_ms": 5000.0,
+  "rows": 9421272,
+  "unique": 9421272,
+  "duplicates": 0,
+  "missing": 0,
+  "span_s": 215.0,
+  "throughput_rps": 43815,
+  "latency_ms": {
+    "p50": 1294,
+    "p95": 3236,
+    "p99": 4173,
+    "max": 4797,
+    "mean": 1505
+  },
+  "slo_violation_share": 0.0,
+  "load_s": 213.6,
+  "drain_s": 1.4,
+  "detection": {
+    "tp": 518260,
+    "fp": 4793,
+    "fn": 12047,
+    "tn": 8886172,
+    "recall": 0.97728,
+    "precision": 0.99084,
+    "fpr": 0.000539,
+    "macro_f1": 0.99153
+  },
+  "by_mode": {
+    "full": {
+      "rows": 5287715,
+      "latency_ms": {
+        "p50": 1252,
+        "p95": 3188,
+        "p99": 4040,
+        "max": 4668,
+        "mean": 1455
+      },
+      "detection": {
+        "tp": 214832,
+        "fp": 164,
+        "fn": 396,
+        "tn": 5072323,
+        "recall": 0.99816,
+        "precision": 0.99924,
+        "fpr": 3.2e-05,
+        "macro_f1": 0.99932
+      }
+    },
+    "light": {
+      "rows": 4133557,
+      "latency_ms": {
+        "p50": 1377,
+        "p95": 3318,
+        "p99": 4335,
+        "max": 4797,
+        "mean": 1567
+      },
+      "detection": {
+        "tp": 303428,
+        "fp": 4629,
+        "fn": 11651,
+        "tn": 3813849,
+        "recall": 0.96302,
+        "precision": 0.98497,
+        "fpr": 0.001212,
+        "macro_f1": 0.98587
+      }
+    }
+  },
+  "family_recall": {
+    "Web": 0.4,
+    "DoS": 0.9967,
+    "DDoS": 0.9822,
+    "Infiltration": 0.447,
+    "BruteForce": 1.0,
+    "Botnet": 1.0
+  },
+  "batches": {
+    "count": 237,
+    "mean_total_s": 0.94,
+    "max_total_s": 1.966,
+    "mean_rows": 40891,
+    "modes": {
+      "mix:0.55": 8,
+      "mix:0.60": 30,
+      "mix:0.85": 4,
+      "mix:0.70": 15,
+      "mix:0.00": 60,
+      "full": 81,
+      "mix:0.65": 22,
+      "mix:0.90": 3,
+      "mix:0.75": 6,
+      "mix:0.80": 7,
+      "mix:0.40": 1
+    }
+  },
+  "backlog_max_records": 165142,
+  "backlog_at_load_end": 0,
+  "sustainable": true,
+  "telemetry": {
+    "samples": 215,
+    "cpu_mean": 72.9,
+    "cpu_p95": 83.9,
+    "cpu_max": 90.0,
+    "mem_used_max_mb": 4066.0,
+    "mem_avail_min_mb": 1859.0,
+    "swap_used_max_mb": 0.0,
+    "steal_max": 0.3
+  },
+  "valid_vm_side": true
+}

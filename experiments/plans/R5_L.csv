@@ -1,0 +1,7 @@
+name,vm,ip,rate,records,mode,controller,profile,procs,warmup_rate,replay,vm_env,host_env
+R5_L_adapt_burst2_r3,nids-exp-l,172.24.4.36,45000,9421272,full,--high 100000 --low 10000 --k 2 --m 3 --dwell 15,30:0.6;60:1.8;0:0.6,5,13500,~/w5/replay/test.parquet,,INTERLEAVE=1
+R5_L_adaptrf_burst2_r1,nids-exp-l,172.24.4.36,45000,9421272,full,--high 100000 --low 10000 --k 2 --m 3 --dwell 15,30:0.6;60:1.8;0:0.6,5,13500,~/w5/replay/test.parquet,LIGHT_MODEL=light_rf,INTERLEAVE=1
+R5_L_adaptrf_burst2_r3,nids-exp-l,172.24.4.36,45000,9421272,full,--high 100000 --low 10000 --k 2 --m 3 --dwell 15,30:0.6;60:1.8;0:0.6,5,13500,~/w5/replay/test.parquet,LIGHT_MODEL=light_rf,INTERLEAVE=1
+R5_L_adapt_burst2_r1,nids-exp-l,172.24.4.36,45000,9421272,full,--high 100000 --low 10000 --k 2 --m 3 --dwell 15,30:0.6;60:1.8;0:0.6,5,13500,~/w5/replay/test.parquet,,INTERLEAVE=1
+R5_L_adaptrf_burst2_r2,nids-exp-l,172.24.4.36,45000,9421272,full,--high 100000 --low 10000 --k 2 --m 3 --dwell 15,30:0.6;60:1.8;0:0.6,5,13500,~/w5/replay/test.parquet,LIGHT_MODEL=light_rf,INTERLEAVE=1
+R5_L_adapt_burst2_r2,nids-exp-l,172.24.4.36,45000,9421272,full,--high 100000 --low 10000 --k 2 --m 3 --dwell 15,30:0.6;60:1.8;0:0.6,5,13500,~/w5/replay/test.parquet,,INTERLEAVE=1

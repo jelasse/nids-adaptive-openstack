@@ -37,3 +37,12 @@ not included.
 | `host/load_start`, `host/load_end`, `host/records_sent`, `host/host_settings.txt` | Laptop | Load timing and host settings |
 
 To recompute the tables from these files: `python3 streaming/aggregate.py results/final --out analysis`.
+
+## Revision experiments (R1–R5)
+
+- `revision/` – one folder per run attempt of R1–R5 (valid and invalid), same files as `final/` plus `deadline.csv`
+  (and `evasion.csv` for R3); `revision/logs/` holds the queue logs.
+- `revision_superseded/` – runs superseded by two corrected implementation errors (`mix/`, `prop/`), kept for the record.
+- `queue_results.csv` – one line per run attempt of every experiment, with both validity verdicts.
+
+See `docs/revision.md`.

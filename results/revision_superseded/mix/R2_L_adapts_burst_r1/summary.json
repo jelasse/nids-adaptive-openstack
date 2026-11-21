@@ -1,0 +1,105 @@
+{
+  "clock_offset_ms": 1.6,
+  "warmup_records": 270000,
+  "slo_ms": 5000.0,
+  "rows": 9421272,
+  "unique": 9421272,
+  "duplicates": 0,
+  "missing": 0,
+  "span_s": 295.4,
+  "throughput_rps": 31898,
+  "latency_ms": {
+    "p50": 50796,
+    "p95": 94778,
+    "p99": 96870,
+    "max": 98365,
+    "mean": 48236
+  },
+  "slo_violation_share": 0.77618,
+  "load_s": 213.6,
+  "drain_s": 81.7,
+  "detection": {
+    "tp": 459136,
+    "fp": 7563,
+    "fn": 71171,
+    "tn": 8883402,
+    "recall": 0.86579,
+    "precision": 0.98379,
+    "fpr": 0.000851,
+    "macro_f1": 0.95831
+  },
+  "by_mode": {
+    "full": {
+      "rows": 2871878,
+      "latency_ms": {
+        "p50": 1685,
+        "p95": 89347,
+        "p99": 95727,
+        "max": 98364,
+        "mean": 17013
+      },
+      "detection": {
+        "tp": 312660,
+        "fp": 85,
+        "fn": 610,
+        "tn": 2558523,
+        "recall": 0.99805,
+        "precision": 0.99973,
+        "fpr": 3.3e-05,
+        "macro_f1": 0.99938
+      }
+    },
+    "light": {
+      "rows": 6549394,
+      "latency_ms": {
+        "p50": 68506,
+        "p95": 95311,
+        "p99": 97003,
+        "max": 98365,
+        "mean": 61927
+      },
+      "detection": {
+        "tp": 146476,
+        "fp": 7478,
+        "fn": 70561,
+        "tn": 6324879,
+        "recall": 0.67489,
+        "precision": 0.95143,
+        "fpr": 0.001181,
+        "macro_f1": 0.89176
+      }
+    }
+  },
+  "family_recall": {
+    "DDoS": 0.8089,
+    "Web": 0.125,
+    "Infiltration": 0.1188,
+    "Botnet": 0.0998,
+    "DoS": 0.9978,
+    "BruteForce": 1.0
+  },
+  "batches": {
+    "count": 176,
+    "mean_total_s": 1.72,
+    "max_total_s": 2.712,
+    "mean_rows": 55064,
+    "modes": {
+      "light": 98,
+      "full": 78
+    }
+  },
+  "backlog_max_records": 3094275,
+  "backlog_at_load_end": 2814240,
+  "sustainable": false,
+  "telemetry": {
+    "samples": 296,
+    "cpu_mean": 84.0,
+    "cpu_p95": 96.8,
+    "cpu_max": 98.5,
+    "mem_used_max_mb": 4469.0,
+    "mem_avail_min_mb": 1456.0,
+    "swap_used_max_mb": 0.0,
+    "steal_max": 0.3
+  },
+  "valid_vm_side": true
+}

@@ -1,0 +1,54 @@
+{
+  "producers": [
+    {
+      "log": "producer_p0.log",
+      "sent": 2355318,
+      "seconds": 174.5,
+      "planned_s": 174.5,
+      "achieved_rps": 13500,
+      "pct_of_plan": 100.0
+    },
+    {
+      "log": "producer_p1.log",
+      "sent": 2355318,
+      "seconds": 174.5,
+      "planned_s": 174.5,
+      "achieved_rps": 13500,
+      "pct_of_plan": 100.0
+    },
+    {
+      "log": "producer_p2.log",
+      "sent": 2355318,
+      "seconds": 174.5,
+      "planned_s": 174.5,
+      "achieved_rps": 13500,
+      "pct_of_plan": 100.0
+    },
+    {
+      "log": "producer_p3.log",
+      "sent": 2355318,
+      "seconds": 174.5,
+      "planned_s": 174.5,
+      "achieved_rps": 13500,
+      "pct_of_plan": 100.0
+    }
+  ],
+  "records_sent": 9421272,
+  "host": {
+    "samples": 175,
+    "cpu_mean": 34.0,
+    "cpu_p95": 37.7,
+    "mem_avail_min_mb": 1620.0,
+    "swap_used_before_run_mb": 3418.0,
+    "swap_used_max_mb": 3657.0,
+    "swap_in_during_load_mb": 253.3,
+    "swap_out_during_load_mb": 352.2
+  },
+  "valid": false,
+  "problems": [
+    "laptop swapped IN 253 MB during the measured load"
+  ],
+  "warnings": [
+    "laptop swapped OUT 352 MB (idle memory; run still valid)"
+  ]
+}

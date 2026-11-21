@@ -1,0 +1,101 @@
+{
+  "clock_offset_ms": 1.8,
+  "warmup_records": 270000,
+  "slo_ms": 5000.0,
+  "rows": 8100000,
+  "unique": 8100000,
+  "duplicates": 0,
+  "missing": 0,
+  "span_s": 181.4,
+  "throughput_rps": 44659,
+  "latency_ms": {
+    "p50": 1924,
+    "p95": 5188,
+    "p99": 5722,
+    "max": 6097,
+    "mean": 2435
+  },
+  "slo_violation_share": 0.07303,
+  "load_s": 179.7,
+  "drain_s": 1.7,
+  "detection": {
+    "tp": 3240055,
+    "fp": 199,
+    "fn": 2945,
+    "tn": 4856801,
+    "recall": 0.99909,
+    "precision": 0.99994,
+    "fpr": 4.1e-05,
+    "macro_f1": 0.9996
+  },
+  "by_mode": {
+    "full": {
+      "rows": 4523635,
+      "latency_ms": {
+        "p50": 1544,
+        "p95": 4918,
+        "p99": 5566,
+        "max": 6038,
+        "mean": 2091
+      },
+      "detection": {
+        "tp": 1196833,
+        "fp": 110,
+        "fn": 2147,
+        "tn": 3324545,
+        "recall": 0.99821,
+        "precision": 0.99991,
+        "fpr": 3.3e-05,
+        "macro_f1": 0.99936
+      }
+    },
+    "light": {
+      "rows": 3576365,
+      "latency_ms": {
+        "p50": 2913,
+        "p95": 5373,
+        "p99": 5809,
+        "max": 6097,
+        "mean": 2869
+      },
+      "detection": {
+        "tp": 2043222,
+        "fp": 89,
+        "fn": 798,
+        "tn": 1532256,
+        "recall": 0.99961,
+        "precision": 0.99996,
+        "fpr": 5.8e-05,
+        "macro_f1": 0.99975
+      }
+    }
+  },
+  "family_recall": {
+    "Botnet": 1.0,
+    "DoS": 0.9991
+  },
+  "batches": {
+    "count": 192,
+    "mean_total_s": 0.99,
+    "max_total_s": 2.105,
+    "mean_rows": 43594,
+    "modes": {
+      "light": 58,
+      "full": 134
+    }
+  },
+  "backlog_max_records": 258387,
+  "backlog_at_load_end": 0,
+  "sustainable": true,
+  "telemetry": {
+    "samples": 182,
+    "cpu_mean": 72.6,
+    "cpu_p95": 86.7,
+    "cpu_max": 92.5,
+    "mem_used_max_mb": 4138.0,
+    "mem_avail_min_mb": 1787.0,
+    "swap_used_max_mb": 0.0,
+    "steal_max": 0.3
+  },
+  "valid_vm_side": true
+}

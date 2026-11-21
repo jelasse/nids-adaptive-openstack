@@ -1,0 +1,2 @@
+producer_cpus=12-15 interleave=1 loops=1 replay=/home/mazite/w8/workloads/evasion_Botnet_s3.parquet
+2026-11-20T22:53:12+07:00,nids-exp-l,instance-00000005,ac=1,profile=performance,swappiness=10,pinned=yes

@@ -1,0 +1,102 @@
+{
+  "clock_offset_ms": 1.8,
+  "warmup_records": 270000,
+  "slo_ms": 5000.0,
+  "rows": 8100000,
+  "unique": 8100000,
+  "duplicates": 0,
+  "missing": 0,
+  "span_s": 180.6,
+  "throughput_rps": 44860,
+  "latency_ms": {
+    "p50": 483,
+    "p95": 1024,
+    "p99": 2229,
+    "max": 3272,
+    "mean": 549
+  },
+  "slo_violation_share": 0.0,
+  "load_s": 179.7,
+  "drain_s": 0.9,
+  "detection": {
+    "tp": 3175068,
+    "fp": 4185,
+    "fn": 67932,
+    "tn": 4852815,
+    "recall": 0.97905,
+    "precision": 0.99868,
+    "fpr": 0.000862,
+    "macro_f1": 0.9907
+  },
+  "by_mode": {
+    "full": {
+      "rows": 73081,
+      "latency_ms": {
+        "p50": 1304,
+        "p95": 1953,
+        "p99": 2767,
+        "max": 3272,
+        "mean": 1305
+      },
+      "detection": {
+        "tp": 9,
+        "fp": 6,
+        "fn": 0,
+        "tn": 73066,
+        "recall": 1.0,
+        "precision": 0.6,
+        "fpr": 8.2e-05,
+        "macro_f1": 0.87498
+      }
+    },
+    "light": {
+      "rows": 8026919,
+      "latency_ms": {
+        "p50": 481,
+        "p95": 893,
+        "p99": 2220,
+        "max": 3272,
+        "mean": 542
+      },
+      "detection": {
+        "tp": 3175059,
+        "fp": 4179,
+        "fn": 67932,
+        "tn": 4779749,
+        "recall": 0.97905,
+        "precision": 0.99869,
+        "fpr": 0.000874,
+        "macro_f1": 0.99064
+      }
+    }
+  },
+  "family_recall": {
+    "Botnet": 0.003,
+    "DoS": 0.98
+  },
+  "batches": {
+    "count": 443,
+    "mean_total_s": 0.4,
+    "max_total_s": 2.031,
+    "mean_rows": 18894,
+    "modes": {
+      "mix:1.00": 416,
+      "full": 20,
+      "mix:0.95": 7
+    }
+  },
+  "backlog_max_records": 0,
+  "backlog_at_load_end": 0,
+  "sustainable": true,
+  "telemetry": {
+    "samples": 180,
+    "cpu_mean": 67.7,
+    "cpu_p95": 86.1,
+    "cpu_max": 94.2,
+    "mem_used_max_mb": 4109.0,
+    "mem_avail_min_mb": 1816.0,
+    "swap_used_max_mb": 0.0,
+    "steal_max": 0.3
+  },
+  "valid_vm_side": true
+}

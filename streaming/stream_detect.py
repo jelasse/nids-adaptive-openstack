@@ -12,7 +12,16 @@ The driver also writes Spark's progress report of every batch to progress.jsonl
 (input and processing rates, durations, offsets behind latest = backlog).
 
 The mode can be changed at any time (by hand or by the controller):  echo light > MODE_FILE
-It takes effect at the next micro-batch, without restarting the job.
+It takes effect at the next micro-batch, without restarting the job. Mode file values:
+  full | light | mix:<f>   (mix: each micro-batch goes to Light with probability f, else to Full, drawn
+                            per batch from a generator seeded with the batch id; used by the proportional
+                            controller. Mixing is per batch, not per flow: splitting one batch between the
+                            two models costs both models' fixed per-batch overhead plus a second parse and
+                            was slower than Full alone (about 28,000 flows/s at f = 0.9 on L))
+Options added for the revision experiments:
+  --light-model light_rf   use another frozen fallback model (default light_lr, the original Light model)
+  --full-sample 0.1        in Light mode, a random 10% of the micro-batches are still classified by Full
+                           (security mitigation; 'light' then behaves as mix:0.9)
 
 Usage (in the VM):
   spark-submit --driver-memory 2g \
@@ -20,7 +29,7 @@ Usage (in the VM):
      stream_detect.py --topic run01 --out ~/nids/runs/run01 --mode-file ~/nids/runs/run01/mode
 Local test without Kafka:  --test-dir <directory of .csv files with the same lines>
 """
-import argparse, json, os, time
+import argparse, json, os, random, time
 from pyspark.sql import SparkSession, functions as F
 from pyspark.ml import PipelineModel
 from pyspark.ml.functions import vector_to_array
@@ -33,6 +42,8 @@ ap.add_argument("--features", default=os.path.expanduser("~/nids/data/report/fea
 ap.add_argument("--out", required=True)
 ap.add_argument("--mode-file", default="")
 ap.add_argument("--default-mode", default="full", choices=["full", "light"])
+ap.add_argument("--light-model", default="light_lr", help="frozen fallback model used as 'light' (light_lr or light_rf)")
+ap.add_argument("--full-sample", type=float, default=0.0, help="share of flows still sent to Full in Light mode")
 ap.add_argument("--trigger", type=float, default=5.0,
                 help="micro-batch interval in seconds; 0 = start the next batch as soon as the previous one ends")
 ap.add_argument("--max-offsets", type=int, default=0, help="maxOffsetsPerTrigger (0 = no cap)")
@@ -56,10 +67,10 @@ spark = (SparkSession.builder.appName("stream-detect")
 spark.sparkContext.setLogLevel("WARN")
 
 MODELS = {"full": PipelineModel.load(os.path.join(a.models, "full_rf")),
-          "light": PipelineModel.load(os.path.join(a.models, "light_lr"))}
-THR = {"full": META["full_rf"]["threshold"], "light": META["light_lr"]["threshold"]}
-print(f"Models loaded. Thresholds: full {THR['full']:.3f}, light {THR['light']:.3f}. "
-      f"Mode file: {MODE_FILE}", flush=True)
+          "light": PipelineModel.load(os.path.join(a.models, a.light_model))}
+THR = {"full": META["full_rf"]["threshold"], "light": META[a.light_model]["threshold"]}
+print(f"Models loaded. Thresholds: full {THR['full']:.3f}, light ({a.light_model}) {THR['light']:.3f}; "
+      f"full sample in light mode {a.full_sample:.2f}. Mode file: {MODE_FILE}", flush=True)
 
 if a.test_dir:
     raw = spark.readStream.option("maxFilesPerTrigger", 1).text(a.test_dir).select(F.col("value"))
@@ -96,25 +107,50 @@ def total_behind(p):
 def read_mode():
     try:
         m = open(MODE_FILE).read().strip().lower()
-        return m if m in MODELS else a.default_mode
+        if m in MODELS or m.startswith("mix:"):
+            return m
     except OSError:
-        return a.default_mode
+        pass
+    return a.default_mode
+
+
+def light_share(mode):
+    """Share of the batch's flows classified by Light for a mode string."""
+    if mode == "full":
+        return 0.0
+    if mode == "light":
+        return 1.0 - a.full_sample
+    try:
+        return min(max(float(mode.split(":", 1)[1]), 0.0), 1.0)
+    except ValueError:
+        return 0.0
+
+
+def score(df, which):
+    return (MODELS[which].transform(df)
+            .select("event_id", "send_ts", "y", "family", vector_to_array("probability")[1].alias("prob"))
+            .withColumn("pred", (F.col("prob") >= THR[which]).cast("int"))
+            .withColumn("mode", F.lit(which)))
 
 
 def detect(df, batch_id):
     t_start = time.time()
     mode = read_mode()
-    pred = (MODELS[mode].transform(df)
-            .select("event_id", "send_ts", "y", "family",
-                    vector_to_array("probability")[1].alias("prob"))
-            .withColumn("pred", (F.col("prob") >= THR[mode]).cast("int"))
-            .persist())
+    f = light_share(mode)
+    if f <= 0.0:
+        which = "full"
+    elif f >= 1.0:
+        which = "light"
+    else:                                   # mixed mode: the whole batch goes to one model, drawn with prob. f
+        which = "light" if random.Random(f"{a.topic}:{batch_id}").random() < f else "full"
+    pred = score(df, which)
+    pred = pred.persist()
     n = pred.count()
     t_det = time.time()
     if n == 0:
         pred.unpersist()
         return
-    out = (pred.withColumn("mode", F.lit(mode)).withColumn("batch_id", F.lit(batch_id))
+    out = (pred.withColumn("batch_id", F.lit(batch_id))
                .withColumn("detect_ts", F.lit(t_det))
                .withColumn("latency_ms", (F.lit(t_det) - F.col("send_ts")) * 1000.0))
     s = out.agg(
@@ -126,7 +162,8 @@ def detect(df, batch_id):
     out.write.mode("append").parquet(PRED_DIR)
     t_end = time.time()
     pred.unpersist()
-    rec = dict(batch_id=batch_id, mode=mode, rows=n, t_start=round(t_start, 3),
+    rec = dict(batch_id=batch_id, mode=mode, model=which, light_share=1.0 if which == "light" else 0.0,
+               target_light_share=round(f, 3), rows=n, t_start=round(t_start, 3),
                t_detect=round(t_det, 3), t_end=round(t_end, 3),
                detect_s=round(t_det - t_start, 3), total_s=round(t_end - t_start, 3),
                lat_p50_ms=round(s["q"][0]), lat_p95_ms=round(s["q"][1]), lat_p99_ms=round(s["q"][2]),

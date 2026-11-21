@@ -1,0 +1,24 @@
+Replay file rows: 9,421,272; sending 1,884,255 from row 0 at 9,000/s with profile 30:0.6,60:1.8,0:0.6 (every 5th row) to topic 'R5_L_adapt_burst2_r2b'
+  sent 54,001  achieved 5,400/s
+  sent 108,001  achieved 5,392/s
+  sent 162,454  achieved 5,410/s
+  sent 324,001  achieved 8,092/s
+  sent 486,651  achieved 9,725/s
+  sent 648,293  achieved 10,798/s
+  sent 810,652  achieved 11,574/s
+  sent 972,001  achieved 12,142/s
+  sent 1,134,301  achieved 12,596/s
+  sent 1,188,302  achieved 11,876/s
+  sent 1,242,301  achieved 11,288/s
+  sent 1,296,301  achieved 10,797/s
+  sent 1,350,303  achieved 10,382/s
+  sent 1,404,305  achieved 10,027/s
+  sent 1,458,305  achieved 9,718/s
+  sent 1,512,163  achieved 9,448/s
+  sent 1,566,306  achieved 9,211/s
+  sent 1,620,306  achieved 8,999/s
+  sent 1,674,307  achieved 8,810/s
+  sent 1,728,001  achieved 8,637/s
+  sent 1,782,351  achieved 8,485/s
+  sent 1,836,352  achieved 8,345/s
+SENT 1,884,255 records in 228.9 s (planned 228.9 s), achieved 8,230/s (event_id 0..9,421,270; max lag behind schedule 0.27 s)

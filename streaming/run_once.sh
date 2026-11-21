@@ -8,6 +8,8 @@
 #   CLOCK_OFFSET_MS=-101  clock offset VM - laptop from clock_offset.sh (subtracted from latencies)
 #   PROFILE, WARMUP, WARMUP_RATE   passed on to the laptop command (see produce_parallel.sh)
 #   CONTROLLER="--high 100000 --low 10000 --k 2 --m 3 --dwell 15"   start the adaptive controller
+#   LIGHT_MODEL=light_rf  fallback model used as 'light' (default light_lr)       [revision]
+#   FULL_SAMPLE=0.1     share of flows still classified by Full in Light mode      [revision]
 #   EXTERNAL=1          the load comes from the laptop (produce_parallel.sh); EXT_PROCS=2 producer processes
 # Change the mode during a run from another terminal:  echo light > ~/nids/runs/<run_name>/mode
 set -euo pipefail
@@ -39,7 +41,8 @@ echo "Topic $NAME created. Run directory: $R"
 # 3. Telemetry and the streaming job in the background
 python "$S/telemetry.py" --out "$R/telemetry.csv" --interval 1 & TEL=$!
 spark-submit --driver-memory 2g --packages $PKG "$S/stream_detect.py" \
-   --topic "$NAME" --out "$R" --max-offsets "${MAX_OFFSETS:-75000}" --trigger "${TRIGGER:-0}" > "$R/stream.log" 2>&1 & SP=$!
+   --topic "$NAME" --out "$R" --max-offsets "${MAX_OFFSETS:-75000}" --trigger "${TRIGGER:-0}" \
+   --light-model "${LIGHT_MODEL:-light_lr}" --full-sample "${FULL_SAMPLE:-0}" > "$R/stream.log" 2>&1 & SP=$!
 echo "Waiting for the streaming job to start ..."
 touch "$R/stream.log"
 until grep -q "batch   rows" "$R/stream.log"; do
@@ -74,6 +77,6 @@ echo; echo "=== Streaming job (last lines) ==="
 sed -n '/Models loaded/,$p' "$R/stream.log" | grep -v -E "WARN|INFO" | tail -n 40
 echo; echo "=== Run summary ==="
 KHEAP=$(pgrep -af kafka.Kafka | grep -o -- '-Xmx[0-9]*[MG]' | head -1)
-echo "kafka_heap=${KHEAP:-unknown} max_offsets=${MAX_OFFSETS:-75000} trigger=${TRIGGER:-0} controller=${CONTROLLER:-none} profile=${PROFILE:-constant} warmup=${WARMUP:-0}@${WARMUP_RATE:-0} clock_offset_ms=${CLOCK_OFFSET_MS:-0}" > "$R/settings.txt"
+echo "kafka_heap=${KHEAP:-unknown} max_offsets=${MAX_OFFSETS:-75000} trigger=${TRIGGER:-0} controller=${CONTROLLER:-none} light_model=${LIGHT_MODEL:-light_lr} full_sample=${FULL_SAMPLE:-0} profile=${PROFILE:-constant} warmup=${WARMUP:-0}@${WARMUP_RATE:-0} clock_offset_ms=${CLOCK_OFFSET_MS:-0}" > "$R/settings.txt"
 spark-submit --driver-memory 2g "$S/analyze_run.py" "$R" --expected "$LIMIT" \
    --clock-offset-ms "${CLOCK_OFFSET_MS:-0}" 2>&1 | grep -v -E "WARN|INFO"

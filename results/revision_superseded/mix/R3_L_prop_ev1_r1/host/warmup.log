@@ -1,0 +1,3 @@
+Replay file rows: 9,421,260; sending 270,000 from row 9,000,000 at 13,500/s to topic 'R3_L_prop_ev1_r1'
+  sent 135,001  achieved 13,500/s
+SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,498/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 2.55 s)

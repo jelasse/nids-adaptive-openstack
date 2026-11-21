@@ -1,0 +1,2 @@
+name,vm,ip,rate,records,mode,controller,profile,procs,warmup_rate,replay,vm_env,host_env
+R4_L_adapt_1p2S_r1b,nids-exp-l,172.24.4.36,54000,28263816,full,--high 100000 --low 10000 --k 2 --m 3 --dwell 15,,4,13500,~/w5/replay/test.parquet,,INTERLEAVE=1;LOOPS=3

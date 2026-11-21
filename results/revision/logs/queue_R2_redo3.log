@@ -1,0 +1,95 @@
+[10:54:47] === R2_L_prop_burst_r4: 45000/s, full, controller, profile 60:0.6,90:1.5,0:0.6, 4 producers, INTERLEAVE=1, test.parquet
+[10:54:47] clock offset 1.7 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,498/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 1.99 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 0..9,421,268; max lag behind schedule 0.31 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 1..9,421,269; max lag behind schedule 0.31 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 2..9,421,270; max lag behind schedule 0.32 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 3..9,421,271; max lag behind schedule 0.32 s)
+      note: laptop swapped OUT 344 MB (idle memory; run still valid)
+    LAPTOP SIDE: VALID
+[11:01:08] result: 1.7,True,True,True,1294,3236,0.0,165142,43815,0.97728,4793,0
+[11:01:42] === R2_L_prop_1p2S_r2: 54000/s, full, controller, 4 producers, INTERLEAVE=1, test.parquet
+[11:01:43] clock offset 1.7 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,499/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 2.10 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 0..9,421,268; max lag behind schedule 0.28 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 1..9,421,269; max lag behind schedule 0.28 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 2..9,421,270; max lag behind schedule 0.28 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 3..9,421,271; max lag behind schedule 0.28 s)
+    LAPTOP SIDE: VALID
+[11:07:23] result: 1.7,True,True,False,1939,3114,0.0,91670,53097,0.97447,2710,0
+[11:07:57] === R2_L_prop_1p2S_r3: 54000/s, full, controller, 4 producers, INTERLEAVE=1, test.parquet
+[11:07:58] clock offset 1.3 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,499/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 2.13 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 0..9,421,268; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 1..9,421,269; max lag behind schedule 0.28 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 2..9,421,270; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 3..9,421,271; max lag behind schedule 0.27 s)
+    LAPTOP SIDE: VALID
+[11:13:38] result: 1.3,True,True,True,2178,3793,0.00364,165865,53382,0.89444,4142,0
+[11:14:12] === R2_L_prop_1p2S_r5: 54000/s, full, controller, 4 producers, INTERLEAVE=1, test.parquet
+[11:14:13] clock offset 1.6 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,499/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 2.15 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 0..9,421,268; max lag behind schedule 0.26 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 1..9,421,269; max lag behind schedule 0.26 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 2..9,421,270; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 3..9,421,271; max lag behind schedule 0.27 s)
+      note: laptop swapped OUT 162 MB (idle memory; run still valid)
+    LAPTOP SIDE: VALID
+[11:19:53] result: 1.6,True,True,True,1902,3144,0.0,79321,53649,0.93604,5878,0
+[11:20:27] === R2_L_prop_burst_r2: 45000/s, full, controller, profile 60:0.6,90:1.5,0:0.6, 4 producers, INTERLEAVE=1, test.parquet
+[11:20:28] clock offset 1.8 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,499/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 2.11 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 0..9,421,268; max lag behind schedule 0.29 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 1..9,421,269; max lag behind schedule 0.29 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 2..9,421,270; max lag behind schedule 0.29 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 3..9,421,271; max lag behind schedule 0.29 s)
+      note: laptop swapped OUT 100 MB (idle memory; run still valid)
+    LAPTOP SIDE: VALID
+[11:26:48] result: 1.8,True,True,True,1427,2791,0.0,119939,43854,0.97345,5944,0
+[11:27:22] === R2_L_prop_burst_r3: 45000/s, full, controller, profile 60:0.6,90:1.5,0:0.6, 4 producers, INTERLEAVE=1, test.parquet
+[11:27:23] clock offset 1.7 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,499/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 1.97 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 0..9,421,268; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 1..9,421,269; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 2..9,421,270; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 3..9,421,271; max lag behind schedule 0.27 s)
+    LAPTOP SIDE: VALID
+[11:33:44] result: 1.7,True,True,True,1555,3939,0.0,191313,43765,0.97418,4977,0
+[11:34:17] === R2_L_prop_burst_r5: 45000/s, full, controller, profile 60:0.6,90:1.5,0:0.6, 4 producers, INTERLEAVE=1, test.parquet
+[11:34:18] clock offset 1.8 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,499/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 1.99 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 0..9,421,268; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 1..9,421,269; max lag behind schedule 0.26 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 2..9,421,270; max lag behind schedule 0.26 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 3..9,421,271; max lag behind schedule 0.26 s)
+      note: laptop swapped OUT 57 MB (idle memory; run still valid)
+    LAPTOP SIDE: VALID
+[11:40:39] result: 1.8,True,True,True,1412,2724,0.0,130489,43873,0.90175,4905,0
+[11:41:12] === R2_L_prop_1p2S_r1: 54000/s, full, controller, 4 producers, INTERLEAVE=1, test.parquet
+[11:41:13] clock offset 1.7 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,496/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 2.00 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 0..9,421,268; max lag behind schedule 0.26 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 1..9,421,269; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 2..9,421,270; max lag behind schedule 0.26 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 3..9,421,271; max lag behind schedule 0.26 s)
+    LAPTOP SIDE: VALID
+[11:46:54] result: 1.7,True,True,True,1840,3192,0.0,90150,53246,0.88161,4481,0
+[11:47:27] === R2_L_prop_burst_r1: 45000/s, full, controller, profile 60:0.6,90:1.5,0:0.6, 4 producers, INTERLEAVE=1, test.parquet
+[11:47:28] clock offset 1.4 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,499/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 1.97 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 0..9,421,268; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 1..9,421,269; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 2..9,421,270; max lag behind schedule 0.26 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 3..9,421,271; max lag behind schedule 0.27 s)
+    LAPTOP SIDE: VALID
+[11:53:49] result: 1.4,True,True,True,1399,2541,0.0,99072,43828,0.89087,5862,0
+[11:54:23] === R2_L_prop_1p2S_r4: 54000/s, full, controller, 4 producers, INTERLEAVE=1, test.parquet
+[11:54:23] clock offset 1.7 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,499/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 1.98 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 0..9,421,268; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,499/s (event_id 1..9,421,269; max lag behind schedule 0.26 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 2..9,421,270; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 3..9,421,271; max lag behind schedule 0.27 s)
+    LAPTOP SIDE: VALID
+[12:00:04] result: 1.7,True,True,True,2206,3512,0.0,115061,53643,0.916,3827,0
+[12:00:38] queue finished

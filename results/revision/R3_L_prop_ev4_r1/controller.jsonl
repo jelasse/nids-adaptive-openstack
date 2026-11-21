@@ -1,0 +1,183 @@
+{"ts": 1795238024.446, "event": "start", "mode": "full", "high": 100000, "low": 10000, "k": 2, "m": 3, "dwell": 15.0}
+{"ts": 1795238030.954, "batch": 2, "backlog": 0, "rows": 48515, "dur_ms": 2171, "mode": "mix:0.00", "model": "full", "lam": null, "c_full_us": 22.22, "c_light_us": 11.11}
+{"ts": 1795238032.958, "batch": 3, "backlog": 0, "rows": 29339, "dur_ms": 1398, "mode": "mix:0.00", "model": "full", "lam": 13514, "c_full_us": 22.22, "c_light_us": 11.11}
+{"ts": 1795238033.958, "batch": 4, "backlog": 0, "rows": 18875, "dur_ms": 1038, "mode": "mix:0.00", "model": "full", "lam": 13501, "c_full_us": 22.22, "c_light_us": 11.11}
+{"ts": 1795238034.959, "batch": 5, "backlog": 0, "rows": 14013, "dur_ms": 992, "mode": "mix:0.00", "model": "full", "lam": 13500, "c_full_us": 22.22, "c_light_us": 11.11}
+{"ts": 1795238035.959, "batch": 6, "backlog": 0, "rows": 13447, "dur_ms": 935, "mode": "mix:0.00", "model": "full", "lam": 13555, "c_full_us": 22.22, "c_light_us": 11.11}
+{"ts": 1795238036.96, "batch": 7, "backlog": 0, "rows": 12565, "dur_ms": 839, "mode": "mix:0.00", "model": "full", "lam": 13424, "c_full_us": 22.22, "c_light_us": 11.11}
+{"ts": 1795238037.961, "batch": 9, "backlog": 0, "rows": 13025, "dur_ms": 923, "mode": "mix:0.00", "model": "full", "lam": 13503, "c_full_us": 22.22, "c_light_us": 11.11}
+{"ts": 1795238038.961, "batch": 10, "backlog": 0, "rows": 12463, "dur_ms": 952, "mode": "mix:0.00", "model": "full", "lam": 13503, "c_full_us": 22.22, "c_light_us": 11.11}
+{"ts": 1795238039.962, "batch": 11, "backlog": 0, "rows": 12850, "dur_ms": 890, "mode": "mix:0.00", "model": "full", "lam": 13498, "c_full_us": 22.22, "c_light_us": 11.11}
+{"ts": 1795238040.964, "batch": 12, "backlog": 0, "rows": 12000, "dur_ms": 854, "mode": "mix:0.00", "model": "full", "lam": 13483, "c_full_us": 22.22, "c_light_us": 11.11}
+{"ts": 1795238041.965, "batch": 13, "backlog": 0, "rows": 11575, "dur_ms": 864, "mode": "mix:0.00", "model": "full", "lam": 13554, "c_full_us": 22.22, "c_light_us": 11.11}
+{"ts": 1795238042.966, "batch": 14, "backlog": 0, "rows": 11650, "dur_ms": 1053, "mode": "mix:0.00", "model": "full", "lam": 13468, "c_full_us": 22.22, "c_light_us": 11.11}
+{"ts": 1795238043.967, "batch": 15, "backlog": 0, "rows": 14237, "dur_ms": 945, "mode": "mix:0.00", "model": "full", "lam": 13520, "c_full_us": 22.22, "c_light_us": 11.11}
+{"ts": 1795238044.969, "batch": 16, "backlog": 0, "rows": 12713, "dur_ms": 997, "mode": "mix:0.00", "model": "full", "lam": 13439, "c_full_us": 22.22, "c_light_us": 11.11}
+{"ts": 1795238045.969, "batch": 17, "backlog": 0, "rows": 11150, "dur_ms": 948, "mode": "mix:0.00", "model": "full", "lam": 11184, "c_full_us": 22.22, "c_light_us": 11.11}
+{"ts": 1795238046.97, "batch": 18, "backlog": 0, "rows": 10000, "dur_ms": 1291, "mode": "mix:0.00", "model": "full", "lam": 10537, "c_full_us": 22.22, "c_light_us": 11.11}
+{"ts": 1795238048.972, "batch": 19, "backlog": 0, "rows": 1899, "dur_ms": 805, "mode": "mix:0.00", "model": "full", "lam": 945, "c_full_us": 22.22, "c_light_us": 11.11}
+{"ts": 1795238049.972, "batch": 20, "backlog": 0, "rows": 27901, "dur_ms": 1232, "mode": "mix:0.00", "model": "full", "lam": 34660, "c_full_us": 22.22, "c_light_us": 11.11}
+{"ts": 1795238050.975, "batch": 21, "backlog": 0, "rows": 33200, "dur_ms": 1194, "mode": "mix:0.00", "model": "full", "lam": 26948, "c_full_us": 22.22, "c_light_us": 11.11}
+{"ts": 1795238051.975, "batch": 22, "backlog": 0, "rows": 32200, "dur_ms": 1191, "mode": "mix:0.00", "model": "full", "lam": 26968, "c_full_us": 22.22, "c_light_us": 11.11}
+{"ts": 1795238053.976, "batch": 23, "backlog": 0, "rows": 32200, "dur_ms": 1169, "mode": "mix:0.00", "model": "full", "lam": 27013, "c_full_us": 22.22, "c_light_us": 11.11}
+{"ts": 1795238054.978, "batch": 24, "backlog": 0, "rows": 31600, "dur_ms": 987, "mode": "mix:0.00", "model": "full", "lam": 27032, "c_full_us": 22.22, "c_light_us": 11.11}
+{"ts": 1795238055.98, "batch": 25, "backlog": 0, "rows": 26600, "dur_ms": 1091, "mode": "mix:0.00", "model": "full", "lam": 26950, "c_full_us": 22.22, "c_light_us": 11.11}
+{"ts": 1795238056.984, "batch": 26, "backlog": 0, "rows": 29400, "dur_ms": 1193, "mode": "mix:0.00", "model": "full", "lam": 26923, "c_full_us": 22.22, "c_light_us": 11.11}
+{"ts": 1795238057.984, "batch": 27, "backlog": 0, "rows": 32400, "dur_ms": 1179, "mode": "mix:0.00", "model": "full", "lam": 27158, "c_full_us": 22.22, "c_light_us": 11.11}
+{"ts": 1795238058.988, "batch": 28, "backlog": 0, "rows": 31800, "dur_ms": 1070, "mode": "mix:0.00", "model": "full", "lam": 26949, "c_full_us": 22.22, "c_light_us": 11.11}
+{"ts": 1795238059.989, "batch": 29, "backlog": 0, "rows": 28800, "dur_ms": 971, "mode": "mix:0.00", "model": "full", "lam": 26916, "c_full_us": 22.22, "c_light_us": 11.11}
+{"ts": 1795238060.992, "batch": 30, "backlog": 0, "rows": 26200, "dur_ms": 1003, "mode": "mix:0.00", "model": "full", "lam": 26982, "c_full_us": 22.22, "c_light_us": 11.11}
+{"ts": 1795238061.994, "batch": 31, "backlog": 0, "rows": 27200, "dur_ms": 1178, "mode": "mix:0.00", "model": "full", "lam": 27092, "c_full_us": 22.22, "c_light_us": 11.11}
+{"ts": 1795238062.994, "batch": 32, "backlog": 0, "rows": 31800, "dur_ms": 1120, "mode": "mix:0.00", "model": "full", "lam": 26972, "c_full_us": 22.22, "c_light_us": 11.11}
+{"ts": 1795238063.995, "batch": 33, "backlog": 0, "rows": 30200, "dur_ms": 1000, "mode": "mix:0.00", "model": "full", "lam": 26964, "c_full_us": 22.22, "c_light_us": 11.11}
+{"ts": 1795238064.998, "batch": 34, "backlog": 0, "rows": 27000, "dur_ms": 1089, "mode": "mix:0.00", "model": "full", "lam": 27000, "c_full_us": 22.22, "c_light_us": 11.11}
+{"ts": 1795238065.998, "batch": 35, "backlog": 0, "rows": 29450, "dur_ms": 1119, "mode": "mix:0.00", "model": "full", "lam": 27043, "c_full_us": 22.22, "c_light_us": 11.11}
+{"ts": 1795238068.001, "batch": 36, "backlog": 0, "rows": 30150, "dur_ms": 1162, "mode": "mix:0.00", "model": "full", "lam": 26944, "c_full_us": 22.22, "c_light_us": 11.11}
+{"ts": 1795238069.003, "batch": 37, "backlog": 0, "rows": 30524, "dur_ms": 1015, "mode": "mix:0.00", "model": "full", "lam": 26268, "c_full_us": 22.22, "c_light_us": 11.11}
+{"ts": 1795238070.004, "batch": 38, "backlog": 0, "rows": 28276, "dur_ms": 1127, "mode": "mix:0.00", "model": "full", "lam": 27831, "c_full_us": 22.22, "c_light_us": 11.11}
+{"ts": 1795238071.004, "batch": 39, "backlog": 0, "rows": 30600, "dur_ms": 1139, "mode": "mix:0.00", "model": "full", "lam": 27128, "c_full_us": 22.22, "c_light_us": 11.11}
+{"ts": 1795238072.004, "batch": 40, "backlog": 0, "rows": 30600, "dur_ms": 1169, "mode": "mix:0.00", "model": "full", "lam": 26866, "c_full_us": 22.22, "c_light_us": 11.11}
+{"ts": 1795238073.005, "batch": 41, "backlog": 0, "rows": 31600, "dur_ms": 1230, "mode": "mix:0.00", "model": "full", "lam": 27032, "c_full_us": 22.22, "c_light_us": 11.11}
+{"ts": 1795238074.005, "batch": 42, "backlog": 0, "rows": 33400, "dur_ms": 1128, "mode": "mix:0.00", "model": "full", "lam": 27132, "c_full_us": 22.22, "c_light_us": 11.11}
+{"ts": 1795238076.508, "batch": 43, "backlog": 0, "rows": 30400, "dur_ms": 1142, "mode": "mix:0.00", "model": "full", "lam": 26926, "c_full_us": 22.22, "c_light_us": 11.11}
+{"ts": 1795238077.508, "batch": 44, "backlog": 0, "rows": 31200, "dur_ms": 1131, "mode": "mix:0.00", "model": "full", "lam": 27320, "c_full_us": 22.22, "c_light_us": 11.11}
+{"ts": 1795238078.509, "batch": 45, "backlog": 0, "rows": 30200, "dur_ms": 1114, "mode": "mix:0.00", "model": "full", "lam": 26678, "c_full_us": 22.22, "c_light_us": 11.11}
+{"ts": 1795238079.51, "batch": 46, "backlog": 0, "rows": 30000, "dur_ms": 1081, "mode": "mix:0.00", "model": "full", "lam": 26930, "c_full_us": 22.22, "c_light_us": 11.11}
+{"ts": 1795238080.51, "batch": 47, "backlog": 0, "rows": 29200, "dur_ms": 1167, "mode": "mix:0.00", "model": "full", "lam": 27012, "c_full_us": 22.22, "c_light_us": 11.11}
+{"ts": 1795238081.513, "batch": 48, "backlog": 0, "rows": 31600, "dur_ms": 1185, "mode": "mix:0.00", "model": "full", "lam": 27078, "c_full_us": 22.22, "c_light_us": 11.11}
+{"ts": 1795238082.514, "batch": 49, "backlog": 0, "rows": 32000, "dur_ms": 1111, "mode": "mix:0.00", "model": "full", "lam": 27004, "c_full_us": 22.22, "c_light_us": 11.11}
+{"ts": 1795238083.515, "batch": 50, "backlog": 0, "rows": 30000, "dur_ms": 1107, "mode": "mix:0.00", "model": "full", "lam": 27003, "c_full_us": 22.22, "c_light_us": 11.11}
+{"ts": 1795238084.516, "batch": 51, "backlog": 0, "rows": 29800, "dur_ms": 1042, "mode": "mix:0.00", "model": "full", "lam": 26920, "c_full_us": 22.22, "c_light_us": 11.11}
+{"ts": 1795238085.516, "batch": 52, "backlog": 0, "rows": 28200, "dur_ms": 1005, "mode": "mix:0.00", "model": "full", "lam": 27063, "c_full_us": 22.22, "c_light_us": 11.11}
+{"ts": 1795238087.519, "batch": 53, "backlog": 0, "rows": 27000, "dur_ms": 1098, "mode": "mix:0.00", "model": "full", "lam": 26866, "c_full_us": 22.22, "c_light_us": 11.11}
+{"ts": 1795238088.52, "batch": 54, "backlog": 0, "rows": 29800, "dur_ms": 1053, "mode": "mix:0.00", "model": "full", "lam": 27116, "c_full_us": 22.22, "c_light_us": 11.11}
+{"ts": 1795238089.522, "batch": 55, "backlog": 0, "rows": 30705, "dur_ms": 1252, "mode": "mix:0.00", "model": "full", "lam": 29132, "c_full_us": 22.22, "c_light_us": 11.11}
+{"ts": 1795238091.524, "batch": 56, "backlog": 5434, "rows": 74998, "dur_ms": 1719, "mode": "mix:0.00", "model": "full", "lam": 64192, "c_full_us": 22.43, "c_light_us": 11.11, "switch_to": "mix:0.60"}
+{"ts": 1795238092.526, "batch": 57, "backlog": 38649, "rows": 74998, "dur_ms": 1661, "mode": "mix:0.60", "model": "full", "lam": 62951, "c_full_us": 22.35, "c_light_us": 11.11, "switch_to": "mix:0.65"}
+{"ts": 1795238094.527, "batch": 58, "backlog": 68401, "rows": 74998, "dur_ms": 1590, "mode": "mix:0.65", "model": "full", "lam": 63026, "c_full_us": 22.0, "c_light_us": 11.11, "switch_to": "mix:0.70"}
+{"ts": 1795238095.53, "batch": 59, "backlog": 93603, "rows": 74998, "dur_ms": 1641, "mode": "mix:0.70", "model": "full", "lam": 62979, "c_full_us": 21.97, "c_light_us": 11.11, "switch_to": "mix:0.75"}
+{"ts": 1795238097.531, "batch": 60, "backlog": 119905, "rows": 74998, "dur_ms": 1624, "mode": "mix:0.75", "model": "full", "lam": 61731, "c_full_us": 21.87, "c_light_us": 11.11}
+{"ts": 1795238098.532, "batch": 61, "backlog": 149408, "rows": 74997, "dur_ms": 1177, "mode": "mix:0.75", "model": "light", "lam": 64308, "c_full_us": 21.87, "c_light_us": 12.49, "switch_to": "mix:0.95"}
+{"ts": 1795238099.534, "batch": 62, "backlog": 148610, "rows": 74998, "dur_ms": 961, "mode": "mix:0.95", "model": "light", "lam": 63042, "c_full_us": 21.87, "c_light_us": 12.58}
+{"ts": 1795238100.535, "batch": 63, "backlog": 134212, "rows": 74998, "dur_ms": 902, "mode": "mix:0.95", "model": "light", "lam": 63059, "c_full_us": 21.87, "c_light_us": 12.42, "switch_to": "mix:0.90"}
+{"ts": 1795238101.536, "batch": 64, "backlog": 116014, "rows": 74998, "dur_ms": 866, "mode": "mix:0.90", "model": "light", "lam": 62901, "c_full_us": 21.87, "c_light_us": 12.16, "switch_to": "mix:0.85"}
+{"ts": 1795238102.537, "batch": 65, "backlog": 95441, "rows": 74998, "dur_ms": 856, "mode": "mix:0.85", "model": "light", "lam": 62846, "c_full_us": 21.87, "c_light_us": 11.93, "switch_to": "mix:0.80"}
+{"ts": 1795238103.542, "batch": 66, "backlog": 74330, "rows": 74998, "dur_ms": 1365, "mode": "mix:0.80", "model": "full", "lam": 62952, "c_full_us": 20.77, "c_light_us": 11.93, "switch_to": "mix:0.70"}
+{"ts": 1795238104.542, "batch": 67, "backlog": 85446, "rows": 74998, "dur_ms": 1034, "mode": "mix:0.70", "model": "light", "lam": 63087, "c_full_us": 20.77, "c_light_us": 12.49, "switch_to": "mix:0.80"}
+{"ts": 1795238105.544, "batch": 68, "backlog": 75634, "rows": 74998, "dur_ms": 820, "mode": "mix:0.80", "model": "light", "lam": 63043, "c_full_us": 20.77, "c_light_us": 12.02, "switch_to": "mix:0.75"}
+{"ts": 1795238106.545, "batch": 69, "backlog": 52224, "rows": 74998, "dur_ms": 819, "mode": "mix:0.75", "model": "light", "lam": 62912, "c_full_us": 20.77, "c_light_us": 11.69, "switch_to": "mix:0.65"}
+{"ts": 1795238107.546, "batch": 70, "backlog": 28875, "rows": 74999, "dur_ms": 1463, "mode": "mix:0.65", "model": "full", "lam": 62988, "c_full_us": 20.39, "c_light_us": 11.69, "switch_to": "mix:0.55"}
+{"ts": 1795238108.546, "batch": 71, "backlog": 46027, "rows": 74998, "dur_ms": 991, "mode": "mix:0.55", "model": "light", "lam": 62987, "c_full_us": 20.39, "c_light_us": 12.15, "switch_to": "mix:0.65"}
+{"ts": 1795238109.548, "batch": 72, "backlog": 33579, "rows": 74998, "dur_ms": 941, "mode": "mix:0.65", "model": "light", "lam": 63118, "c_full_us": 20.39, "c_light_us": 12.27}
+{"ts": 1795238110.549, "batch": 73, "backlog": 17818, "rows": 74998, "dur_ms": 897, "mode": "mix:0.65", "model": "light", "lam": 62951, "c_full_us": 20.39, "c_light_us": 12.18, "switch_to": "mix:0.55"}
+{"ts": 1795238112.552, "batch": 74, "backlog": 0, "rows": 74481, "dur_ms": 1719, "mode": "mix:0.55", "model": "full", "lam": 63169, "c_full_us": 21.2, "c_light_us": 12.18, "switch_to": "mix:0.60"}
+{"ts": 1795238113.553, "batch": 75, "backlog": 33177, "rows": 74998, "dur_ms": 997, "mode": "mix:0.60", "model": "light", "lam": 62929, "c_full_us": 21.2, "c_light_us": 12.51, "switch_to": "mix:0.70"}
+{"ts": 1795238114.555, "batch": 77, "backlog": 0, "rows": 74341, "dur_ms": 844, "mode": "mix:0.70", "model": "light", "lam": 63029, "c_full_us": 21.2, "c_light_us": 12.16, "switch_to": "mix:0.60"}
+{"ts": 1795238115.556, "batch": 78, "backlog": 0, "rows": 52976, "dur_ms": 669, "mode": "mix:0.60", "model": "light", "lam": 62768, "c_full_us": 21.2, "c_light_us": 12.16}
+{"ts": 1795238116.556, "batch": 79, "backlog": 0, "rows": 42237, "dur_ms": 1098, "mode": "mix:0.60", "model": "full", "lam": 63040, "c_full_us": 21.2, "c_light_us": 12.16}
+{"ts": 1795238117.557, "batch": 80, "backlog": 0, "rows": 69250, "dur_ms": 914, "mode": "mix:0.60", "model": "light", "lam": 63069, "c_full_us": 21.2, "c_light_us": 12.47}
+{"ts": 1795238118.559, "batch": 81, "backlog": 0, "rows": 57550, "dur_ms": 786, "mode": "mix:0.60", "model": "light", "lam": 62965, "c_full_us": 21.2, "c_light_us": 12.47}
+{"ts": 1795238119.559, "batch": 83, "backlog": 0, "rows": 44063, "dur_ms": 637, "mode": "mix:0.60", "model": "light", "lam": 63022, "c_full_us": 21.2, "c_light_us": 12.47}
+{"ts": 1795238120.56, "batch": 85, "backlog": 0, "rows": 39463, "dur_ms": 564, "mode": "mix:0.60", "model": "light", "lam": 62975, "c_full_us": 21.2, "c_light_us": 12.47}
+{"ts": 1795238122.565, "batch": 86, "backlog": 0, "rows": 35550, "dur_ms": 1181, "mode": "mix:0.60", "model": "full", "lam": 63032, "c_full_us": 21.2, "c_light_us": 12.47}
+{"ts": 1795238123.565, "batch": 88, "backlog": 0, "rows": 58000, "dur_ms": 727, "mode": "mix:0.60", "model": "light", "lam": 62988, "c_full_us": 21.2, "c_light_us": 12.47}
+{"ts": 1795238124.567, "batch": 90, "backlog": 0, "rows": 38450, "dur_ms": 643, "mode": "mix:0.60", "model": "light", "lam": 62964, "c_full_us": 21.2, "c_light_us": 12.47}
+{"ts": 1795238125.571, "batch": 91, "backlog": 0, "rows": 40550, "dur_ms": 578, "mode": "mix:0.60", "model": "light", "lam": 63064, "c_full_us": 21.2, "c_light_us": 12.47}
+{"ts": 1795238126.571, "batch": 93, "backlog": 0, "rows": 37275, "dur_ms": 524, "mode": "mix:0.60", "model": "light", "lam": 63034, "c_full_us": 21.2, "c_light_us": 12.47}
+{"ts": 1795238127.572, "batch": 95, "backlog": 0, "rows": 30626, "dur_ms": 512, "mode": "mix:0.60", "model": "light", "lam": 63020, "c_full_us": 21.2, "c_light_us": 12.47}
+{"ts": 1795238128.573, "batch": 96, "backlog": 0, "rows": 32187, "dur_ms": 499, "mode": "mix:0.60", "model": "light", "lam": 62865, "c_full_us": 21.2, "c_light_us": 12.47}
+{"ts": 1795238129.575, "batch": 97, "backlog": 0, "rows": 31350, "dur_ms": 1032, "mode": "mix:0.60", "model": "full", "lam": 62826, "c_full_us": 21.2, "c_light_us": 12.47}
+{"ts": 1795238130.576, "batch": 99, "backlog": 0, "rows": 55157, "dur_ms": 716, "mode": "mix:0.60", "model": "light", "lam": 62413, "c_full_us": 21.2, "c_light_us": 12.47}
+{"ts": 1795238131.579, "batch": 101, "backlog": 0, "rows": 36702, "dur_ms": 528, "mode": "mix:0.60", "model": "light", "lam": 63382, "c_full_us": 21.2, "c_light_us": 12.47}
+{"ts": 1795238132.581, "batch": 102, "backlog": 0, "rows": 34186, "dur_ms": 543, "mode": "mix:0.60", "model": "light", "lam": 64746, "c_full_us": 21.2, "c_light_us": 12.47, "switch_to": "mix:0.65"}
+{"ts": 1795238133.581, "batch": 103, "backlog": 0, "rows": 34163, "dur_ms": 1174, "mode": "mix:0.65", "model": "full", "lam": 62915, "c_full_us": 21.2, "c_light_us": 12.47, "switch_to": "mix:0.60"}
+{"ts": 1795238134.583, "batch": 104, "backlog": 0, "rows": 71451, "dur_ms": 960, "mode": "mix:0.60", "model": "light", "lam": 60861, "c_full_us": 21.2, "c_light_us": 12.76, "switch_to": "mix:0.55"}
+{"ts": 1795238135.584, "batch": 105, "backlog": 0, "rows": 62861, "dur_ms": 760, "mode": "mix:0.55", "model": "light", "lam": 65480, "c_full_us": 21.2, "c_light_us": 12.56, "switch_to": "mix:0.70"}
+{"ts": 1795238136.586, "batch": 106, "backlog": 0, "rows": 47831, "dur_ms": 1194, "mode": "mix:0.70", "model": "full", "lam": 62936, "c_full_us": 21.2, "c_light_us": 12.56, "switch_to": "mix:0.60"}
+{"ts": 1795238137.587, "batch": 107, "backlog": 220, "rows": 74999, "dur_ms": 899, "mode": "mix:0.60", "model": "light", "lam": 62997, "c_full_us": 21.2, "c_light_us": 12.39}
+{"ts": 1795238138.587, "batch": 108, "backlog": 0, "rows": 57095, "dur_ms": 1350, "mode": "mix:0.60", "model": "full", "lam": 63265, "c_full_us": 21.2, "c_light_us": 12.39}
+{"ts": 1795238139.588, "batch": 109, "backlog": 9939, "rows": 74999, "dur_ms": 861, "mode": "mix:0.60", "model": "light", "lam": 62870, "c_full_us": 21.2, "c_light_us": 12.12}
+{"ts": 1795238140.589, "batch": 111, "backlog": 0, "rows": 45844, "dur_ms": 599, "mode": "mix:0.60", "model": "light", "lam": 62939, "c_full_us": 21.2, "c_light_us": 12.12}
+{"ts": 1795238141.592, "batch": 112, "backlog": 0, "rows": 37863, "dur_ms": 561, "mode": "mix:0.60", "model": "light", "lam": 63105, "c_full_us": 21.2, "c_light_us": 12.12}
+{"ts": 1795238142.592, "batch": 113, "backlog": 0, "rows": 34813, "dur_ms": 516, "mode": "mix:0.60", "model": "light", "lam": 62055, "c_full_us": 21.2, "c_light_us": 12.12, "switch_to": "mix:0.55"}
+{"ts": 1795238143.593, "batch": 114, "backlog": 0, "rows": 32974, "dur_ms": 1162, "mode": "mix:0.55", "model": "full", "lam": 63903, "c_full_us": 21.2, "c_light_us": 12.12, "switch_to": "mix:0.60"}
+{"ts": 1795238144.594, "batch": 115, "backlog": 0, "rows": 73250, "dur_ms": 1624, "mode": "mix:0.60", "model": "full", "lam": 63038, "c_full_us": 21.49, "c_light_us": 12.12}
+{"ts": 1795238146.597, "batch": 116, "backlog": 27302, "rows": 74998, "dur_ms": 1618, "mode": "mix:0.60", "model": "full", "lam": 62993, "c_full_us": 21.52, "c_light_us": 12.12, "switch_to": "mix:0.65"}
+{"ts": 1795238148.599, "batch": 118, "backlog": 88975, "rows": 74998, "dur_ms": 937, "mode": "mix:0.65", "model": "light", "lam": 62903, "c_full_us": 21.52, "c_light_us": 12.23, "switch_to": "mix:0.80"}
+{"ts": 1795238149.608, "batch": 119, "backlog": 71829, "rows": 74998, "dur_ms": 865, "mode": "mix:0.80", "model": "light", "lam": 61742, "c_full_us": 21.52, "c_light_us": 12.02, "switch_to": "mix:0.70"}
+{"ts": 1795238150.61, "batch": 120, "backlog": 52910, "rows": 74998, "dur_ms": 882, "mode": "mix:0.70", "model": "light", "lam": 64831, "c_full_us": 21.52, "c_light_us": 11.94, "switch_to": "mix:0.75"}
+{"ts": 1795238152.612, "batch": 121, "backlog": 33500, "rows": 74998, "dur_ms": 1685, "mode": "mix:0.75", "model": "full", "lam": 63025, "c_full_us": 21.8, "c_light_us": 11.94, "switch_to": "mix:0.65"}
+{"ts": 1795238153.613, "batch": 122, "backlog": 64564, "rows": 74998, "dur_ms": 1497, "mode": "mix:0.65", "model": "full", "lam": 62945, "c_full_us": 21.25, "c_light_us": 11.94, "switch_to": "mix:0.70"}
+{"ts": 1795238155.616, "batch": 123, "backlog": 84016, "rows": 74998, "dur_ms": 1621, "mode": "mix:0.70", "model": "full", "lam": 63093, "c_full_us": 21.36, "c_light_us": 11.94, "switch_to": "mix:0.75"}
+{"ts": 1795238157.618, "batch": 124, "backlog": 110931, "rows": 74999, "dur_ms": 1715, "mode": "mix:0.75", "model": "full", "lam": 62871, "c_full_us": 21.81, "c_light_us": 11.94, "switch_to": "mix:0.80"}
+{"ts": 1795238158.62, "batch": 125, "backlog": 142501, "rows": 74998, "dur_ms": 1013, "mode": "mix:0.80", "model": "light", "lam": 62139, "c_full_us": 21.81, "c_light_us": 12.41, "switch_to": "mix:0.90"}
+{"ts": 1795238159.621, "batch": 126, "backlog": 133021, "rows": 74998, "dur_ms": 951, "mode": "mix:0.90", "model": "light", "lam": 64677, "c_full_us": 21.81, "c_light_us": 12.49, "switch_to": "mix:0.95"}
+{"ts": 1795238160.624, "batch": 127, "backlog": 117973, "rows": 74998, "dur_ms": 1670, "mode": "mix:0.95", "model": "full", "lam": 62973, "c_full_us": 21.95, "c_light_us": 12.49, "switch_to": "mix:0.90"}
+{"ts": 1795238161.624, "batch": 128, "backlog": 148125, "rows": 74998, "dur_ms": 938, "mode": "mix:0.90", "model": "light", "lam": 62964, "c_full_us": 21.95, "c_light_us": 12.5, "switch_to": "mix:0.95"}
+{"ts": 1795238162.625, "batch": 129, "backlog": 132139, "rows": 74999, "dur_ms": 907, "mode": "mix:0.95", "model": "light", "lam": 62847, "c_full_us": 21.95, "c_light_us": 12.38, "switch_to": "mix:0.90"}
+{"ts": 1795238163.627, "batch": 130, "backlog": 114378, "rows": 74998, "dur_ms": 812, "mode": "mix:0.90", "model": "light", "lam": 63106, "c_full_us": 21.95, "c_light_us": 11.91, "switch_to": "mix:0.85"}
+{"ts": 1795238164.628, "batch": 131, "backlog": 90593, "rows": 74998, "dur_ms": 832, "mode": "mix:0.85", "model": "light", "lam": 63070, "c_full_us": 21.95, "c_light_us": 11.67, "switch_to": "mix:0.75"}
+{"ts": 1795238165.63, "batch": 132, "backlog": 68019, "rows": 74998, "dur_ms": 808, "mode": "mix:0.75", "model": "light", "lam": 63010, "c_full_us": 21.95, "c_light_us": 11.4, "switch_to": "mix:0.70"}
+{"ts": 1795238166.634, "batch": 134, "backlog": 22186, "rows": 74997, "dur_ms": 809, "mode": "mix:0.70", "model": "light", "lam": 62976, "c_full_us": 21.95, "c_light_us": 11.21, "switch_to": "mix:0.60"}
+{"ts": 1795238167.634, "batch": 135, "backlog": 0, "rows": 73236, "dur_ms": 781, "mode": "mix:0.60", "model": "light", "lam": 63103, "c_full_us": 21.95, "c_light_us": 11.05, "switch_to": "mix:0.55"}
+{"ts": 1795238168.635, "batch": 136, "backlog": 0, "rows": 49187, "dur_ms": 609, "mode": "mix:0.55", "model": "light", "lam": 62980, "c_full_us": 21.95, "c_light_us": 11.05}
+{"ts": 1795238169.636, "batch": 137, "backlog": 0, "rows": 38363, "dur_ms": 1019, "mode": "mix:0.55", "model": "full", "lam": 62993, "c_full_us": 21.95, "c_light_us": 11.05}
+{"ts": 1795238170.638, "batch": 138, "backlog": 0, "rows": 64200, "dur_ms": 1568, "mode": "mix:0.55", "model": "full", "lam": 63003, "c_full_us": 22.69, "c_light_us": 11.05, "switch_to": "mix:0.60"}
+{"ts": 1795238171.641, "batch": 139, "backlog": 23852, "rows": 74998, "dur_ms": 919, "mode": "mix:0.60", "model": "light", "lam": 63042, "c_full_us": 22.69, "c_light_us": 11.41, "switch_to": "mix:0.65"}
+{"ts": 1795238172.641, "batch": 140, "backlog": 6591, "rows": 74999, "dur_ms": 804, "mode": "mix:0.65", "model": "light", "lam": 62827, "c_full_us": 22.69, "c_light_us": 11.2, "switch_to": "mix:0.60"}
+{"ts": 1795238173.643, "batch": 142, "backlog": 0, "rows": 38547, "dur_ms": 543, "mode": "mix:0.60", "model": "light", "lam": 62691, "c_full_us": 22.69, "c_light_us": 11.2}
+{"ts": 1795238174.643, "batch": 143, "backlog": 0, "rows": 34615, "dur_ms": 1111, "mode": "mix:0.60", "model": "full", "lam": 63748, "c_full_us": 22.69, "c_light_us": 11.2}
+{"ts": 1795238175.646, "batch": 144, "backlog": 0, "rows": 70050, "dur_ms": 909, "mode": "mix:0.60", "model": "light", "lam": 62995, "c_full_us": 22.69, "c_light_us": 11.74}
+{"ts": 1795238176.647, "batch": 145, "backlog": 0, "rows": 55294, "dur_ms": 608, "mode": "mix:0.60", "model": "light", "lam": 60763, "c_full_us": 22.69, "c_light_us": 11.74, "switch_to": "mix:0.55"}
+{"ts": 1795238177.647, "batch": 146, "backlog": 0, "rows": 40543, "dur_ms": 1077, "mode": "mix:0.55", "model": "full", "lam": 66573, "c_full_us": 22.69, "c_light_us": 11.74, "switch_to": "mix:0.70"}
+{"ts": 1795238178.649, "batch": 147, "backlog": 0, "rows": 67751, "dur_ms": 1389, "mode": "mix:0.70", "model": "full", "lam": 62907, "c_full_us": 22.03, "c_light_us": 11.74, "switch_to": "mix:0.60"}
+{"ts": 1795238179.649, "batch": 149, "backlog": 0, "rows": 18825, "dur_ms": 341, "mode": "mix:0.60", "model": "light", "lam": 31824, "c_full_us": 22.03, "c_light_us": 11.74, "switch_to": "mix:0.00"}
+{"ts": 1795238180.651, "batch": 151, "backlog": 0, "rows": 7800, "dur_ms": 329, "mode": "mix:0.00", "model": "light", "lam": 27244, "c_full_us": 22.03, "c_light_us": 11.74}
+{"ts": 1795238181.652, "batch": 152, "backlog": 0, "rows": 8800, "dur_ms": 636, "mode": "mix:0.00", "model": "full", "lam": 26667, "c_full_us": 22.03, "c_light_us": 11.74}
+{"ts": 1795238182.653, "batch": 153, "backlog": 0, "rows": 16067, "dur_ms": 996, "mode": "mix:0.00", "model": "full", "lam": 25263, "c_full_us": 22.03, "c_light_us": 11.74}
+{"ts": 1795238183.655, "batch": 154, "backlog": 0, "rows": 28133, "dur_ms": 1031, "mode": "mix:0.00", "model": "full", "lam": 28218, "c_full_us": 22.03, "c_light_us": 11.74}
+{"ts": 1795238184.657, "batch": 156, "backlog": 0, "rows": 25449, "dur_ms": 943, "mode": "mix:0.00", "model": "full", "lam": 26934, "c_full_us": 22.03, "c_light_us": 11.74}
+{"ts": 1795238185.658, "batch": 157, "backlog": 0, "rows": 25551, "dur_ms": 1018, "mode": "mix:0.00", "model": "full", "lam": 27095, "c_full_us": 22.03, "c_light_us": 11.74}
+{"ts": 1795238187.66, "batch": 158, "backlog": 0, "rows": 27400, "dur_ms": 1055, "mode": "mix:0.00", "model": "full", "lam": 26916, "c_full_us": 22.03, "c_light_us": 11.74}
+{"ts": 1795238188.66, "batch": 159, "backlog": 0, "rows": 28600, "dur_ms": 1090, "mode": "mix:0.00", "model": "full", "lam": 27109, "c_full_us": 22.03, "c_light_us": 11.74}
+{"ts": 1795238189.661, "batch": 160, "backlog": 0, "rows": 29400, "dur_ms": 1062, "mode": "mix:0.00", "model": "full", "lam": 26972, "c_full_us": 22.03, "c_light_us": 11.74}
+{"ts": 1795238190.664, "batch": 161, "backlog": 0, "rows": 28341, "dur_ms": 1123, "mode": "mix:0.00", "model": "full", "lam": 26686, "c_full_us": 22.03, "c_light_us": 11.74}
+{"ts": 1795238191.664, "batch": 162, "backlog": 0, "rows": 30659, "dur_ms": 978, "mode": "mix:0.00", "model": "full", "lam": 27277, "c_full_us": 22.03, "c_light_us": 11.74}
+{"ts": 1795238192.665, "batch": 163, "backlog": 0, "rows": 26400, "dur_ms": 932, "mode": "mix:0.00", "model": "full", "lam": 26994, "c_full_us": 22.03, "c_light_us": 11.74}
+{"ts": 1795238193.667, "batch": 164, "backlog": 0, "rows": 25200, "dur_ms": 982, "mode": "mix:0.00", "model": "full", "lam": 27039, "c_full_us": 22.03, "c_light_us": 11.74}
+{"ts": 1795238194.667, "batch": 166, "backlog": 0, "rows": 25925, "dur_ms": 931, "mode": "mix:0.00", "model": "full", "lam": 26986, "c_full_us": 22.03, "c_light_us": 11.74}
+{"ts": 1795238195.669, "batch": 167, "backlog": 0, "rows": 25075, "dur_ms": 946, "mode": "mix:0.00", "model": "full", "lam": 26933, "c_full_us": 22.03, "c_light_us": 11.74}
+{"ts": 1795238196.671, "batch": 168, "backlog": 0, "rows": 25600, "dur_ms": 958, "mode": "mix:0.00", "model": "full", "lam": 27061, "c_full_us": 22.03, "c_light_us": 11.74}
+{"ts": 1795238197.672, "batch": 169, "backlog": 0, "rows": 25800, "dur_ms": 1002, "mode": "mix:0.00", "model": "full", "lam": 26931, "c_full_us": 22.03, "c_light_us": 11.74}
+{"ts": 1795238198.674, "batch": 170, "backlog": 0, "rows": 27114, "dur_ms": 1123, "mode": "mix:0.00", "model": "full", "lam": 27060, "c_full_us": 22.03, "c_light_us": 11.74}
+{"ts": 1795238199.676, "batch": 171, "backlog": 0, "rows": 30286, "dur_ms": 915, "mode": "mix:0.00", "model": "full", "lam": 26945, "c_full_us": 22.03, "c_light_us": 11.74}
+{"ts": 1795238200.677, "batch": 172, "backlog": 0, "rows": 24800, "dur_ms": 990, "mode": "mix:0.00", "model": "full", "lam": 27104, "c_full_us": 22.03, "c_light_us": 11.74}
+{"ts": 1795238201.68, "batch": 173, "backlog": 0, "rows": 25400, "dur_ms": 942, "mode": "mix:0.00", "model": "full", "lam": 25631, "c_full_us": 22.03, "c_light_us": 11.74}
+{"ts": 1795238202.68, "batch": 174, "backlog": 0, "rows": 26800, "dur_ms": 937, "mode": "mix:0.00", "model": "full", "lam": 28450, "c_full_us": 22.03, "c_light_us": 11.74}
+{"ts": 1795238203.681, "batch": 175, "backlog": 0, "rows": 25200, "dur_ms": 951, "mode": "mix:0.00", "model": "full", "lam": 26894, "c_full_us": 22.03, "c_light_us": 11.74}
+{"ts": 1795238204.684, "batch": 176, "backlog": 0, "rows": 25800, "dur_ms": 947, "mode": "mix:0.00", "model": "full", "lam": 27129, "c_full_us": 22.03, "c_light_us": 11.74}
+{"ts": 1795238205.684, "batch": 177, "backlog": 0, "rows": 25576, "dur_ms": 1029, "mode": "mix:0.00", "model": "full", "lam": 27007, "c_full_us": 22.03, "c_light_us": 11.74}
+{"ts": 1795238206.685, "batch": 178, "backlog": 0, "rows": 27624, "dur_ms": 947, "mode": "mix:0.00", "model": "full", "lam": 26819, "c_full_us": 22.03, "c_light_us": 11.74}
+{"ts": 1795238207.687, "batch": 179, "backlog": 0, "rows": 25600, "dur_ms": 847, "mode": "mix:0.00", "model": "full", "lam": 27004, "c_full_us": 22.03, "c_light_us": 11.74}
+{"ts": 1795238208.687, "batch": 180, "backlog": 0, "rows": 23000, "dur_ms": 909, "mode": "mix:0.00", "model": "full", "lam": 27123, "c_full_us": 22.03, "c_light_us": 11.74}
+{"ts": 1795238209.689, "batch": 181, "backlog": 0, "rows": 24600, "dur_ms": 904, "mode": "mix:0.00", "model": "full", "lam": 27033, "c_full_us": 22.03, "c_light_us": 11.74}
+{"ts": 1795238210.689, "batch": 182, "backlog": 0, "rows": 24400, "dur_ms": 1017, "mode": "mix:0.00", "model": "full", "lam": 26991, "c_full_us": 22.03, "c_light_us": 11.74}
+{"ts": 1795238211.69, "batch": 183, "backlog": 0, "rows": 27400, "dur_ms": 1028, "mode": "mix:0.00", "model": "full", "lam": 26942, "c_full_us": 22.03, "c_light_us": 11.74}
+{"ts": 1795238212.691, "batch": 184, "backlog": 0, "rows": 27800, "dur_ms": 970, "mode": "mix:0.00", "model": "full", "lam": 27043, "c_full_us": 22.03, "c_light_us": 11.74}
+{"ts": 1795238213.692, "batch": 185, "backlog": 0, "rows": 26200, "dur_ms": 1084, "mode": "mix:0.00", "model": "full", "lam": 27010, "c_full_us": 22.03, "c_light_us": 11.74}
+{"ts": 1795238214.694, "batch": 186, "backlog": 0, "rows": 29200, "dur_ms": 1020, "mode": "mix:0.00", "model": "full", "lam": 26937, "c_full_us": 22.03, "c_light_us": 11.74}
+{"ts": 1795238215.694, "batch": 187, "backlog": 0, "rows": 27600, "dur_ms": 956, "mode": "mix:0.00", "model": "full", "lam": 27059, "c_full_us": 22.03, "c_light_us": 11.74}
+{"ts": 1795238216.696, "batch": 188, "backlog": 0, "rows": 25800, "dur_ms": 946, "mode": "mix:0.00", "model": "full", "lam": 26987, "c_full_us": 22.03, "c_light_us": 11.74}
+{"ts": 1795238217.698, "batch": 189, "backlog": 0, "rows": 25600, "dur_ms": 1098, "mode": "mix:0.00", "model": "full", "lam": 27033, "c_full_us": 22.03, "c_light_us": 11.74}
+{"ts": 1795238218.698, "batch": 190, "backlog": 0, "rows": 29600, "dur_ms": 1065, "mode": "mix:0.00", "model": "full", "lam": 26934, "c_full_us": 22.03, "c_light_us": 11.74}
+{"ts": 1795238219.699, "batch": 191, "backlog": 0, "rows": 28800, "dur_ms": 982, "mode": "mix:0.00", "model": "full", "lam": 27042, "c_full_us": 22.03, "c_light_us": 11.74}
+{"ts": 1795238220.699, "batch": 192, "backlog": 0, "rows": 26600, "dur_ms": 1126, "mode": "mix:0.00", "model": "full", "lam": 27060, "c_full_us": 22.03, "c_light_us": 11.74}
+{"ts": 1795238222.2, "batch": 193, "backlog": 0, "rows": 30400, "dur_ms": 1030, "mode": "mix:0.00", "model": "full", "lam": 26998, "c_full_us": 22.03, "c_light_us": 11.74}
+{"ts": 1795238223.201, "batch": 194, "backlog": 0, "rows": 27800, "dur_ms": 1063, "mode": "mix:0.00", "model": "full", "lam": 26990, "c_full_us": 22.03, "c_light_us": 11.74}
+{"ts": 1795238224.203, "batch": 195, "backlog": 0, "rows": 28600, "dur_ms": 1063, "mode": "mix:0.00", "model": "full", "lam": 26905, "c_full_us": 22.03, "c_light_us": 11.74}
+{"ts": 1795238225.204, "batch": 196, "backlog": 0, "rows": 28800, "dur_ms": 945, "mode": "mix:0.00", "model": "full", "lam": 27093, "c_full_us": 22.03, "c_light_us": 11.74}
+{"ts": 1795238226.205, "batch": 197, "backlog": 0, "rows": 25400, "dur_ms": 1005, "mode": "mix:0.00", "model": "full", "lam": 26878, "c_full_us": 22.03, "c_light_us": 11.74}
+{"ts": 1795238227.207, "batch": 198, "backlog": 0, "rows": 27200, "dur_ms": 1007, "mode": "mix:0.00", "model": "full", "lam": 27038, "c_full_us": 22.03, "c_light_us": 11.74}
+{"ts": 1795238228.207, "batch": 199, "backlog": 0, "rows": 27200, "dur_ms": 949, "mode": "mix:0.00", "model": "full", "lam": 27011, "c_full_us": 22.03, "c_light_us": 11.74}
+{"ts": 1795238229.208, "batch": 200, "backlog": 0, "rows": 21400, "dur_ms": 1382, "mode": "mix:0.00", "model": "full", "lam": 22550, "c_full_us": 22.03, "c_light_us": 11.74}
+{"ts": 1795238259.721, "event": "stop", "mode": "full"}

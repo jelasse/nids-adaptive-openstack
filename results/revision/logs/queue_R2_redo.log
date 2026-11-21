@@ -1,0 +1,308 @@
+[22:53:59] skip R2_L_adapts_burst_r2 (already done)
+[22:53:59] skip R2_L_adapt_1p2S_r2b (already done)
+[22:53:59] skip R2_L_adaptrf_burst_r1b (already done)
+[22:53:59] skip R2_L_adapt_burst_r1b (already done)
+[22:53:59] skip R2_L_prop_burst_r4 (already done)
+[22:53:59] skip R2_L_prop_1p2S_r2 (already done)
+[22:53:59] skip R2_L_adapt_burst_r3b (already done)
+[22:53:59] === R2_L_adapt_burst_r5b: 45000/s, full, controller, profile 60:0.6,90:1.5,0:0.6, 4 producers, INTERLEAVE=1, test.parquet
+[22:54:00] clock offset 1.6 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,499/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 2.00 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 0..9,421,268; max lag behind schedule 0.26 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 1..9,421,269; max lag behind schedule 0.26 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 2..9,421,270; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 3..9,421,271; max lag behind schedule 0.27 s)
+    LAPTOP SIDE: VALID
+[23:00:21] result: 1.6,True,True,True,2184,5853,0.13899,346021,43857,0.90572,5714,0
+[23:00:55] === R2_L_adaptrf_burst_r4b: 45000/s, full, controller, profile 60:0.6,90:1.5,0:0.6, 4 producers, LIGHT_MODEL=light_rf, INTERLEAVE=1, test.parquet
+[23:00:55] clock offset 1.8 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,498/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 1.99 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 0..9,421,268; max lag behind schedule 0.26 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 1..9,421,269; max lag behind schedule 0.26 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 2..9,421,270; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 3..9,421,271; max lag behind schedule 0.27 s)
+    LAPTOP SIDE: VALID
+[23:07:16] result: 1.8,True,True,True,1611,5264,0.07309,302932,43765,0.99821,374,0
+[23:07:50] === R2_L_adapts_burst_r5: 45000/s, full, controller, profile 60:0.6,90:1.5,0:0.6, 4 producers, FULL_SAMPLE=0.1, INTERLEAVE=1, test.parquet
+[23:07:50] clock offset 1.8 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,499/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 1.99 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 0..9,421,268; max lag behind schedule 0.26 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 1..9,421,269; max lag behind schedule 0.26 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 2..9,421,270; max lag behind schedule 0.26 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 3..9,421,271; max lag behind schedule 0.26 s)
+    LAPTOP SIDE: VALID
+[23:14:11] result: 1.8,True,True,True,2068,5886,0.12437,360873,43761,0.90572,5398,0
+[23:14:45] === R2_L_prop_1p2S_r3: 54000/s, full, controller, 4 producers, INTERLEAVE=1, test.parquet
+[23:14:45] clock offset 1.8 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,499/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 1.97 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 0..9,421,268; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 1..9,421,269; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 2..9,421,270; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 3..9,421,271; max lag behind schedule 0.26 s)
+    LAPTOP SIDE: VALID
+[23:20:26] result: 1.8,True,True,True,428,783,0.0,25688,53802,0.84184,10043,0
+[23:21:00] === R2_L_adapts_1p2S_r1: 54000/s, full, controller, 4 producers, FULL_SAMPLE=0.1, INTERLEAVE=1, test.parquet
+[23:21:01] clock offset 1.5 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,499/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 1.98 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 0..9,421,268; max lag behind schedule 0.26 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 1..9,421,269; max lag behind schedule 0.26 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 2..9,421,270; max lag behind schedule 0.26 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 3..9,421,271; max lag behind schedule 0.27 s)
+    LAPTOP SIDE: INVALID -> laptop swapped IN 19 MB during the measured load
+[23:26:41] result: 1.5,True,False,True,2523,4692,0.02021,182749,52908,0.87521,4024,0
+[23:27:15] === R2_L_prop_1p2S_r5: 54000/s, full, controller, 4 producers, INTERLEAVE=1, test.parquet
+[23:27:16] clock offset 1.7 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,498/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 1.99 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 0..9,421,268; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 1..9,421,269; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 2..9,421,270; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 3..9,421,271; max lag behind schedule 0.27 s)
+    LAPTOP SIDE: VALID
+[23:32:57] result: 1.7,True,True,True,410,857,0.0,44980,53860,0.84184,10048,0
+[23:33:30] === R2_L_adapts_burst_r1: 45000/s, full, controller, profile 60:0.6,90:1.5,0:0.6, 4 producers, FULL_SAMPLE=0.1, INTERLEAVE=1, test.parquet
+[23:33:31] clock offset 1.8 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,499/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 2.00 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 0..9,421,268; max lag behind schedule 0.26 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 1..9,421,269; max lag behind schedule 0.26 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 2..9,421,270; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 3..9,421,271; max lag behind schedule 0.26 s)
+    LAPTOP SIDE: VALID
+[23:39:52] result: 1.8,True,True,True,2139,5520,0.08174,360921,43825,0.9022,5225,0
+[23:40:26] === R2_L_adapts_burst_r4: 45000/s, full, controller, profile 60:0.6,90:1.5,0:0.6, 4 producers, FULL_SAMPLE=0.1, INTERLEAVE=1, test.parquet
+[23:40:26] clock offset 1.4 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,499/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 2.00 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 0..9,421,268; max lag behind schedule 0.26 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 1..9,421,269; max lag behind schedule 0.26 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 2..9,421,270; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 3..9,421,271; max lag behind schedule 0.26 s)
+    LAPTOP SIDE: VALID
+[23:46:47] result: 1.4,True,True,True,2130,5980,0.15019,335332,43756,0.90222,5739,0
+[23:47:21] === R2_L_adapts_1p2S_r2: 54000/s, full, controller, 4 producers, FULL_SAMPLE=0.1, INTERLEAVE=1, test.parquet
+[23:47:21] clock offset 1.7 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,499/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 1.97 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 0..9,421,268; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 1..9,421,269; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 2..9,421,270; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 3..9,421,271; max lag behind schedule 0.27 s)
+    LAPTOP SIDE: VALID
+[23:53:02] result: 1.7,True,True,True,2472,4474,0.00589,148463,53366,0.86229,4463,0
+[23:53:36] === R2_L_adaptrf_1p2S_r1b: 54000/s, full, controller, 4 producers, LIGHT_MODEL=light_rf, INTERLEAVE=1, test.parquet
+[23:53:36] clock offset 1.7 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,498/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 2.01 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 0..9,421,268; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 1..9,421,269; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 2..9,421,270; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 3..9,421,271; max lag behind schedule 0.27 s)
+    LAPTOP SIDE: VALID
+[23:59:17] result: 1.7,True,True,False,2528,4462,0.00458,146792,52707,0.99888,348,0
+[23:59:51] === R2_L_prop_burst_r2: 45000/s, full, controller, profile 60:0.6,90:1.5,0:0.6, 4 producers, INTERLEAVE=1, test.parquet
+[23:59:51] clock offset 1.8 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,496/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 2.00 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 0..9,421,268; max lag behind schedule 0.26 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 1..9,421,269; max lag behind schedule 0.26 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 2..9,421,270; max lag behind schedule 0.26 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 3..9,421,271; max lag behind schedule 0.27 s)
+      note: laptop swapped OUT 74 MB (idle memory; run still valid)
+    LAPTOP SIDE: VALID
+[00:06:12] result: 1.8,True,True,True,430,722,0.0,0,43821,0.84184,9974,0
+[00:06:46] === R2_L_adaptrf_1p2S_r5b: 54000/s, full, controller, 4 producers, LIGHT_MODEL=light_rf, INTERLEAVE=1, test.parquet
+[00:06:47] clock offset 1.7 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,499/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 1.98 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 0..9,421,268; max lag behind schedule 0.26 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 1..9,421,269; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 2..9,421,270; max lag behind schedule 0.26 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 3..9,421,271; max lag behind schedule 0.27 s)
+    LAPTOP SIDE: VALID
+[00:12:28] result: 1.7,True,True,True,2556,4633,0.01656,173881,53745,0.99889,376,0
+[00:13:01] === R2_L_prop_burst_r3: 45000/s, full, controller, profile 60:0.6,90:1.5,0:0.6, 4 producers, INTERLEAVE=1, test.parquet
+[00:13:02] clock offset 1.6 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,499/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 1.97 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 0..9,421,268; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 1..9,421,269; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 2..9,421,270; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 3..9,421,271; max lag behind schedule 0.27 s)
+    LAPTOP SIDE: VALID
+[00:19:23] result: 1.6,True,True,True,1165,3078,0.0,150428,43814,0.90503,6181,0
+[00:19:56] === R2_L_prop_burst_r5: 45000/s, full, controller, profile 60:0.6,90:1.5,0:0.6, 4 producers, INTERLEAVE=1, test.parquet
+[00:19:57] clock offset 1.8 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,498/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 1.98 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 0..9,421,268; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 1..9,421,269; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 2..9,421,270; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 3..9,421,271; max lag behind schedule 0.27 s)
+    LAPTOP SIDE: VALID
+[00:26:18] result: 1.8,True,True,True,510,936,0.0,0,43931,0.84184,9780,0
+[00:26:52] === R2_L_adaptrf_1p2S_r3b: 54000/s, full, controller, 4 producers, LIGHT_MODEL=light_rf, INTERLEAVE=1, test.parquet
+[00:26:52] clock offset 1.8 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,499/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 1.96 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 0..9,421,268; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 1..9,421,269; max lag behind schedule 0.26 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 2..9,421,270; max lag behind schedule 0.26 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 3..9,421,271; max lag behind schedule 0.27 s)
+    LAPTOP SIDE: VALID
+[00:32:33] result: 1.8,True,True,False,2477,4441,0.00884,171154,52886,0.99897,389,0
+[00:33:07] === R2_L_adapts_1p2S_r4: 54000/s, full, controller, 4 producers, FULL_SAMPLE=0.1, INTERLEAVE=1, test.parquet
+[00:33:07] clock offset 1.3 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,498/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 1.98 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 0..9,421,268; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 1..9,421,269; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 2..9,421,270; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,499/s (event_id 3..9,421,271; max lag behind schedule 0.26 s)
+      note: laptop swapped OUT 54 MB (idle memory; run still valid)
+    LAPTOP SIDE: VALID
+[00:38:48] result: 1.3,True,True,True,2366,4442,0.00323,152370,53682,0.92658,5977,0
+[00:39:22] === R2_L_adaptrf_burst_r5b: 45000/s, full, controller, profile 60:0.6,90:1.5,0:0.6, 4 producers, LIGHT_MODEL=light_rf, INTERLEAVE=1, test.parquet
+[00:39:22] clock offset 1.7 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,498/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 1.98 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 0..9,421,268; max lag behind schedule 0.26 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 1..9,421,269; max lag behind schedule 0.26 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 2..9,421,270; max lag behind schedule 0.26 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 3..9,421,271; max lag behind schedule 0.27 s)
+    LAPTOP SIDE: VALID
+[00:45:43] result: 1.7,True,True,True,1832,5445,0.0949,319933,43857,0.99821,392,0
+[00:46:17] === R2_L_adaptrf_burst_r2b: 45000/s, full, controller, profile 60:0.6,90:1.5,0:0.6, 4 producers, LIGHT_MODEL=light_rf, INTERLEAVE=1, test.parquet
+[00:46:17] clock offset 1.7 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,498/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 1.97 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 0..9,421,268; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 1..9,421,269; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 2..9,421,270; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 3..9,421,271; max lag behind schedule 0.27 s)
+    LAPTOP SIDE: VALID
+[00:52:38] result: 1.7,True,True,True,1821,5192,0.07236,294317,43762,0.9983,368,0
+[00:53:12] === R2_L_adaptrf_1p2S_r2b: 54000/s, full, controller, 4 producers, LIGHT_MODEL=light_rf, INTERLEAVE=1, test.parquet
+[00:53:12] clock offset 1.8 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,499/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 1.96 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 0..9,421,268; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 1..9,421,269; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 2..9,421,270; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 3..9,421,271; max lag behind schedule 0.27 s)
+    LAPTOP SIDE: VALID
+[00:58:53] result: 1.8,True,True,True,2513,4459,0.00516,160889,53799,0.99889,373,0
+[00:59:27] === R2_L_adapt_1p2S_r1b: 54000/s, full, controller, 4 producers, INTERLEAVE=1, test.parquet
+[00:59:27] clock offset 1.7 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,498/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 1.97 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 0..9,421,268; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 1..9,421,269; max lag behind schedule 0.26 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 2..9,421,270; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 3..9,421,271; max lag behind schedule 0.27 s)
+    LAPTOP SIDE: VALID
+[01:05:08] result: 1.7,True,True,True,2529,4358,0.00207,155210,53572,0.98683,5640,0
+[01:05:42] === R2_L_adaptrf_burst_r3b: 45000/s, full, controller, profile 60:0.6,90:1.5,0:0.6, 4 producers, LIGHT_MODEL=light_rf, INTERLEAVE=1, test.parquet
+[01:05:42] clock offset 1.7 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,499/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 1.97 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 0..9,421,268; max lag behind schedule 0.26 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 1..9,421,269; max lag behind schedule 0.26 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 2..9,421,270; max lag behind schedule 0.26 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 3..9,421,271; max lag behind schedule 0.27 s)
+    LAPTOP SIDE: VALID
+[01:12:03] result: 1.7,True,True,True,1828,5170,0.06643,302095,43790,0.99821,381,0
+[01:12:37] === R2_L_adapt_burst_r2b: 45000/s, full, controller, profile 60:0.6,90:1.5,0:0.6, 4 producers, INTERLEAVE=1, test.parquet
+[01:12:37] clock offset 1.6 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,498/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 1.97 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 0..9,421,268; max lag behind schedule 0.26 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 1..9,421,269; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 2..9,421,270; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 3..9,421,271; max lag behind schedule 0.27 s)
+    LAPTOP SIDE: VALID
+[01:18:58] result: 1.6,True,True,True,1802,5526,0.10579,319152,43837,0.89195,4891,0
+[01:19:32] === R2_L_adapt_1p2S_r4b: 54000/s, full, controller, 4 producers, INTERLEAVE=1, test.parquet
+[01:19:32] clock offset 1.5 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,499/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 1.97 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 0..9,421,268; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 1..9,421,269; max lag behind schedule 0.26 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 2..9,421,270; max lag behind schedule 0.26 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 3..9,421,271; max lag behind schedule 0.26 s)
+    LAPTOP SIDE: VALID
+[01:25:13] result: 1.5,True,True,False,2397,4197,0.0,132243,52736,0.97913,5472,0
+[01:25:47] === R2_L_adapts_burst_r3: 45000/s, full, controller, profile 60:0.6,90:1.5,0:0.6, 4 producers, FULL_SAMPLE=0.1, INTERLEAVE=1, test.parquet
+[01:25:48] clock offset 1.9 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,498/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 1.95 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 0..9,421,268; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 1..9,421,269; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 2..9,421,270; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 3..9,421,271; max lag behind schedule 0.27 s)
+      note: laptop swapped OUT 446 MB (idle memory; run still valid)
+    LAPTOP SIDE: VALID
+[01:32:08] result: 1.9,True,True,True,1962,4988,0.04862,285101,43843,0.89192,6159,0
+[01:32:42] === R2_L_adapts_1p2S_r3: 54000/s, full, controller, 4 producers, FULL_SAMPLE=0.1, INTERLEAVE=1, test.parquet
+[01:32:43] clock offset 1.7 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,499/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 1.97 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 0..9,421,268; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 1..9,421,269; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 2..9,421,270; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 3..9,421,271; max lag behind schedule 0.26 s)
+    LAPTOP SIDE: VALID
+[01:38:23] result: 1.7,True,True,True,2487,4470,0.00641,168065,53318,0.85412,3974,0
+[01:38:57] === R2_L_prop_1p2S_r1: 54000/s, full, controller, 4 producers, INTERLEAVE=1, test.parquet
+[01:38:58] clock offset 1.7 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,497/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 1.97 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 0..9,421,268; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,499/s (event_id 1..9,421,269; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 2..9,421,270; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 3..9,421,271; max lag behind schedule 0.27 s)
+    LAPTOP SIDE: VALID
+[01:44:38] result: 1.7,True,True,True,482,1598,0.0,34982,53834,0.84204,9847,0
+[01:45:12] === R2_L_adapts_1p2S_r5: 54000/s, full, controller, 4 producers, FULL_SAMPLE=0.1, INTERLEAVE=1, test.parquet
+[01:45:13] clock offset 1.7 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,499/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 1.97 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 0..9,421,268; max lag behind schedule 0.26 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 1..9,421,269; max lag behind schedule 0.26 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 2..9,421,270; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 3..9,421,271; max lag behind schedule 0.27 s)
+    LAPTOP SIDE: VALID
+[01:50:54] result: 1.7,True,True,True,2479,4456,0.00889,161484,53777,0.98686,5713,0
+[01:51:27] === R2_L_prop_burst_r1: 45000/s, full, controller, profile 60:0.6,90:1.5,0:0.6, 4 producers, INTERLEAVE=1, test.parquet
+[01:51:28] clock offset 1.6 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,497/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 1.96 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 0..9,421,268; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 1..9,421,269; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 2..9,421,270; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 3..9,421,271; max lag behind schedule 0.27 s)
+    LAPTOP SIDE: VALID
+[01:57:49] result: 1.6,True,True,True,412,683,0.0,0,43952,0.84184,10064,0
+[01:58:23] === R2_L_adapt_burst_r4b: 45000/s, full, controller, profile 60:0.6,90:1.5,0:0.6, 4 producers, INTERLEAVE=1, test.parquet
+[01:58:23] clock offset 1.7 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,499/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 1.96 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 0..9,421,268; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 1..9,421,269; max lag behind schedule 0.26 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 2..9,421,270; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 3..9,421,271; max lag behind schedule 0.26 s)
+    LAPTOP SIDE: VALID
+[02:04:44] result: 1.7,True,True,True,2177,6028,0.14967,370174,43781,0.90523,5609,0
+[02:05:18] === R2_L_adaptrf_1p2S_r4b: 54000/s, full, controller, 4 producers, LIGHT_MODEL=light_rf, INTERLEAVE=1, test.parquet
+[02:05:18] clock offset 1.8 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,496/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 1.98 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 0..9,421,268; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 1..9,421,269; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 2..9,421,270; max lag behind schedule 0.26 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 3..9,421,271; max lag behind schedule 0.27 s)
+    LAPTOP SIDE: VALID
+[02:10:59] result: 1.8,True,True,True,2395,4067,0.0,134283,53471,0.99888,373,0
+[02:11:33] === R2_L_adapt_1p2S_r3b: 54000/s, full, controller, 4 producers, INTERLEAVE=1, test.parquet
+[02:11:34] clock offset 1.8 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,498/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 1.96 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 0..9,421,268; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 1..9,421,269; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 2..9,421,270; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 3..9,421,271; max lag behind schedule 0.27 s)
+    LAPTOP SIDE: VALID
+[02:17:14] result: 1.8,True,True,True,2407,4511,0.00871,165227,53285,0.8537,5706,0
+[02:17:48] === R2_L_prop_1p2S_r4: 54000/s, full, controller, 4 producers, INTERLEAVE=1, test.parquet
+[02:17:49] clock offset 1.8 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,499/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 1.97 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 0..9,421,268; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 1..9,421,269; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 2..9,421,270; max lag behind schedule 0.27 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 3..9,421,271; max lag behind schedule 0.27 s)
+    LAPTOP SIDE: VALID
+[02:23:29] result: 1.8,True,True,True,412,654,0.0,12768,53857,0.84184,10048,0
+[02:24:03] === R2_L_adapt_1p2S_r5b: 54000/s, full, controller, 4 producers, INTERLEAVE=1, test.parquet
+[02:24:04] clock offset 1.8 ms
+    SENT 270,000 records in 20.0 s (planned 20.0 s), achieved 13,499/s (event_id 1,000,000,000..1,000,269,999; max lag behind schedule 1.98 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 0..9,421,268; max lag behind schedule 0.28 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 1..9,421,269; max lag behind schedule 0.26 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 2..9,421,270; max lag behind schedule 0.26 s)
+    SENT 2,355,318 records in 174.5 s (planned 174.5 s), achieved 13,500/s (event_id 3..9,421,271; max lag behind schedule 0.27 s)
+    LAPTOP SIDE: VALID
+[02:29:45] result: 1.8,True,True,False,2439,4550,0.00971,162138,53323,0.91088,6285,0
+[02:30:18] queue finished

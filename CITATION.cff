@@ -1,19 +1,22 @@
 cff-version: 1.2.0
 message: "If you use this code or these results, please cite the paper below."
-title: "Adaptive Intrusion Detection under Resource Constraints: An Empirical Study on an OpenStack Private Cloud (code and results)"
+title: "Security-Latency Trade-offs in Resource-Constrained Streaming Intrusion Detection (code and results)"
 authors:
   - family-names: Mazite
     given-names: Jelasse
 license: MIT
 repository-code: "https://github.com/jelasse/nids-adaptive-openstack"
-date-released: 2026-11-15
-keywords: [adaptive inference, intrusion detection, OpenStack, resource constraints, stream processing]
+date-released: 2026-11-21
+version: "2.0-revision"
+keywords: [adaptive inference, intrusion detection, evasion, overload, OpenStack, stream processing]
 preferred-citation:
   type: article
-  title: "Adaptive Intrusion Detection under Resource Constraints: An Empirical Study on an OpenStack Private Cloud"
+  title: "Security-Latency Trade-offs in Resource-Constrained Streaming Intrusion Detection: An Experimental Study of Adaptive Inference and Overload-Induced Evasion"
   authors:
     - family-names: Mazite
       given-names: Jelasse
+    - family-names: "Nguyễn"
+      given-names: "Tất Thắng"
   journal: "Journal of Information Security and Applications"
   year: 2026
-  notes: "Manuscript in preparation for submission to JISA. Title, volume, pages and DOI to be updated after acceptance."
+  notes: "Submitted. Update volume, pages and DOI after publication."

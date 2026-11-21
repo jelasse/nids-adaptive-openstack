@@ -1,0 +1,19 @@
+Replay file rows: 8,100,000; sending 2,025,000 from row 3 at 11,250/s with profile 40:0.6,90:1.4,0:0.6 (every 4th row) to topic 'R3_L_adaptrf_ev4_r1'
+  sent 67,501  achieved 6,750/s
+  sent 135,001  achieved 6,731/s
+  sent 202,901  achieved 6,750/s
+  sent 270,001  achieved 6,734/s
+  sent 428,954  achieved 8,563/s
+  sent 586,455  achieved 9,759/s
+  sent 743,954  achieved 10,614/s
+  sent 900,621  achieved 11,245/s
+  sent 1,058,957  achieved 11,754/s
+  sent 1,215,545  achieved 12,144/s
+  sent 1,373,957  achieved 12,480/s
+  sent 1,531,426  achieved 12,752/s
+  sent 1,688,151  achieved 12,976/s
+  sent 1,755,655  achieved 12,532/s
+  sent 1,823,155  achieved 12,147/s
+  sent 1,890,656  achieved 11,809/s
+  sent 1,958,155  achieved 11,512/s
+SENT 2,025,000 records in 180.0 s (planned 180.0 s), achieved 11,250/s (event_id 3..8,099,999; max lag behind schedule 0.30 s)

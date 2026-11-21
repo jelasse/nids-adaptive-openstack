@@ -1,0 +1,6 @@
+name,vm,ip,rate,records,mode,controller,profile,procs,warmup_rate,replay,vm_env,host_env
+R3_L_prop_ev5_r1,nids-exp-l,172.24.4.36,45000,8100000,full,--policy proportional --low 10000 --cap-full 45000 --cap-light 90000 --horizon 10,40:0.6;90:1.4;0:0.6,4,13500,/home/mazite/w8/workloads/evasion_Botnet_s5.parquet,,INTERLEAVE=1
+R3_L_prop_ev2_r1,nids-exp-l,172.24.4.36,45000,8100000,full,--policy proportional --low 10000 --cap-full 45000 --cap-light 90000 --horizon 10,40:0.6;90:1.4;0:0.6,4,13500,/home/mazite/w8/workloads/evasion_Botnet_s2.parquet,,INTERLEAVE=1
+R3_L_prop_ev4_r1,nids-exp-l,172.24.4.36,45000,8100000,full,--policy proportional --low 10000 --cap-full 45000 --cap-light 90000 --horizon 10,40:0.6;90:1.4;0:0.6,4,13500,/home/mazite/w8/workloads/evasion_Botnet_s4.parquet,,INTERLEAVE=1
+R3_L_prop_ev3_r1,nids-exp-l,172.24.4.36,45000,8100000,full,--policy proportional --low 10000 --cap-full 45000 --cap-light 90000 --horizon 10,40:0.6;90:1.4;0:0.6,4,13500,/home/mazite/w8/workloads/evasion_Botnet_s3.parquet,,INTERLEAVE=1
+R3_L_prop_ev1_r1,nids-exp-l,172.24.4.36,45000,8100000,full,--policy proportional --low 10000 --cap-full 45000 --cap-light 90000 --horizon 10,40:0.6;90:1.4;0:0.6,4,13500,/home/mazite/w8/workloads/evasion_Botnet_s1.parquet,,INTERLEAVE=1

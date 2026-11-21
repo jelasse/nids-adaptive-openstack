@@ -1,0 +1,101 @@
+{
+  "clock_offset_ms": 0.6,
+  "warmup_records": 270000,
+  "slo_ms": 5000.0,
+  "rows": 8100000,
+  "unique": 8100000,
+  "duplicates": 0,
+  "missing": 0,
+  "span_s": 181.2,
+  "throughput_rps": 44702,
+  "latency_ms": {
+    "p50": 1728,
+    "p95": 4341,
+    "p99": 4772,
+    "max": 5237,
+    "mean": 2119
+  },
+  "slo_violation_share": 0.00184,
+  "load_s": 179.7,
+  "drain_s": 1.5,
+  "detection": {
+    "tp": 3206428,
+    "fp": 1923,
+    "fn": 36572,
+    "tn": 4855077,
+    "recall": 0.98872,
+    "precision": 0.9994,
+    "fpr": 0.000396,
+    "macro_f1": 0.99504
+  },
+  "by_mode": {
+    "full": {
+      "rows": 4656950,
+      "latency_ms": {
+        "p50": 1535,
+        "p95": 4245,
+        "p99": 4699,
+        "max": 4990,
+        "mean": 2021
+      },
+      "detection": {
+        "tp": 1318405,
+        "fp": 110,
+        "fn": 3505,
+        "tn": 3334930,
+        "recall": 0.99735,
+        "precision": 0.99992,
+        "fpr": 3.3e-05,
+        "macro_f1": 0.99904
+      }
+    },
+    "light": {
+      "rows": 3443050,
+      "latency_ms": {
+        "p50": 2300,
+        "p95": 4430,
+        "p99": 4848,
+        "max": 5237,
+        "mean": 2251
+      },
+      "detection": {
+        "tp": 1888023,
+        "fp": 1813,
+        "fn": 33067,
+        "tn": 1520147,
+        "recall": 0.98279,
+        "precision": 0.99904,
+        "fpr": 0.001191,
+        "macro_f1": 0.98975
+      }
+    }
+  },
+  "family_recall": {
+    "DoS": 0.9889,
+    "Botnet": 0.794
+  },
+  "batches": {
+    "count": 213,
+    "mean_total_s": 0.89,
+    "max_total_s": 1.909,
+    "mean_rows": 39296,
+    "modes": {
+      "light": 76,
+      "full": 137
+    }
+  },
+  "backlog_max_records": 195338,
+  "backlog_at_load_end": 0,
+  "sustainable": true,
+  "telemetry": {
+    "samples": 181,
+    "cpu_mean": 73.0,
+    "cpu_p95": 86.2,
+    "cpu_max": 92.7,
+    "mem_used_max_mb": 4126.0,
+    "mem_avail_min_mb": 1799.0,
+    "swap_used_max_mb": 0.0,
+    "steal_max": 0.3
+  },
+  "valid_vm_side": true
+}

@@ -1,43 +1,50 @@
-# Adaptive Intrusion Detection under Resource Constraints on an OpenStack Private Cloud
+# Security–Latency Trade-offs in Resource-Constrained Streaming Intrusion Detection
 
 Code, experiment plans and per-run results for the paper
 
-> J. Mazite, "Adaptive Intrusion Detection under Resource Constraints: An Empirical Study on an OpenStack
-> Private Cloud", *Journal of Telecommunications and Information Technology* (submitted, 2026).
+> J. Mazite, N. T. Thắng, "Security–Latency Trade-offs in Resource-Constrained Streaming Intrusion Detection: An
+> Experimental Study of Adaptive Inference and Overload-Induced Evasion" (submitted, 2026).
 
-A streaming network intrusion detector (Apache Kafka + Spark Structured Streaming) runs in one VM of a
+Release `v1.0-submitted` holds the first version of the study (experiments E1–E4); release `v2.0-revision` adds the
+revision experiments R1–R5 described in [`docs/revision.md`](docs/revision.md).
+
+A flow-record streaming intrusion detector (Apache Kafka + Spark Structured Streaming) runs in one VM of a
 single-host OpenStack cloud. Flow records of the corrected CSE-CIC-IDS2018 dataset are replayed at controlled
-rates, below and beyond the detector's measured capacity, and three inference policies are compared:
+rates, below and beyond the detector's measured capacity. The policies compared are:
 
-| Policy | Model | Features |
+| Policy | Model(s) | Features |
 |---|---|---|
 | Static-Full | Random Forest, 50 trees, depth 20 | 78 |
 | Static-Light | Logistic regression, regularization 0.01 | 10 |
-| Adaptive | switches between Full and Light from the Kafka backlog (Algorithm 1 in the paper) | – |
+| Adaptive (LR) | switches between Full and Light from the Kafka backlog (Algorithm 1 in the paper) | – |
+| Adaptive (RF) | same rule, security-aware fallback: Random Forest, 10 trees, depth 10 | 20 |
+| Adaptive + 10% Full | Adaptive (LR), with 10% of fallback-mode batches still classified by Full | – |
+| Proportional (LR) | each micro-batch goes to Light with a probability set from the arrival rate and backlog | – |
 
 ## Main results
 
 | Finding | Value |
 |---|---|
 | Saturation rate of Static-Full, M (2 vCPU, 4 GB) / L (4 vCPU, 6 GB) | 30,000 / 45,000 flows/s |
-| Static-Full at 0.5 S on M: p95 latency, attack recall | 2.29 s, 0.9986 |
-| Static-Full beyond saturation on L (1.2 S / 1.5 S): p95 latency | 41 s / 69 s (no flow lost) |
-| Static-Light on L up to 1.5 S: p95 latency, attack recall | < 0.9 s, 0.8418 |
-| Adaptive vs Static-Full at 1.2 S / burst: p95 latency reduction | 33.2 s / 41.1 s |
-| Adaptive at 1.2 S / burst: Macro-F1 | 0.990 / 0.982 |
+| Static-Full beyond saturation on L (1.2 S / 1.5 S): p95 latency | 41 s / 69 s (no record lost in any valid run) |
+| Attack flows detected within 5 s at 1.2 S: Static-Full / Adaptive (LR) / Adaptive (RF) | 2.7% / 97.8% / 99.9% |
+| Static-Light: recall on botnet, web, infiltration | 0.000, 0.000, 0.022 |
+| Induced-overload evasion, botnet episode detected (median of 5 placements): Adaptive (LR) / Proportional / Adaptive + 10% Full / Adaptive (RF) | 70% / 32% / 48% / 100% |
+| False positives per minute under overload: Adaptive (LR) / Adaptive (RF) | 1,605–1,965 / 107–128 |
 
 ## Repository layout
 
 | Folder | Contents |
 |---|---|
 | `testbed/` | DevStack `local.conf` example (no passwords), version recording |
-| `data_prep/` | Profiling, label mapping, duplicate check, cleaning, time-ordered train/validation/test split |
-| `models/` | Training, tuning and freezing of the Full and Light models; in-VM scoring speed check |
+| `data_prep/` | Profiling, label mapping, duplicate check, cleaning, time-ordered train/validation/test split; revision checks of the split (`revision_checks.py`) |
+| `models/` | Training, tuning and freezing of the Full and Light models; selection of the security-aware fallback (`freeze_fallback.py`); test-split evaluation of the frozen models (`eval_frozen.py`); in-VM scoring speed check |
 | `streaming/` | Replay producers, streaming detector, controller, telemetry, host session and Kafka start scripts, run script, run queue, per-run analysis, aggregation |
-| `experiments/plans/` | Randomized run plans of E1–E4 (one CSV line per run) |
-| `results/` | Evidence files of every run: final E1–E4 runs, saturation measurement, set-aside robustness set, pilots (see `results/README.md`) |
-| `analysis/` | Aggregated tables, bootstrap effect sizes and the latency figure computed from `results/final/` |
-| `docs/` | Frozen experimental protocol and step-by-step reproduction guide |
+| `experiments/plans/` | Randomized run plans of E1–E4 and R1–R5 (one CSV line per run) |
+| `experiments/workloads/` | Manifests of the five evasion workloads of R3 |
+| `results/` | Evidence files of every run: final E1–E4 runs, saturation measurements, set-aside robustness set, pilots, revision runs R1–R5 and superseded revision runs; `queue_results.csv` lists every attempt (see `results/README.md`) |
+| `analysis/` | Aggregated tables and the latency figure computed from `results/final/`; `analysis/revision/` with the revision tables, figures, deadline metrics of E2–E4 and dataset checks |
+| `docs/` | Frozen experimental protocol, step-by-step reproduction guide, revision experiments (`revision.md`) |
 
 ## Experiments
 
@@ -48,7 +55,7 @@ rates, below and beyond the detector's measured capacity, and three inference po
 | E3 | Effect of the allocation | M (L values from E2) | Static-Full, Static-Light | 22,500, 36,000, 45,000 flows/s | 3 |
 | E4 | Adaptive policy | L | Static-Full, Static-Light, Adaptive | 1.2 S; burst | 5 |
 
-S is the saturation rate of Static-Full on the VM. Every run replays the whole test split (9,421,272 flows) after a
+The revision experiments R1–R5 are listed in [`docs/revision.md`](docs/revision.md). S is the saturation rate of Static-Full on the VM. Every run replays the whole test split (9,421,272 flows) after a
 20 s warm-up. Run names follow `<experiment>_<VM>_<policy>_<load>_r<repetition>`, e.g. `E4_L_adapt_burst_r3`.
 
 ## Reproducing
@@ -70,6 +77,7 @@ python3 ~/nids-host/stream/aggregate.py ~/w7/runs --host ~/w5/host_runs --out ~/
 
 ```bash
 python3 streaming/aggregate.py results/final --out analysis
+python3 analysis/revision/rev_analysis.py results/revision results/queue_results.csv /tmp/check
 ```
 
 ## Data
