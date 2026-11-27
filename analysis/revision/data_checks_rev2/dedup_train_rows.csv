@@ -1,0 +1,8 @@
+family,train_rows,kept,removed,removed_share
+Benign,3236345,2897647,338698,0.10465
+Botnet,100045,100045,0,0.0
+BruteForce,65938,65938,0,0.0
+DDoS,961904,961904,0,0.0
+DoS,1283946,1283946,0,0.0
+Infiltration,10904,10369,535,0.04906
+Web,202,202,0,0.0

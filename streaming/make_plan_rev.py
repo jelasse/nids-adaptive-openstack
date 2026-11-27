@@ -12,7 +12,9 @@
                            full, adapt, adaptrf, adapts, prop                                          [MC1]   25 runs
   R4  long runs          test split replayed 3 times: Static-Full at 0.9 S, Adaptive at 1.2 S        [MC10]   2 runs
   R5  sharper burst      30 s at 0.6 S, 60 s at 1.8 S, then 0.6 S: adapt, adaptrf, 3 reps            [MC12]   6 runs
-Usage (laptop):  python make_plan_rev.py R2    -> ~/w8/plans/R2_L.csv     (R1 ... R5)
+  R6  static baselines   (second review, item 1) Static-Full and Static-Light under the SAME order-preserving
+                         replay as R2: test split, 1.2 S and burst, 5 reps                             20 runs
+Usage (laptop):  python make_plan_rev.py R2    -> ~/w8/plans/R2_L.csv     (R1 ... R6)
   --redo   only the runs still needed, judged from ~/w7/queue_results.csv: a run never done keeps its name; a run
            done but invalid on either side is repeated with the suffix b (then c, ...), as in the main experiments;
            a valid run is left out.          -> ~/w8/plans/<exp>_L_redo.csv
@@ -31,7 +33,7 @@ POL = {  # name: (mode, controller, vm_env)
     "adapts": ("full", HYST, "FULL_SAMPLE=0.1"), "prop": ("full", PROP, ""),
 }
 ap = argparse.ArgumentParser()
-ap.add_argument("exp", choices=["R1", "R2", "R3", "R4", "R5"])
+ap.add_argument("exp", choices=["R1", "R2", "R3", "R4", "R5", "R6"])
 ap.add_argument("--workloads", default="~/w8/workloads")
 ap.add_argument("--seed", type=int, default=1)
 ap.add_argument("--out", default=os.path.expanduser("~/w8/plans"))
@@ -73,6 +75,12 @@ elif a.exp == "R5":
     for pol in ("adapt", "adaptrf"):
         for rep in range(1, 4):
             add(f"R5_L_{pol}_burst2_r{rep}", S, RECORDS, pol, BURST2, peak=1.8 * S)
+
+elif a.exp == "R6":
+    for pol in ("full", "light"):
+        for rep in range(1, 6):
+            add(f"R6_L_{pol}_1p2S_r{rep}", round(1.2 * S), RECORDS, pol)
+            add(f"R6_L_{pol}_burst_r{rep}", S, RECORDS, pol, BURST, peak=1.5 * S)
 
 random.Random(a.seed).shuffle(rows)
 if a.redo:

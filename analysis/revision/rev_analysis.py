@@ -1,4 +1,4 @@
-"""Revision experiments R1-R5: one valid run per base name; medians and ranges per experiment, policy and load.
+"""Revision experiments R1-R6: one valid run per base name; medians and ranges per experiment, policy and load.
 Usage:  python3 rev_analysis.py <runs dir> <queue_results.csv> <out dir>
         e.g. python3 analysis/revision/rev_analysis.py results/revision results/queue_results.csv /tmp/check
 """

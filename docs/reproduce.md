@@ -102,3 +102,14 @@ recreate them with steps 3 and 7.1.
    python3 analysis/revision/rev_analysis.py ~/w7/runs ~/w7/queue_results.csv ~/w8/analysis
    python3 analysis/revision/rev_figs.py ~/w7/runs ~/w7/queue_results.csv analysis/revision/w7_deadline_L.csv ~/w8/analysis
    ```
+
+## 8. Second revision (R6 and checks)
+
+```bash
+python3 ~/nids-host/stream/make_plan_rev.py R6        # -> ~/w8/plans/R6_L.csv, 20 runs
+nohup bash ~/nids-host/stream/run_queue.sh ~/w8/plans/R6_L.csv > ~/w8/queue_R6.log 2>&1 &
+source ~/spark-venv/bin/activate
+for s in lodo3 valdup dupeval3; do spark-submit --driver-memory 10g data_prep/rev2_checks.py $s ~/w4/data ~/w8/rev2; done
+spark-submit --driver-memory 10g data_prep/rev2_checks.py dedup ~/w4/data ~/w8/rev2 --with-full
+```
+`valdup` reads the candidate throughputs from `~/w8/rev/fallback_candidates.csv` (written by `models/freeze_fallback.py`).

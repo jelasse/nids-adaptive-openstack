@@ -56,3 +56,27 @@ python3 analysis/revision/rev_figs.py results/revision results/queue_results.csv
 `analysis/revision/w7_deadline_*.csv` hold the deadline metrics of the E2–E4 runs, computed with the same
 `deadline_metrics.py` from their archived per-flow predictions. `analysis/revision/data_checks/` holds the dataset
 checks of `data_prep/revision_checks.py` (split overlap, duplicates, leave-one-day-out, ablation, Attempted flows).
+
+## Second revision (R6 and dataset checks)
+
+The second review asked for (1) static baselines under the same replay as the adaptive policies, (2) leave-one-day-out
+validation of the security-aware fallback, (3) a check of training–validation duplicates and their effect on the
+fallback, and (4) clear run accounting. Release `v2.1-revision2` adds:
+
+- **R6** (`results/revision/R6_*`, plan `experiments/plans/R6_L.csv`): Static-Full and Static-Light on L at 1.2 S and
+  under the burst, five runs each, with the order-preserving replay (`INTERLEAVE=1`) of R1–R5. 20 attempts, all valid.
+  Fig. 3 and Tables 9 and 11 of the paper take the static policies from R6 (`analysis/revision/rev_figs.py`).
+- **Checks** (`data_prep/rev2_checks.py`, results in `analysis/revision/data_checks_rev2/`):
+  - `lodo3.csv` – leave-one-day-out for Full, Light and the fallback (deployed top-20 features and features ranked
+    without the held-out day);
+  - `val_duplicates_vs_train.csv`, `selection_dedup.csv` – duplicates of validation flows in training, and the fallback
+    selection repeated on validation flows without a training duplicate (same model chosen);
+  - `dup_eval3.csv` – the three frozen models on test flows with and without a training duplicate;
+  - `dedup_train_rows.csv`, `dedup_retrain.csv` – the fallback (and Full) refitted without any flow shared with
+    validation or test.
+
+### Run accounting after the second revision
+
+`results/queue_results.csv` lists 290 attempts: 159 in the original experiments and 131 in R1–R6, of which 248 are
+valid. The 46 superseded runs in `results/revision_superseded/` are **not** among these attempts (their result lines
+are in `results/revision_superseded/*/queue_results_superseded.csv`), so 336 runs were executed in total.

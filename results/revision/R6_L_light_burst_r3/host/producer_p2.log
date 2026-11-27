@@ -1,0 +1,23 @@
+Replay file rows: 9,421,272; sending 2,355,318 from row 2 at 11,250/s with profile 60:0.6,90:1.5,0:0.6 (every 4th row) to topic 'R6_L_light_burst_r3'
+  sent 67,501  achieved 6,750/s
+  sent 135,001  achieved 6,745/s
+  sent 202,646  achieved 6,751/s
+  sent 270,001  achieved 6,743/s
+  sent 337,801  achieved 6,750/s
+  sent 405,740  achieved 6,757/s
+  sent 574,501  achieved 8,202/s
+  sent 743,251  achieved 9,285/s
+  sent 912,019  achieved 10,128/s
+  sent 1,080,001  achieved 10,794/s
+  sent 1,249,751  achieved 11,355/s
+  sent 1,418,501  achieved 11,815/s
+  sent 1,587,261  achieved 12,204/s
+  sent 1,755,916  achieved 12,537/s
+  sent 1,924,158  achieved 12,823/s
+  sent 1,991,658  achieved 12,443/s
+  sent 2,059,163  achieved 12,108/s
+  sent 2,126,662  achieved 11,811/s
+  sent 2,194,164  achieved 11,545/s
+  sent 2,261,661  achieved 11,305/s
+  sent 2,329,161  achieved 11,088/s
+SENT 2,355,318 records in 213.9 s (planned 213.9 s), achieved 11,009/s (event_id 2..9,421,270; max lag behind schedule 0.26 s)

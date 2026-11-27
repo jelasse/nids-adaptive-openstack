@@ -40,8 +40,8 @@ def rev_runs(prefix):
     return out
 fig, axs = plt.subplots(1, 2, figsize=(7.0, 2.9), sharey=True)
 for ax, cond, w7c, title in ((axs[0], "1p2S", "1p2S", "Constant overload, 1.2 S"), (axs[1], "burst", "burst", "Burst, 90 s at 1.5 S")):
-    series = [("full", {k: v for k, v in W7.items() if f"_full_{w7c}_" in k}),
-              ("light", {k: v for k, v in W7.items() if f"_light_{w7c}_" in k}),
+    series = [("full", rev_runs(f"R6_L_full_{cond}_")),          # second revision: static policies with the
+              ("light", rev_runs(f"R6_L_light_{cond}_")),        # same order-preserving replay as R2
               ("adapt", rev_runs(f"R2_L_adapt_{cond}_")), ("prop", rev_runs(f"R2_L_prop_{cond}_")),
               ("adaptrf", rev_runs(f"R2_L_adaptrf_{cond}_"))]
     for k, runs in series:
